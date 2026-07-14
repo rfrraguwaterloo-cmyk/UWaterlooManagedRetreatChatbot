@@ -1,0 +1,21 @@
+anthropic
+openai
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+sentence-transformers
+numpy
+langchain
+langchain-community
+langchain-ollama
+streamlit
+pandas
+openpyxl
+pdfplumber
+python-dotenv
+requests
+fpdf2
+# Google Drive upload (used by drive_upload.py; optional — pipeline runs without it)
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+gspread

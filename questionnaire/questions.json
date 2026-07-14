@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "description": "Guided questionnaire to shape RAG queries for managed retreat decision-making. Answers are injected as context into the LLM prompt.",
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "Who are you?",
+      "type": "single_choice",
+      "options": [
+        "Municipal / regional government planner",
+        "Indigenous / First Nations community leader",
+        "Elected official or policy maker",
+        "Researcher or academic",
+        "Community member or resident",
+        "NGO or advocacy organization"
+      ]
+    },
+    {
+      "id": "Q2",
+      "text": "What is the primary climate hazard your community faces?",
+      "type": "single_choice",
+      "options": [
+        "Riverine flooding",
+        "Coastal flooding / storm surge",
+        "Shoreline or cliff erosion",
+        "Tidal inundation / sea level rise",
+        "Multiple hazards"
+      ]
+    },
+    {
+      "id": "Q3",
+      "text": "Where are you in the managed retreat process?",
+      "type": "single_choice",
+      "options": [
+        "Exploring whether retreat is an option",
+        "Building the case — gathering evidence and community support",
+        "Planning and designing the retreat",
+        "Actively relocating households or infrastructure",
+        "Retreat is complete — managing post-relocation challenges"
+      ]
+    },
+    {
+      "id": "Q4",
+      "text": "What is your most pressing question right now?",
+      "type": "single_choice",
+      "options": [
+        "How do we fund this? (buyouts, grants, compensation)",
+        "How do we get community consent and buy-in?",
+        "How do we protect vulnerable and low-income residents?",
+        "What are the legal and property rights barriers?",
+        "How do we choose and prepare the destination site?",
+        "How do we decide who must move vs who can stay?",
+        "What has worked or failed in similar communities?"
+      ]
+    },
+    {
+      "id": "Q5",
+      "text": "Is the retreat voluntary, incentivized, or mandated?",
+      "type": "single_choice",
+      "options": [
+        "Voluntary — residents choose whether to move",
+        "Incentivized — buyouts or compensation offered to encourage moving",
+        "Mandated — residents are required to relocate",
+        "Not decided yet"
+      ]
+    },
+    {
+      "id": "Q6",
+      "text": "What country or region are you in?",
+      "type": "single_choice",
+      "options": [
+        "Canada",
+        "United States",
+        "Pacific Islands",
+        "Southeast Asia",
+        "Europe",
+        "Africa",
+        "Other"
+      ]
+    }
+  ]
+}

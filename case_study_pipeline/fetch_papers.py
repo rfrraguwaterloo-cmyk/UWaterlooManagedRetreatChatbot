@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+"""
+fetch_papers.py — Download source PDFs for a case study using PyPaperBot.
+
+Tries sources in order: Unpaywall (free, open-access) → Anna's Archive API
+(if key provided) → SciDB scrape → Sci-Hub.
+
+Downloaded PDFs are saved to data/raw/<CASE_ID>/ and uploaded to the
+corresponding Google Drive folder (using drive_folders.json).
+
+Usage:
+    # Pass DOIs directly:
+    python3 -m case_study_pipeline.fetch_papers \\
+        --case-id CS13 \\
+        --dois 10.1525/elementa.2021.00036 10.1007/s11069-021-04592-1
+
+    # Or read from a dois.txt file (one DOI per line):
+    python3 -m case_study_pipeline.fetch_papers --case-id CS13
+
+    # Skip Drive upload:
+    python3 -m case_study_pipeline.fetch_papers --case-id CS13 --no-upload
+
+Options:
+    --scihub-mirror     Sci-Hub mirror URL (default: https://sci-hub.se)
+    --aa-api-key        Anna's Archive API key (see annas-archive.se/faq#api)
+    --no-upload         Skip Drive upload after download
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import tempfile
+import shutil
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+# Load .env so UWATERLOO_USER/PASS and GOOGLE credentials are available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(REPO_ROOT / ".env")
+except ImportError:
+    pass
+PIPELINE_DIR = Path(__file__).resolve().parent
+DRIVE_FOLDERS_FILE = PIPELINE_DIR / "drive_folders.json"
+
+
+def load_drive_folders() -> dict:
+    if not DRIVE_FOLDERS_FILE.exists():
+        return {}
+    return json.loads(DRIVE_FOLDERS_FILE.read_text())
+
+
+def get_dois_for_case(case_dir: Path, dois_arg: list[str] | None) -> list[str]:
+    """Return DOIs from --dois arg, or from data/raw/CSX/dois.txt if it exists."""
+    if dois_arg:
+        return [d.strip() for d in dois_arg if d.strip()]
+    dois_file = case_dir / "dois.txt"
+    if dois_file.exists():
+        lines = dois_file.read_text().splitlines()
+        return [l.strip() for l in lines if l.strip() and not l.startswith("#")]
+    return []
+
+
+def fetch_and_download(
+    dois: list[str],
+    dest_dir: Path,
+    scihub_mirror: str,
+    aa_api_key: str | None,
+) -> list[Path]:
+    """
+    Run PyPaperBot for each DOI. Downloads go into dest_dir.
+    Returns list of PDF paths that were successfully downloaded.
+    """
+    try:
+        from PyPaperBot.Crossref import getPapersInfoFromDOIs
+        from PyPaperBot.Downloader import downloadPapers
+    except ImportError:
+        print(
+            "ERROR: PyPaperBot not found. Install it with:\n"
+            "  pip3 install bibtexparser crossref-commons undetected-chromedriver\n"
+            "  pip3 install -e ~/PyPaperBot/PyPaperBot"
+        )
+        sys.exit(1)
+
+    dest_dir.mkdir(parents=True, exist_ok=True)
+
+    papers = []
+    for doi in dois:
+        print(f"\n  Fetching metadata for DOI: {doi}")
+        paper = getPapersInfoFromDOIs(doi, restrict=None)
+        papers.append(paper)
+
+    before = set(dest_dir.glob("*.pdf"))
+
+    dwn_dir = str(dest_dir) + "/"
+    downloadPapers(
+        papers,
+        dwn_dir,
+        num_limit=None,
+        SciHub_URL=scihub_mirror,
+        SciDB_URL=None,
+        AnnasArchive_API_key=aa_api_key,
+    )
+
+    after = set(dest_dir.glob("*.pdf"))
+    new_pdfs = sorted(after - before)
+    return new_pdfs
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Download source PDFs for an RFR case study via PyPaperBot."
+    )
+    parser.add_argument("--case-id", required=True, help="e.g. CS13")
+    parser.add_argument(
+        "--dois", nargs="+", metavar="DOI",
+        help="One or more DOIs to download. If omitted, reads data/raw/<CASE_ID>/dois.txt",
+    )
+    parser.add_argument(
+        "--scihub-mirror", default="https://sci-hub.se",
+        help="Sci-Hub mirror URL (default: https://sci-hub.se)",
+    )
+    parser.add_argument(
+        "--aa-api-key", default=None,
+        help="Anna's Archive API key for paywalled papers",
+    )
+    parser.add_argument(
+        "--no-upload", action="store_true",
+        help="Skip uploading downloaded PDFs to Google Drive",
+    )
+    args = parser.parse_args()
+
+    case_id = args.case_id.upper()
+    case_dir = REPO_ROOT / "data" / "raw" / case_id
+
+    if not case_dir.exists():
+        print(f"ERROR: Case directory not found: {case_dir}")
+        sys.exit(1)
+
+    dois = get_dois_for_case(case_dir, args.dois)
+    if not dois:
+        print(
+            f"ERROR: No DOIs provided. Either pass --dois or create:\n"
+            f"  {case_dir / 'dois.txt'}  (one DOI per line)"
+        )
+        sys.exit(1)
+
+    print(f"\n{'='*60}")
+    print(f"  fetch_papers — {case_id}")
+    print(f"  DOIs to fetch: {len(dois)}")
+    for d in dois:
+        print(f"    {d}")
+    print(f"  Destination: {case_dir}")
+    print(f"{'='*60}\n")
+
+    new_pdfs = fetch_and_download(
+        dois=dois,
+        dest_dir=case_dir,
+        scihub_mirror=args.scihub_mirror,
+        aa_api_key=args.aa_api_key,
+    )
+
+    print(f"\n{'='*60}")
+    if new_pdfs:
+        print(f"  Downloaded {len(new_pdfs)} PDF(s):")
+        for p in new_pdfs:
+            print(f"    {p.name}")
+    else:
+        print("  No new PDFs downloaded.")
+    print(f"{'='*60}\n")
+
+    # Drive upload
+    if new_pdfs and not args.no_upload:
+        folders = load_drive_folders()
+        folder_id = folders.get(case_id)
+        if not folder_id:
+            print(f"  [Drive] No folder ID found for {case_id} in drive_folders.json — skipping upload.")
+        else:
+            from .drive_upload import make_uploader, try_upload
+            uploader = make_uploader(folder_id=folder_id)
+            if uploader:
+                for pdf in new_pdfs:
+                    print(f"  [Drive] Uploading {pdf.name}...")
+                    try_upload(uploader, pdf)
+            else:
+                print("  [Drive] No uploader available — skipping upload.")
+    elif args.no_upload:
+        print("  [Drive] Upload skipped (--no-upload).")
+
+    print("\nDone.")
+
+
+if __name__ == "__main__":
+    main()

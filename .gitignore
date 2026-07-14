@@ -1,0 +1,19 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+chroma_db/
+data/raw/
+!data/raw/*/case_meta.json
+*.pdf
+
+# Google OAuth credentials
+client_secret*.json
+token.json
+service_account*.json
+
+# Claude Code local settings
+.claude/
+chroma_db/

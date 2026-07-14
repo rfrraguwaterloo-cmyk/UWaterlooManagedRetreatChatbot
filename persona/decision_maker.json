@@ -1,0 +1,14 @@
+{
+  "role": "Municipal planner or First Nations community leader",
+  "knowledge_level": "Non-technical; familiar with community planning, not ML or hydrology",
+  "key_concerns": [
+    "Equity and justice for displaced residents",
+    "Community buy-in and consent",
+    "Funding availability and compensation",
+    "Cultural and spiritual impacts",
+    "Legal barriers and property rights"
+  ],
+  "preferred_tone": "Plain language, practical, grounded in real examples",
+  "useful_response_looks_like": "Here is what worked in a similar community, here is what to watch out for, and here are the key decisions you need to make.",
+  "ocap_note": "Responses involving First Nations communities must respect OCAP principles: Ownership, Control, Access, Possession."
+}

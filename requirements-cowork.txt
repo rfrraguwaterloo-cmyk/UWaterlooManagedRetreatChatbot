@@ -1,0 +1,10 @@
+# Minimal deps to import/run case_study_pipeline inside a Cowork sandbox session.
+# Deliberately excludes the heavy RAG stack (torch, chromadb, sentence-transformers)
+# from requirements.txt, which run_case_study.py does NOT use.
+fpdf2
+python-dotenv
+pdfplumber
+openai
+anthropic
+httpx[socks]
+socksio
