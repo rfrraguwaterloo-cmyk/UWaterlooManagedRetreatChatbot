@@ -1,5 +1,5 @@
 """
-ingest_pipeline_outputs.py — Convert selected Ver2.md files into ChromaDB-ready JSON.
+ingest_pipeline_outputs.py — Convert selected Ver2.md files into RAG JSON chunks.
 
 Reads every data/raw/CSX/pipeline_output/CSX_Ver2.md (the canonical file written
 by select_best_run.py), splits it into one chunk per questionnaire section, and
@@ -14,7 +14,7 @@ Usage:
     python ingest/ingest_pipeline_outputs.py --all --force  # overwrite existing JSON
 
 The script is idempotent: re-running it for a case study overwrites its
-data/extracted/CSX.json, so ChromaDB always reflects the latest selected Ver2.
+data/extracted/CSX.json, so the embedding store can reflect the latest selected Ver2.
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ DATA_RAW = REPO_ROOT / "data" / "raw"
 EXTRACTED_DIR = REPO_ROOT / "data" / "extracted"
 
 # ---------------------------------------------------------------------------
-# Section name → ChromaDB section key
+# Section name → retrieval section key
 # The keys match the field names used in CS1_IDJC.json so all chunks are
 # queryable with the same metadata filters.
 # ---------------------------------------------------------------------------
@@ -187,7 +187,7 @@ def ingest_case(case_id: str, force: bool = False) -> bool:
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
-        description="Convert selected Ver2.md files into ChromaDB-ready JSON chunks."
+        description="Convert selected Ver2.md files into RAG JSON chunks."
     )
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--case-id", nargs="+", metavar="ID",

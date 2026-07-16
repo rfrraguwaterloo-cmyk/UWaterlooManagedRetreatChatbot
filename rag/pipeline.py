@@ -31,21 +31,21 @@ def query_ollama(prompt: str) -> str:
     return response.json()["response"].strip()
 
 
-def query_claude(prompt: str) -> str:
+def query_claude(prompt: str, max_tokens: int = 4096) -> str:
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
     message = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=4096,
+        max_tokens=max_tokens,
         messages=[{"role": "user", "content": prompt}],
     )
     return message.content[0].text.strip()
 
 
-def query_openai(prompt: str) -> str:
+def query_openai(prompt: str, max_tokens: int = 2048) -> str:
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     response = client.chat.completions.create(
         model="gpt-4o-mini",
-        max_completion_tokens=2048,
+        max_completion_tokens=max_tokens,
         messages=[{"role": "user", "content": prompt}],
     )
     return response.choices[0].message.content.strip()
@@ -86,9 +86,9 @@ def run_pipeline(
     prompt = build_prompt(query, chunks, questionnaire_answers)
 
     if model == "claude":
-        answer = query_claude(prompt)
+        answer = query_claude(prompt, max_tokens=8192 if _OVERVIEW_RE.search(query) else 4096)
     elif model in ("openai", "gpt"):
-        answer = query_openai(prompt)
+        answer = query_openai(prompt, max_tokens=4096 if _OVERVIEW_RE.search(query) else 2048)
     else:
         answer = query_ollama(prompt)
 

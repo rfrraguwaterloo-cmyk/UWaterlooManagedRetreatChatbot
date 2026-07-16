@@ -10,14 +10,26 @@ sys.path.insert(0, str(Path(__file__).parent))
 from sheets_logger import log_query
 
 
-def _ensure_chroma_built():
+def _ensure_embedding_index_built():
     """Ensure precomputed_embeddings.json has texts+metadatas (needed by numpy retriever)."""
     precomputed = Path("data/extracted/precomputed_embeddings.json")
     needs_rebuild = True
     if precomputed.exists():
         import json as _json
         pre = _json.loads(precomputed.read_text())
-        if "texts" in pre and "metadatas" in pre:
+        from ingest.embed_and_index import _content_hash, load_all_chunks
+
+        chunks = load_all_chunks()
+        texts = [c.get("text", _json.dumps(c)) for c in chunks]
+        ids = [f"{c.get('case_id', 'unknown')}_{c.get('chunk_index', i)}" for i, c in enumerate(chunks)]
+        metadatas = [{k: str(v) for k, v in c.items() if k != "text"} for c in chunks]
+        content_hash = _content_hash(ids, texts, metadatas)
+        if (
+            pre.get("ids") == ids
+            and pre.get("texts") == texts
+            and pre.get("metadatas") == metadatas
+            and pre.get("content_hash") == content_hash
+        ):
             print(f"Embeddings ready ({len(pre['ids'])} chunks).")
             needs_rebuild = False
     if needs_rebuild:
@@ -31,8 +43,8 @@ DATA_RAW = Path("data/raw")
 
 
 @st.cache_data
-def load_cs1_20_meta() -> dict[str, dict]:
-    """Load case metadata for all case studies (CS1 onwards)."""
+def load_case_meta() -> dict[str, dict]:
+    """Load case metadata for all case studies with local case_meta.json files."""
     meta = {}
     if not DATA_RAW.exists():
         return meta
@@ -68,8 +80,8 @@ def _clean_excerpt(text: str, max_chars: int = 800) -> str:
     return text
 
 
-# ── Build ChromaDB before any Streamlit calls ─────────────────────────────────
-_ensure_chroma_built()
+# ── Build embedding index before any Streamlit calls ──────────────────────────
+_ensure_embedding_index_built()
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retreat", layout="wide")
@@ -207,7 +219,7 @@ with main_col:
             st.warning("Please enter a question.")
         elif re.search(r"\b(what|which|list|show|how many).{0,30}case stud", query, re.I):
             # Meta question — list all case studies directly from extracted JSONs
-            cs_meta = load_cs1_20_meta()
+            cs_meta = load_case_meta()
             extracted_dir = Path("data/extracted")
             all_cases = []
             for f in sorted(extracted_dir.glob("CS*.json"), key=lambda p: int(re.search(r'\d+', p.stem).group())):
@@ -264,7 +276,7 @@ with main_col:
                         st.markdown(f"**{q_text}** {val}")
 
             # ── Case studies used ─────────────────────────────────────────
-            cs_meta = load_cs1_20_meta()
+            cs_meta = load_case_meta()
 
             seen_ids: set[str] = set()
             retrieved_cs = []
@@ -275,7 +287,7 @@ with main_col:
                     retrieved_cs.append(c)
 
             mentioned_ids = {
-                f"CS{n}" for n in re.findall(r'\bCS([1-9]|1[0-9]|20)\b', answer)
+                f"CS{n}" for n in re.findall(r'\bCS(\d+)\b', answer)
             }
 
             if retrieved_cs:

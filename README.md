@@ -27,7 +27,9 @@ pip install -r requirements.txt
 export ANTHROPIC_API_KEY=your_key_here
 export OPENAI_API_KEY=your_key_here
 
-# 2. Ingest case studies into vector store
+# 2. Convert canonical Ver2 memos to JSON chunks, then build embeddings
+python ingest/ingest_pipeline_outputs.py
+python ingest/create_summary_chunks.py
 python ingest/embed_and_index.py
 
 # 3. Run CLI pipeline
@@ -40,13 +42,13 @@ streamlit run app/app.py
 ## Ingesting documents
 
 ```bash
-# Parse a PDF case study
-python ingest/parse_pdf.py data/raw/isle_de_jean_charles.pdf CS1
+# Convert canonical case-study memos into section chunks
+python ingest/ingest_pipeline_outputs.py
 
-# Parse a spreadsheet (Ana's human-coded extractions)
-python ingest/parse_spreadsheet.py data/raw/extraction_framework.xlsx
+# Refresh overview-summary chunks for broad comparison queries
+python ingest/create_summary_chunks.py
 
-# Embed everything into ChromaDB
+# Build the precomputed embedding store used by rag/retriever.py
 python ingest/embed_and_index.py
 ```
 
@@ -55,8 +57,9 @@ python ingest/embed_and_index.py
 ```
 rfr-rag/
 ├── data/raw/           # Original PDFs and spreadsheets (not committed)
-├── data/extracted/     # JSON outputs from parsing
-├── ingest/             # PDF + spreadsheet parsers, embedding script
+├── data/extracted/     # Ver2-derived JSON chunks + embedding store
+├── ingest/             # Ver2 ingestion, summary chunks, embedding script
+├── case_study_pipeline/# Source extraction/audit workflow
 ├── rag/                # Retriever, prompt builder, pipeline
 ├── persona/            # Decision-maker persona config
 ├── questionnaire/      # Guided questionnaire structure

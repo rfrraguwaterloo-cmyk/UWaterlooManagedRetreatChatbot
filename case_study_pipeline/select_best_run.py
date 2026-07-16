@@ -6,7 +6,7 @@ reads the Check 2 (or Check 1) grade from each, selects the winner, copies its
 Ver2.md to the canonical location (pipeline_output/CSX_Ver2.md), and writes
 pipeline_output/selected.json.
 
-The canonical Ver2.md is what ingest_pipeline_outputs.py reads into ChromaDB.
+The canonical Ver2.md is what ingest_pipeline_outputs.py reads into JSON chunks.
 
 Usage:
     python -m case_study_pipeline.select_best_run --case-id CS1
@@ -167,7 +167,7 @@ def main(argv: list[str] | None = None) -> None:
     for case_id in case_ids:
         select_for_case(case_id, force=args.force)
 
-    print("\nDone. Run ingest/ingest_pipeline_outputs.py to push selected Ver2 files into ChromaDB.")
+    print("\nDone. Run ingest/ingest_pipeline_outputs.py to convert selected Ver2 files into JSON chunks.")
 
 
 if __name__ == "__main__":

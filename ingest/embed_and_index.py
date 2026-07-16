@@ -2,12 +2,14 @@
 embed_and_index.py — Precompute and save embeddings for all case study chunks.
 
 Saves data/extracted/precomputed_embeddings.json:
-  { "ids": [...], "embeddings": [...], "texts": [...], "metadatas": [...] }
+  { "ids": [...], "embeddings": [...], "texts": [...], "metadatas": [...],
+    "content_hash": "..." }
 
 Retrieval uses numpy cosine similarity in rag/retriever.py (no ChromaDB —
 it is broken on Python 3.13 / HuggingFace Spaces).
 """
 import json
+import hashlib
 import sys
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
@@ -30,6 +32,15 @@ def load_all_chunks() -> list[dict]:
     return chunks
 
 
+def _content_hash(ids: list[str], texts: list[str], metadatas: list[dict]) -> str:
+    payload = json.dumps(
+        {"ids": ids, "texts": texts, "metadatas": metadatas},
+        sort_keys=True,
+        ensure_ascii=False,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
 def embed_and_index():
     chunks = load_all_chunks()
     if not chunks:
@@ -39,11 +50,17 @@ def embed_and_index():
     texts = [c.get("text", json.dumps(c)) for c in chunks]
     ids = [f"{c.get('case_id', 'unknown')}_{c.get('chunk_index', i)}" for i, c in enumerate(chunks)]
     metadatas = [{k: str(v) for k, v in c.items() if k != "text"} for c in chunks]
+    content_hash = _content_hash(ids, texts, metadatas)
 
-    # Use precomputed embeddings if IDs match — nothing to do
+    # Use precomputed embeddings only if chunk IDs and chunk contents match.
     if PRECOMPUTED_PATH.exists():
         pre = json.loads(PRECOMPUTED_PATH.read_text())
-        if pre.get("ids") == ids and "texts" in pre and "metadatas" in pre:
+        if (
+            pre.get("ids") == ids
+            and pre.get("texts") == texts
+            and pre.get("metadatas") == metadatas
+            and pre.get("content_hash") == content_hash
+        ):
             print(f"Precomputed embeddings up to date ({len(ids)} chunks).")
             return
         print("Precomputed embeddings stale — recomputing...")
@@ -60,6 +77,7 @@ def embed_and_index():
         "embeddings": embeddings,
         "texts": texts,
         "metadatas": metadatas,
+        "content_hash": content_hash,
     }))
     print(f"Saved precomputed embeddings for {len(texts)} chunks.")
     print("\nNext: streamlit run app/app.py")

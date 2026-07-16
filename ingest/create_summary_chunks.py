@@ -34,6 +34,9 @@ _PREAMBLE_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 
+_H2_RE = re.compile(r"^##\s+(.+)$", re.MULTILINE)
+_FALLBACK_SECTION_LIMIT = 6000
+
 
 def _find_case_folder(case_id: str) -> Path | None:
     for p in DATA_RAW.iterdir():
@@ -61,6 +64,28 @@ def _all_case_ids() -> list[str]:
     return sorted(set(ids), key=lambda x: int(x[2:]))
 
 
+def _fallback_opening_sections(text: str) -> str:
+    """Use opening memo sections when a Ver2 lacks a Case Study Overview heading."""
+    matches = list(_H2_RE.finditer(text))
+    if not matches:
+        return ""
+
+    pieces = []
+    for i, match in enumerate(matches):
+        heading = match.group(1).strip()
+        if not re.search(r"case identification|general information", heading, re.I):
+            continue
+        start = match.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        body = text[start:end].strip()
+        if body:
+            pieces.append(f"## {heading}\n\n{body}")
+        if len("\n\n".join(pieces)) >= _FALLBACK_SECTION_LIMIT:
+            break
+
+    return "\n\n".join(pieces)[:_FALLBACK_SECTION_LIMIT].strip()
+
+
 def build_summary_chunks() -> list[dict]:
     chunks = []
     for case_id in _all_case_ids():
@@ -79,6 +104,8 @@ def build_summary_chunks() -> list[dict]:
             # Fallback: grab preamble before Q&A questions
             m2 = _PREAMBLE_RE.match(text)
             overview_text = m2.group(1).strip() if m2 else ""
+            if len(overview_text) < 100:
+                overview_text = _fallback_opening_sections(text)
 
         if not overview_text:
             print(f"  [{case_id}] No CASE STUDY OVERVIEW section found — skipping.")

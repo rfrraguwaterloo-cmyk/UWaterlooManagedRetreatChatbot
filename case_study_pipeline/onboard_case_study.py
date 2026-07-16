@@ -326,7 +326,7 @@ def main() -> None:
             copied = copy_pdfs_from_drive_folder(service, source_id, folder_id, local_dest)
             print(f"✓ Copied {len(copied)} PDF(s) into the Drive folder and into {local_dest}/")
 
-    # 3. Write case_meta.json so the ingestion bridge can tag ChromaDB chunks
+    # 3. Write case_meta.json so the ingestion bridge can tag RAG chunks
     import json as _json
     _meta_path = REPO_ROOT / "data" / "raw" / case_id / "case_meta.json"
     _meta_path.write_text(_json.dumps({
