@@ -15,12 +15,18 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_RAW = REPO_ROOT / "data" / "raw"
 EXTRACTED_DIR = REPO_ROOT / "data" / "extracted"
 OUT_FILE = EXTRACTED_DIR / "case_summaries.json"
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from ingest.source_links import load_source_links
 
 # Match overview section — handles #, ##, and variations in heading text
 _OVERVIEW_RE = re.compile(
@@ -129,6 +135,7 @@ def build_summary_chunks() -> list[dict]:
             "location": meta.get("location", ""),
             "country": meta.get("country", ""),
             "source": f"Pipeline Ver2 — {meta.get('name', case_id)}",
+            "source_links": load_source_links(case_id),
             "text": full_text,
         })
         print(f"  [{case_id}] Extracted overview ({len(overview_text)} chars)")

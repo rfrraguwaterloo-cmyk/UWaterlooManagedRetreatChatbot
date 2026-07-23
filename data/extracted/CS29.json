@@ -2,37 +2,199 @@
   {
     "case_id": "CS29",
     "chunk_index": 0,
-    "section": "pre_flight_check_audit_resolution_summary",
-    "location": "Seenigama, Southern Province",
-    "country": "Sri Lanka",
-    "source": "Pipeline Ver2 — Seenigama",
-    "text": "Case study: Seenigama (Seenigama, Southern Province, Sri Lanka)\nSection: PRE-FLIGHT CHECK: Audit Resolution Summary\n\nBefore writing, the following audit issues were confirmed against source documents and resolved:\n\n1. **Issue 1 (Major):** \"Managed retreat\" replaced in prose with \"post-tsunami relocation/resettlement\" throughout. The sources use the terms relocation, resettlement, and forced relocation; \"managed retreat\" is used only as a project taxonomy label where required by the questionnaire.\n2. **Issue 3 (Major):** \"43,000 houses on 387 sites\" — confirmed in Ahmed & McEvoy (2014, p. 54): *\"resettlement plans to build 43,000 new houses on 387 sites outside the buffer zone.\"* **Retained with direct citation.**\n3. **Issue 4 (Major):** \"Hambantota New Town: ~2,330 houses\" — confirmed in Ahmed & McEvoy (2014, Table I, p. 55): *\"New Town, Hambantota: 2,330 [beneficiary households].\"* **Retained with direct citation.**\n4. **Issue 5 (Major):** \"18 households / Kananke Watta\" — confirmed in Brookings-CMRD (2015, p. 1 Executive Summary and throughout): *\"18 families that were resettled in Kananke Watta.\"* Population range \"60–100 individuals\" removed as not in sources.\n5. **Issue 6 (Low):** Four settlements and 396 total units — confirmed in Fernando (2018, Table 1): Salzburg 79, Green Village 90, China Charity 135, Tea Garden 92 = 396. Retained with explicit citation to Table 1.\n6. **Issue 9 (Major):** \"Six to twelve months\" timeframe — Brookings-CMRD (2015, p. 18) states *\"most of the measures were limited to six months at most.\"* This is directly supported for Kananke Watta specifically; Fernando (2018) and Birkmann et al. (2026) do not use this phrase. Used only for Kananke Watta context, qualified appropriately.\n7. **Issue 10 (Major):** \"1.5–2 km inland\" — confirmed in Brookings-CMRD (2015, p. 8): *\"1.5 to 2 kilometers inland from the pre-tsunami homes.\"* Retained with direct citation.\n8. **Issue 11 (Medium):** \"8–15 km\" range — confirmed in Birkmann et al. (2026, p. 7): *\"The majority of these settlements were situated 10–15 km from their previous place of residence\"* and Fig. 1 caption refers to *\"about 8–15 km away from the city center.\"* Retained with qualifier.\n9. **Issue 12 (Major):** Buffer zone reduced to 45 m in Galle city — Fernando (2018, p. 49): *\"Reduction of the buffer zone regulation from 100 m to 45 m within the Gale city area.\"* Birkmann et al. (2026, p. 16): *\"further reduced to 50 m and even in some places to 45 m.\"* Brookings-CMRD (2015, p. 5) describes buffer zone change as *\"100 to 200 meters down to 35 to 55 meters\"* for the Kananke Watta/Matara context specifically. **Both reductions documented; distinguished by location in the text.**\n10. **Issue 13 (Medium):** Construction timeline qualified as site-specific.\n11. **Issues 14, 15, 17 (Major):** Survey schedule \"2024/2025\" confirmed in Birkmann et al. (2026); \"58%\" statistic confirmed at p. 12 of Birkmann et al. (2026); perception shift percentages confirmed at p. 16. **All retained with direct citations to Birkmann et al. (2026).**\n12. **Issue 16 (Low):** Rephrased to \"some settlements had fewer than 40% of original beneficiaries remaining.\"\n13. **Issue 20 (Major):** \"Post-retreat monitoring phase\" removed; replaced with accurate characterisation from Birkmann et al. (2026) that monitoring is recommended but limited.\n14. **Minor Issue E:** IFRC one-year warranty — confirmed in Brookings-CMRD (2015, p. 15): *\"the IFRC warned the resettled families that the organization would only provide a one-year warranty on the rapidly built houses.\"* Retained.\n15. **Minor Issue F:** Government banks / low-interest loans — confirmed in Birkmann et al. (2026, p. 5): *\"These families were also entitled to a low-interest housing loan provided through government banks (People's Bank and Bank of Ceylon).\"* Retained.\n16. **Minor Issue G:** Buffer zone wording corrected; both the 45 m (Galle) and 35–55 m (Matara/Kananke Watta) reductions are sourced and distinguished.\n17. **Audit Issue 21 (Coding):** \"Community buyout/retreat\" retained but qualified as collective relocation/resettlement rather than a cash buyout.\n18. **Audit Issue 25 (Coding):** \"Hazard maps & models\" — buffer zone regulation is a zoning/regulatory tool, not formal hazard modelling. Removed from decision support tools coding; Coast Conservation Act zoning noted under regulatory framework.\n19. **Audit Issue 26 (Coding):** \"Who decides\" coded as Government; community participation in decision-making was minimal and sources do not support coding Community as a decision-maker.\n\n*Note: The audit flagged Issues 14, 15, and 17 as \"not supported.\" On re-reading Birkmann et al. (2026), these figures are directly present in the source. The survey years 2005/2006, 2007/2008, 2024/2025 are confirmed in the paper's methods section. The 58% figure appears on p. 12. The perception shift (80% appropriate in 2005/2006 to 70% inappropriate by 2025) appears on p. 16. This is a case where the audit was incorrect; Version 2 retains these figures with explicit citations. This disagreement is noted in the \"Additional Notes and Lessons Learned\" section.*\n\n---"
-  },
-  {
-    "case_id": "CS29",
-    "chunk_index": 1,
     "section": "overview",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
     "source": "Pipeline Ver2 — Seenigama",
+    "source_links": [
+      {
+        "title": "DOI 10.1108/IJDRBE-08-2012-0028",
+        "doi": "10.1108/IJDRBE-08-2012-0028",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2020.315193",
+        "doi": "10.1016/j.ijdrr.2020.315193",
+        "url": "https://doi.org/10.1016/j.ijdrr.2020.315193"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2025.007988",
+        "doi": "10.1016/j.ijdrr.2025.007988",
+        "url": "https://doi.org/10.1016/j.ijdrr.2025.007988"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "Wickramaarachchi, N., & Lakshani, K.G.R. (2026). Factors influencing the refusal of post-disaster relocation: insights from resettled individuals and professionals in Sri Lanka. International Journal of Disaster Resilience in the Built Environment. https://doi.org/10.1108/ijdrbe-02-2025-0028",
+        "doi": "10.1108/ijdrbe-02-2025-0028",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Goswami, S., Patil, T., & Raju, E. (2026). A scoping review of risk creation in disaster-induced resettlement in the urban. Cities, 162, 106707. https://doi.org/10.1016/j.cities.2025.106707",
+        "doi": "10.1016/j.cities.2025.106707",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Best, K., Niemeier, D.A., & Hadden, J. (2025). When boundaries are blurred: infrastructure needs in support of the climate displaced. Frontiers in Climate, 7, 1584877. https://doi.org/10.3389/fclim.2025.1584877",
+        "doi": "10.3389/fclim.2025.1584877",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Bower, E., Epifantseva, S., Schmitter, S., Wong-Parodi, G., Kulp, S., & Field, C.B. (2024). Planned relocation may reduce communities' future exposure to coastal inundation but effect varies with emission scenario and geography. Communications Earth & Environment, 5, 759. https://doi.org/10.1038/s43247-024-01854-1",
+        "doi": "10.1038/s43247-024-01854-1",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      }
+    ],
     "text": "Case study: Seenigama (Seenigama, Southern Province, Sri Lanka)\nSection: CASE STUDY OVERVIEW\n\n**Case Name and Location:** Post-Tsunami Relocation/Resettlement — Southern Sri Lanka, with primary research sites in Galle District (Akmeemana Division), Hambantota District (New Town), Matara District (Kananke Watta/Talalla), and Seenigama, Southern Province, Sri Lanka.\n\n**Hazard(s):** The 2004 Indian Ocean Tsunami (primary trigger). The buffer zone regulation was also framed as a protection against future tsunamis and other coastal hazards (Fernando, 2018; Birkmann et al., 2026).\n\n**Type of Retreat:** Post-disaster community relocation and resettlement. The government re-imposed coastal buffer zone regulations under the Coast Conservation Act No. 57 of 1981, prohibiting reconstruction of residential structures within 100 m of the sea. This compelled tens of thousands of affected households to relocate permanently to new settlements built inland. Two main program types operated simultaneously: a donor-driven (DD) approach, in which international NGOs and donors constructed houses on government-acquired land and transferred them to beneficiaries; and an owner-driven (OD) approach, in which government cash grants were provided to households with land outside the buffer zone to rebuild independently (Brookings-CMRD, 2015).\n\n**Scale:** Nationally, the buffer zone regulation forced more than 70,000 tsunami-affected families to relocate (Fernando, 2018). National resettlement plans called for approximately 43,000 new houses on 387 sites outside the buffer zone across Sri Lanka (Ahmed & McEvoy, 2014). In the Galle District area, relocated settlements were situated approximately 8–15 km from the city center (Birkmann et al., 2026). Four documented settlements in Akmeemana Division (Salzburg: 79 units; Green Village: 90 units; China Charity Village: 135 units; Tea Garden: 92 units) totalled 396 housing units (Fernando, 2018, Table 1). Hambantota New Town comprised approximately 2,330 houses, the largest single post-tsunami resettlement project in Sri Lanka (Ahmed & McEvoy, 2014). The Kananke Watta sub-case in Matara District involved 18 households (Brookings-CMRD, 2015). The tsunami killed approximately 35,322 people in Sri Lanka and displaced approximately 480,000–516,150 individuals nationally (Brookings-CMRD, 2015).\n\n**Key Actors:** Sri Lankan national government, including the Task Force for Rebuilding the Nation (TAFREN, established in February 2005/2006); the Tsunami Housing Reconstruction Unit (THRU) within the Urban Development Authority (UDA); the Ministry of Urban Development and Housing; and the Coast Conservation Department. At the local level, Divisional Secretariats and Grama Niladhari (village-level administrative officers) played central coordination roles. Key donors and NGOs included the International Federation of Red Cross and Red Crescent Societies (IFRC), USAID, Save the Children, Farms Lanka, Sewa Lanka, and the Institute for Development and Community Strengths (INDECOS). Academic researchers from the University of Colombo (Fernando), the University of Stuttgart (Birkmann), RMIT University (Ahmed & McEvoy), and the University of Moratuwa (Siriwardhana et al.) provided post-hoc evaluation (Fernando, 2018; Birkmann et al., 2026; Ahmed & McEvoy, 2014; Siriwardhana et al., 2021).\n\n**Timeline:** The tsunami struck on 26 December 2004. Emergency evacuation and transitional shelter occurred immediately after, with families housed at temples, schools, and transitional camps in early 2005. The coastal buffer zone regulation was re-imposed in 2005 (Birkmann et al., 2026; Fernando, 2018). Buffer zone distances were subsequently modified — reduced from 100 m to 45 m in the Galle city area (Fernando, 2018) and, in the Kananke Watta/Matara area, from an initial 100–200 m to 35–55 m in early 2006 (Brookings-CMRD, 2015). Permanent relocation settlements were constructed in the years following the tsunami, with timing varying by site; the Kananke Watta families moved into permanent houses in June 2006 (Brookings-CMRD, 2015). Household surveys were conducted in the Galle area in 2005/2006 and 2007/2008, and again in 2024/2025 (Birkmann et al., 2026). The case is best described as in a long-term post-relocation phase, though systematic monitoring remains limited (Birkmann et al., 2026).\n\n**Key Outcomes:** The outcomes are deeply mixed. About 58% of households interviewed in relocation sites in 2024/2025 considered their living conditions better compared to the first year after relocation; however, approximately half still reported continuous challenges in maintaining a livelihood (Birkmann et al., 2026). Some settlements had fewer than 40% of original beneficiaries remaining, with houses having been sold, rented, or vacated (Fernando, 2018). Key persistent problems include: distance from livelihoods (especially for fishing families); inadequate infrastructure and housing quality; legal title delays — households only received land title deeds after 10 years in the relocation site (Birkmann et al., 2026); erosion of community cohesion and conflicts with host communities (Fernando, 2018; Siriwardhana et al., 2021); and livelihood disruption. In the 2024/2025 survey, approximately 70% of households in the coastal zone considered the buffer zone regulation an inappropriate measure, compared to approximately 80% who viewed it as appropriate in 2005/2006 (Birkmann et al., 2026). Physical infrastructure has improved over time, particularly access to piped water and electricity, but long-term monitoring and institutional follow-up have been limited (Birkmann et al., 2026; Fernando, 2018).\n\n---\n\n### Narrative Summary\n\nOn 26 December 2004, a magnitude 9.3 earthquake in the Indian Ocean generated a tsunami that killed approximately 35,322 people in Sri Lanka and displaced an estimated 480,000–516,150 individuals (Brookings-CMRD, 2015). The southern coastal belt was among the most severely affected regions. In the immediate aftermath, the Sri Lankan government re-imposed an existing coastal buffer zone regulation under the Coast Conservation Act No. 57 of 1981, prohibiting reconstruction of residential buildings within 100 metres of the sea, and initiated resettlement programs to move affected families inland. This produced one of the largest post-disaster relocation programs in recent history, forcing more than 70,000 families to relocate (Fernando, 2018). National plans called for approximately 43,000 new houses on 387 sites outside the buffer zone (Ahmed & McEvoy, 2014). A national coordination body, TAFREN, was established in early 2005/2006 to coordinate donor assistance, while the Tsunami Housing Reconstruction Unit (THRU) within the Urban Development Authority oversaw two permanent housing programs: a donor-driven scheme for those displaced from the buffer zone, and an owner-driven scheme for those with land outside the zone (Birkmann et al., 2026). International donors — including the IFRC, USAID, and many other NGOs — funded and constructed new settlements on government-acquired land, primarily in rural areas far from the original coastal communities.\n\nThe relocation process was largely top-down and reactive. Affected families had minimal involvement in decisions about where they would be moved or how houses would be designed. Beneficiary selection was handled through local officials, including Grama Niladhari, and the sources report concerns about transparency and favoritism (Brookings-CMRD, 2015). The government's preference for state land when acquiring resettlement sites — driven by high private land prices — contributed to many relocation settlements being located in rural areas approximately 8–15 km from the Galle city centre (Birkmann et al., 2026). Housing quality was frequently poor, monitoring was inadequate, and neither donors nor government had a long-term adaptation plan for relocated communities (Fernando, 2018). The Kananke Watta sub-case in Matara District — where 18 families were relocated 1.5–2 km inland, funded entirely by the IFRC — illustrates the broader patterns: donor-driven construction on poorly assessed land, limited community involvement, and serious quality deficiencies (Brookings-CMRD, 2015).\n\nTwenty years on, the picture is uneven. Physical infrastructure in relocation sites has improved, particularly in terms of access to piped water and electricity (Birkmann et al., 2026). Social integration with host communities has also increased, though it took many years (Birkmann et al., 2026; Siriwardhana et al., 2021). However, a substantial share of households continues to face poverty, inadequate transportation, and limited access to employment and services. Many original beneficiaries have sold or vacated their donated homes, and the buffer zone has been progressively reduced and is now widely viewed as inappropriate by coastal residents (Birkmann et al., 2026). The case offers important lessons about the long-term complexity of post-disaster relocation: that relocation is not a one-time event but a decades-long process requiring sustained institutional support, meaningful community participation, and adaptive management — none of which were sufficiently provided in this case.\n\n---"
   },
   {
     "case_id": "CS29",
-    "chunk_index": 2,
+    "chunk_index": 1,
     "section": "coding_questions",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
     "source": "Pipeline Ver2 — Seenigama",
+    "source_links": [
+      {
+        "title": "DOI 10.1108/IJDRBE-08-2012-0028",
+        "doi": "10.1108/IJDRBE-08-2012-0028",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2020.315193",
+        "doi": "10.1016/j.ijdrr.2020.315193",
+        "url": "https://doi.org/10.1016/j.ijdrr.2020.315193"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2025.007988",
+        "doi": "10.1016/j.ijdrr.2025.007988",
+        "url": "https://doi.org/10.1016/j.ijdrr.2025.007988"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "Wickramaarachchi, N., & Lakshani, K.G.R. (2026). Factors influencing the refusal of post-disaster relocation: insights from resettled individuals and professionals in Sri Lanka. International Journal of Disaster Resilience in the Built Environment. https://doi.org/10.1108/ijdrbe-02-2025-0028",
+        "doi": "10.1108/ijdrbe-02-2025-0028",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Goswami, S., Patil, T., & Raju, E. (2026). A scoping review of risk creation in disaster-induced resettlement in the urban. Cities, 162, 106707. https://doi.org/10.1016/j.cities.2025.106707",
+        "doi": "10.1016/j.cities.2025.106707",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Best, K., Niemeier, D.A., & Hadden, J. (2025). When boundaries are blurred: infrastructure needs in support of the climate displaced. Frontiers in Climate, 7, 1584877. https://doi.org/10.3389/fclim.2025.1584877",
+        "doi": "10.3389/fclim.2025.1584877",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Bower, E., Epifantseva, S., Schmitter, S., Wong-Parodi, G., Kulp, S., & Field, C.B. (2024). Planned relocation may reduce communities' future exposure to coastal inundation but effect varies with emission scenario and geography. Communications Earth & Environment, 5, 759. https://doi.org/10.1038/s43247-024-01854-1",
+        "doi": "10.1038/s43247-024-01854-1",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      }
+    ],
     "text": "Case study: Seenigama (Seenigama, Southern Province, Sri Lanka)\nSection: CODING QUESTIONS\n\n---\n\n### Is there any evidence of a proactive or reactive trigger in the MR decision process? (Reactive/Proactive)\n\n**Answer:** Reactive.\n\n**Narrative:** The relocation decision in this case was entirely reactive. The 2004 Indian Ocean Tsunami caused catastrophic destruction to coastal communities in Sri Lanka, killing approximately 35,322 people and displacing between 480,000 and 516,150 individuals (Brookings-CMRD, 2015). In the immediate aftermath, the Sri Lankan government re-imposed the coastal buffer zone under the Coast Conservation Act No. 57 of 1981 and initiated resettlement programs to move affected families away from the coast. Birkmann et al. (2026) describe the post-tsunami interventions — including buffer zones and relocation — as disaster response measures, not pre-planned anticipatory adaptation strategies. Fernando (2018) similarly characterises relocation as a post-disaster policy decision made under emergency conditions with insufficient planning. Brookings-CMRD (2015) explicitly notes that the displaced families had little involvement in the decision-making process, reflecting the rushed, reactive nature of implementation.\n\nThere is no evidence in the reviewed sources that the relocation had been planned in advance or was framed as a proactive climate adaptation measure at the time of implementation. Birkmann et al. (2026) note that within the broader disaster risk reduction literature there is increasing recognition that reactive approaches are insufficient and that proactive, anticipatory relocation is preferable; the Sri Lanka case is discussed as an example informing that argument, but the case itself remains firmly reactive.\n\n**Coding selected:** Reactive. The single hazard event — the 2004 tsunami — triggered the response.\n\n---\n\n### Date, Number of households affected, Number of population affected, Total funding\n\n**Date:**\n- Tsunami struck: 26 December 2004.\n- Buffer zone regulation re-imposed: 2005 (Fernando, 2018; Birkmann et al., 2026).\n- Buffer zone reduced from 100 m: to 45 m in the Galle city area (Fernando, 2018); to 35–55 m in early 2006 in the Matara/Kananke Watta context (Brookings-CMRD, 2015); Birkmann et al. (2026) further note that in some places the buffer was reduced to 45 m by 2025 and that houses have been reconstructed as close as 10–15 m from the sea.\n- Kananke Watta families moved to permanent homes: June 2006 (Brookings-CMRD, 2015).\n- Household surveys: 2005/2006, 2007/2008, and 2024/2025 (Birkmann et al., 2026).\n\n**Households affected:**\n- Nationally: more than 70,000 tsunami-affected families required to relocate under the buffer zone regulation (Fernando, 2018).\n- National plan: approximately 43,000 new houses on 387 sites outside the buffer zone (Ahmed & McEvoy, 2014).\n- Hambantota New Town: 2,330 beneficiary households (Ahmed & McEvoy, 2014).\n- Akmeemana Division (four settlements): 396 total housing units — Salzburg 79, Green Village 90, China Charity Village 135, Tea Garden 92 (Fernando, 2018, Table 1).\n- Kananke Watta sub-case: 18 households (Brookings-CMRD, 2015).\n- Seenigama case study sites: 84 and 50 beneficiary households in two schemes respectively (Ahmed & McEvoy, 2014).\n\n**Population affected:**\n- Tsunami deaths in Sri Lanka: approximately 35,322 (Birkmann et al., 2026; Brookings-CMRD, 2015).\n- Total displaced nationally: approximately 480,000–516,150 (Brookings-CMRD, 2015).\n- Kananke Watta household composition is detailed in Brookings-CMRD (2015, Table 1), but a precise total population figure for that site is not stated in the sources.\n\n**Total funding:**\n- No single aggregate funding figure is provided in the reviewed sources.\n- The Kananke Watta project was fully funded by the IFRC (Brookings-CMRD, 2015).\n- Under the owner-driven program, the national government provided grants: LKR 100,000 for partially damaged houses outside the buffer zone, LKR 250,000 for partially damaged houses inside the buffer zone, and LKR 500,000 for fully damaged houses (Birkmann et al., 2026; Brookings-CMRD, 2015). Government also provided low-interest housing loans through People's Bank and Bank of Ceylon, with 20-year repayment terms and a 24-month grace period (Birkmann et al., 2026).\n- Hambantota New Town was implemented by \"various international and local NGOs, and philanthropic, political and religious organisations\" (Ahmed & McEvoy, 2014, p. 55).\n- Physical losses from the tsunami were estimated at approximately USD 1 billion (4.5% of GDP) (Brookings-CMRD, 2015).\n- No precise relocation-specific total funding figure is documented in the reviewed sources.\n\n---\n\n### What is the occurrence of the hazard(s) considered in the MR decision process? (Single Hazard/Multiple Hazards)\n\n**Answer:** Multiple Hazards.\n\n**Narrative:** The immediate trigger was the single catastrophic event of the 2004 Indian Ocean Tsunami. However, the buffer zone regulation was re-imposed \"with the intention of safeguarding people from future tsunamis or other coastal hazards\" (Fernando, 2018, p. 48). Birkmann et al. (2026) document that 20 years after the disaster, households living in the coastal zone reported increasing coastal erosion (nearly 60% stated coastal erosion is increasing), more damage from coastal hazards (55%), and concerns about sea level rise; approximately 64% stated they believe climate change is real and connected to the coastal hazards observed. The Coast Conservation Act under which the buffer zone operates was framed around a range of coastal hazards. While the precipitating event was a single tsunami, the policy framework encompassed multiple coastal hazards, supporting the Multiple Hazards classification.\n\n**Coding selected:** Multiple Hazards — tsunami as the primary trigger, plus coastal flooding/erosion as secondary and ongoing hazards recognized in the policy framing and by residents in long-term follow-up.\n\n---\n\n### What is the origin of the hazards considered in the MR decision process? (Technological Hazard/Natural Hazard)\n\n**Answer:** Natural Hazard.\n\n**Narrative:** The 2004 Indian Ocean Tsunami was triggered by a naturally occurring seismic earthquake. The coastal hazards cited in the policy framework — tsunami, coastal flooding, coastal erosion, sea level rise — are all naturally occurring. Birkmann et al. (2026) note climate change as an amplifying factor for coastal hazards over the 20-year period, but the hazards themselves remain natural in origin. There is no evidence of technological or industrial hazards in this case.\n\n**Coding selected:** Natural Hazard.\n\n---\n\n### Was this hazard considered in the MR decision process?\n\n**Answer:** Tsunami (primary); Coastal Flooding/Erosion (secondary, recognized in policy framing and over time).\n\n**Narrative:** The primary hazard driving the relocation decision was the 2004 Indian Ocean Tsunami. The buffer zone was re-imposed specifically to protect communities from future tsunamis and other coastal hazards (Fernando, 2018). In the 2024/2025 survey, approximately 60% of households in the coastal zone reported increasing coastal erosion and greater damage from coastal hazards, and approximately 64% believed climate change was increasing coastal risks (Birkmann et al., 2026). These coastal concerns were not explicitly modelled as separate drivers of the original relocation decision, but were part of the policy framing through the Coast Conservation Act.\n\nRiverine/pluvial flooding, lake flooding/erosion, wildfire, volcano, land subsidence, landslide/debris flow, earthquake, and hurricane are not identified as relevant hazards in the sources for this case. (Note: Siriwardhana et al. (2021) also addresses landslide-induced relocation as a separate case study in Sri Lanka, but the CS29 focus is exclusively on tsunami/coastal hazards.)\n\n**Coding selected:** Tsunami; Coastal Flooding/Erosion (secondary, in policy framing and long-term context).\n\n---\n\n### What was the geographic scale of the MR project?\n\n**Answer:** Entire community; Neighbourhood; Individual Homes.\n\n**Narrative:** The relocation operated at multiple scales simultaneously. At the national level, the buffer zone policy effectively applied to entire coastal communities across many districts — more than 70,000 families (Fernando, 2018). At the district and divisional level, large neighbourhood-scale resettlement sites were established: Hambantota New Town (2,330 houses; Ahmed & McEvoy, 2014) and the four Akmeemana settlements (396 units; Fernando, 2018, Table 1). At the micro level, Kananke Watta involved 18 individual households (Brookings-CMRD, 2015).\n\nThe dominant operational unit was the construction of new neighbourhood-scale resettlement sites to house groups of affected households; selection and allocation were ultimately made at the individual household level. \"Entire community\" applies to the policy-wide scope; \"Neighbourhood\" applies to the new settlement sites constructed; \"Individual homes\" applies to the household-level allocation process.\n\n**Coding selected:** Entire community; Neighbourhood; Individual Homes (multiple apply at different scales of the program).\n\n---\n\n### Who or what was retreated?\n\n**Answer:** Individuals; Groups/Neighbourhoods; Communities.\n\n**Narrative:** The primary subjects of relocation were individual households and families living within the coastal buffer zone. In practice, groups of former neighbours were frequently relocated together to the same resettlement sites; at Kananke Watta, 16 of the 18 families had been neighbours before the tsunami (Brookings-CMRD, 2015). At the largest scale, entire coastal communities were systematically removed from the buffer zone and relocated to new inland settlements (Fernando, 2018; Birkmann et al., 2026). Individual household eligibility determined who qualified, but site allocation typically involved groups of affected households moved together.\n\nCritical infrastructure and hazard protection structures are not described as subjects of retreat in the reviewed sources.\n\n**Coding selected:** Individuals; Groups/Neighbourhoods; Communities.\n\n---\n\n### Other notes\n\n- The case is located in the Global South (Sri Lanka — a lower-middle-income country at the time).\n- Multiple sub-locations are documented across the reviewed sources: Kananke Watta/Matara (Brookings-CMRD, 2015); Akmeemana/Galle (Fernando, 2018; Birkmann et al., 2026); Hambantota New Town (Ahmed & McEvoy, 2014); Seenigama (Ahmed & McEvoy, 2014); and Sinhapura/Sinigama tsunami sites (Siriwardhana et al., 2021). The Chennai, India case discussed in Ahmed & McEvoy (2014) is outside the CS29 geographical scope.\n- The case involves a mix of government-led and donor-led components in a complex multi-actor environment.\n\n---"
   },
   {
     "case_id": "CS29",
-    "chunk_index": 3,
+    "chunk_index": 2,
     "section": "institutional_environment",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
     "source": "Pipeline Ver2 — Seenigama",
+    "source_links": [
+      {
+        "title": "DOI 10.1108/IJDRBE-08-2012-0028",
+        "doi": "10.1108/IJDRBE-08-2012-0028",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2020.315193",
+        "doi": "10.1016/j.ijdrr.2020.315193",
+        "url": "https://doi.org/10.1016/j.ijdrr.2020.315193"
+      },
+      {
+        "title": "DOI 10.1016/j.ijdrr.2025.007988",
+        "doi": "10.1016/j.ijdrr.2025.007988",
+        "url": "https://doi.org/10.1016/j.ijdrr.2025.007988"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/IJDRBE-08-2012-0028"
+      },
+      {
+        "title": "Wickramaarachchi, N., & Lakshani, K.G.R. (2026). Factors influencing the refusal of post-disaster relocation: insights from resettled individuals and professionals in Sri Lanka. International Journal of Disaster Resilience in the Built Environment. https://doi.org/10.1108/ijdrbe-02-2025-0028",
+        "doi": "10.1108/ijdrbe-02-2025-0028",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1108/ijdrbe-02-2025-0028"
+      },
+      {
+        "title": "Goswami, S., Patil, T., & Raju, E. (2026). A scoping review of risk creation in disaster-induced resettlement in the urban. Cities, 162, 106707. https://doi.org/10.1016/j.cities.2025.106707",
+        "doi": "10.1016/j.cities.2025.106707",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1016/j.cities.2025.106707"
+      },
+      {
+        "title": "Best, K., Niemeier, D.A., & Hadden, J. (2025). When boundaries are blurred: infrastructure needs in support of the climate displaced. Frontiers in Climate, 7, 1584877. https://doi.org/10.3389/fclim.2025.1584877",
+        "doi": "10.3389/fclim.2025.1584877",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.3389/fclim.2025.1584877"
+      },
+      {
+        "title": "Bower, E., Epifantseva, S., Schmitter, S., Wong-Parodi, G., Kulp, S., & Field, C.B. (2024). Planned relocation may reduce communities' future exposure to coastal inundation but effect varies with emission scenario and geography. Communications Earth & Environment, 5, 759. https://doi.org/10.1038/s43247-024-01854-1",
+        "doi": "10.1038/s43247-024-01854-1",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      },
+      {
+        "title": "Location: Seenigama, Southern Province, Sri Lanka",
+        "url": "https://doi.org/10.1038/s43247-024-01854-1"
+      }
+    ],
     "text": "Case study: Seenigama (Seenigama, Southern Province, Sri Lanka)\nSection: INSTITUTIONAL ENVIRONMENT\n\n---\n\n### What is the focus or scope of the MR project?\n\n**Answer:** Community buyout/retreat; Other acquisition tools.\n\n**Narrative:** The relocation was not a buyout in the conventional sense (i.e., purchase of existing private properties from affected homeowners at market value). Instead, the process involved two distinct mechanisms:\n\n1. **Donor-driven (DD) housing:** The government acquired new land for resettlement, donors funded construction of new housing, and completed houses were assigned to eligible households. Families inside the buffer zone who did not have land elsewhere received a government-provided house in a government-selected location, with no payment for their original property (Brookings-CMRD, 2015; Birkmann et al., 2026). The land acquisition for resettlement sites was through government purchase of available state or private land (e.g., the 1.75-acre plot at Kananke Watta was purchased from a private landowner; Brookings-CMRD, 2015).\n\n2. **Owner-driven (OD) reconstruction:** Households with land outside the buffer zone received government cash grants (LKR 250,000–500,000) to rebuild on their own land (Birkmann et al., 2026; Brookings-CMRD, 2015).\n\nThe Coast Conservation Act's buffer zone prohibition operated as a regulatory tool preventing reconstruction in the hazard zone, compelling departure without a financial buyout of the original property. The process is best described as a collective, top-down relocation/resettlement rather than a conventional individual buyout program.\n\n**Coding selected:** Community buyout/retreat (noted as collective relocation/resettlement rather than a cash property buyout); Other acquisition tools (regulatory buffer zone enforcement and donor-built in-kind housing provision).\n\n---\n\n### What legal constraints or requirements were identified during the MR decision process?\n\n**Answer:** Legal authority over retreat; Relevant regulations/acts; Land acquisition; Title(s) transfer; Land rezoning; Compliance & enforcement; Other.\n\n**Narrative:**\n\n- **Legal authority over retreat / Relevant regulations/acts:** The Coast Conservation Act No. 57 of 1981 was the primary legal framework. It prohibited developmental activity in the coastal zone without a permit from the Director of Coast Conservation, and after the tsunami, a permit could not be issued for residential construction in the buffer zone (Birkmann et al., 2026). The buffer zone was initially set at 100 m in Galle (and 100–200 m in some areas; Brookings-CMRD, 2015). A Revised Tsunami Housing Policy (2006) prepared by the Reconstruction and Development Agency (RADA) set minimum housing standards (Brookings-CMRD, 2015). The UDA issued guidelines for donor-built settlements (Birkmann et al., 2026; Ahmed & McEvoy, 2014).\n\n- **Land acquisition:** The government acquired land for resettlement sites. At Kananke Watta, a 1.75-acre plot was purchased from a private landowner after the Divisional Secretariat identified it as suitable (Brookings-CMRD, 2015). The UDA preferred state land for most relocation sites, as private land was difficult to obtain due to high land prices, which contributed to many sites being located far from the city (Birkmann et al., 2026).\n\n- **Title(s) transfer:** Legal deeds to new properties were intended for beneficiaries but issuance was significantly delayed. Birkmann et al. (2026, p. 16) confirm that relocated households \"only obtained legal ownership of land (deed, land title), after 10 years in the relocation site.\" This created serious legal complications: households who sold their relocation homes before 10 years had no legal title to transfer, resulting in illegal transactions. Fernando (2018) also notes the government's difficulty issuing deeds when beneficiaries had already vacated or sold their donated houses.\n\n- **Land rezoning:** The buffer zone effectively rezoned coastal lands as no-construction areas for residential purposes. Birkmann et al. (2026) document that the buffer zone was continuously modified over the 20 years, being reduced from 100 m to 45 m in Galle city and further in some locations; by 2025, houses had been reconstructed as close as 10–15 m from the sea, raising serious concerns about enforcement by the Coast Conservation Department.\n\n- **Compliance & enforcement:** Enforcement was described as deficient. By 2025, houses were being built as close as 10–15 m from the sea despite the official minimum buffer (Birkmann et al., 2026). Fernando (2018) notes that monitoring of construction quality by the Divisional Secretariat and local councils was also neglected.\n\n- **Other:** The reduction of the buffer zone in early 2006 — from 100–200 m to 35–55 m in the Matara area (Brookings-CMRD, 2015) and to 45 m in the Galle city area (Fernando, 2018) — created a legally anomalous situation in which some families became eligible for both their original land/home (now permissible) and their relocated house, perceived as profoundly unfair by those fully relocated. This is repeatedly identified as a significant source of grievance (Brookings-CMRD, 2015; Fernando, 2018).\n\n**Note on home acquisition:** No evidence supports the coding of formal \"home acquisition\" as a retreat mechanism. Affected households were not paid for their original properties; rather, they were prohibited from rebuilding in the buffer zone and offered a replacement house in a new location. \"Home acquisition\" in the usual buyout sense is not supported and is therefore not coded.\n\n**Coding selected:** Legal authority over retreat; Relevant regulations/acts; Land acquisition; Title(s) transfer; Land rezoning; Compliance & enforcement; Other.\n\n---\n\n### What were the funding sources for the MR project?\n\n**Answer:** Multiple funders — Federal/national government; International aid (donors, NGOs).\n\n**Narrative:**\n\n- **National government:** Provided cash grants under the owner-driven reconstruction program (LKR 100,000–500,000 per household depending on damage classification and buffer zone status); low-interest housing loans through People's Bank and Bank of Ceylon (Birkmann et al., 2026); land acquisition for"
   }
 ]

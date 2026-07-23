@@ -1,6 +1,7 @@
 import sys
 import json
 import re
+import ast
 from pathlib import Path
 import streamlit as st
 
@@ -22,7 +23,9 @@ def _ensure_embedding_index_built():
         chunks = load_all_chunks()
         texts = [c.get("text", _json.dumps(c)) for c in chunks]
         ids = [f"{c.get('case_id', 'unknown')}_{c.get('chunk_index', i)}" for i, c in enumerate(chunks)]
-        metadatas = [{k: str(v) for k, v in c.items() if k != "text"} for c in chunks]
+        from ingest.embed_and_index import build_metadatas
+
+        metadatas = build_metadatas(chunks)
         content_hash = _content_hash(ids, texts, metadatas)
         if (
             pre.get("ids") == ids
@@ -78,6 +81,38 @@ def _clean_excerpt(text: str, max_chars: int = 800) -> str:
     if len(text) > max_chars:
         text = text[:max_chars].rsplit(' ', 1)[0] + ' ...'
     return text
+
+
+def _parse_source_links(raw) -> list[dict]:
+    if not raw:
+        return []
+    if isinstance(raw, list):
+        return [x for x in raw if isinstance(x, dict)]
+    if isinstance(raw, str):
+        for parser in (json.loads, ast.literal_eval):
+            try:
+                parsed = parser(raw)
+            except Exception:
+                continue
+            if isinstance(parsed, list):
+                return [x for x in parsed if isinstance(x, dict)]
+    return []
+
+
+def _render_source_links(raw_links, limit: int = 5) -> None:
+    links = _parse_source_links(raw_links)
+    if not links:
+        return
+    st.markdown("**Paper/source links:**")
+    for link in links[:limit]:
+        title = link.get("title") or link.get("doi") or link.get("url") or "Source"
+        url = link.get("url") or (f"https://doi.org/{link['doi']}" if link.get("doi") else "")
+        if url:
+            st.markdown(f"- [{title}]({url})")
+        else:
+            st.markdown(f"- {title}")
+        if link.get("pdf_url"):
+            st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 
 # ── Build embedding index before any Streamlit calls ──────────────────────────
@@ -308,6 +343,7 @@ with main_col:
                     with st.expander(f"{cid} — {name}, {country}  {cited}"):
                         st.markdown(f"**Section retrieved:** {section}")
                         st.markdown(f"**Source:** {chunk['metadata'].get('source', '')}")
+                        _render_source_links(chunk["metadata"].get("source_links"))
                         excerpt = _clean_excerpt(chunk["text"])
                         if len(excerpt) > 40:
                             st.markdown("**Excerpt:**")

@@ -1,4 +1,6 @@
 import re
+import json
+import ast
 
 
 _OVERVIEW_CONTEXT_CHARS = 1800
@@ -32,6 +34,33 @@ def _compact_overview_text(text: str) -> str:
     return compact
 
 
+def _parse_source_links(raw) -> list[dict]:
+    if not raw:
+        return []
+    if isinstance(raw, list):
+        return [x for x in raw if isinstance(x, dict)]
+    if isinstance(raw, str):
+        for parser in (json.loads, ast.literal_eval):
+            try:
+                parsed = parser(raw)
+            except Exception:
+                continue
+            if isinstance(parsed, list):
+                return [x for x in parsed if isinstance(x, dict)]
+    return []
+
+
+def _format_source_links(metadata: dict, limit: int = 3) -> str:
+    links = _parse_source_links(metadata.get("source_links"))
+    pieces = []
+    for link in links[:limit]:
+        label = link.get("title") or link.get("doi") or "source"
+        url = link.get("url") or (f"https://doi.org/{link['doi']}" if link.get("doi") else "")
+        if url:
+            pieces.append(f"{label}: {url}")
+    return "; ".join(pieces)
+
+
 def build_prompt(query: str, retrieved_chunks: list[dict], questionnaire_answers: dict | None = None) -> str:
     is_overview = any(
         kw in query.lower()
@@ -41,12 +70,15 @@ def build_prompt(query: str, retrieved_chunks: list[dict], questionnaire_answers
     if is_overview:
         context_blocks = "\n\n".join(
             f"[Source: {c['metadata'].get('source', 'unknown')} | Case: {c['metadata'].get('case_id', '?')}]\n"
+            f"Source links: {_format_source_links(c['metadata'])}\n"
             f"{_compact_overview_text(c['text'])}"
             for c in retrieved_chunks
         )
     else:
         context_blocks = "\n\n".join(
-            f"[Source: {c['metadata'].get('source', 'unknown')} | Case: {c['metadata'].get('case_id', '?')}]\n{c['text']}"
+            f"[Source: {c['metadata'].get('source', 'unknown')} | Case: {c['metadata'].get('case_id', '?')}]\n"
+            f"Source links: {_format_source_links(c['metadata'])}\n"
+            f"{c['text']}"
             for c in retrieved_chunks
         )
 
@@ -71,7 +103,7 @@ def build_prompt(query: str, retrieved_chunks: list[dict], questionnaire_answers
             "You are a research assistant helping municipal planners and community leaders understand managed retreat. "
             "Answer in plain, formal language grounded strictly in the case study evidence below. "
             "Do not use informal metaphors or colloquial expressions. "
-            "Cite specific case studies (e.g. CS5, CS20) and name sources where possible. "
+            "Cite specific case studies (e.g. CS5, CS20), name sources where possible, and include DOI/source links when they are supplied in the context. "
             "Structure your answer with clear numbered sections if the question has multiple dimensions."
         )
 

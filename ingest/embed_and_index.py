@@ -41,6 +41,19 @@ def _content_hash(ids: list[str], texts: list[str], metadatas: list[dict]) -> st
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+def _metadata_value(value):
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return str(value)
+
+
+def build_metadatas(chunks: list[dict]) -> list[dict]:
+    return [
+        {k: _metadata_value(v) for k, v in c.items() if k != "text"}
+        for c in chunks
+    ]
+
+
 def embed_and_index():
     chunks = load_all_chunks()
     if not chunks:
@@ -49,7 +62,7 @@ def embed_and_index():
 
     texts = [c.get("text", json.dumps(c)) for c in chunks]
     ids = [f"{c.get('case_id', 'unknown')}_{c.get('chunk_index', i)}" for i, c in enumerate(chunks)]
-    metadatas = [{k: str(v) for k, v in c.items() if k != "text"} for c in chunks]
+    metadatas = build_metadatas(chunks)
     content_hash = _content_hash(ids, texts, metadatas)
 
     # Use precomputed embeddings only if chunk IDs and chunk contents match.

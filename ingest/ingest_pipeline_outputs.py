@@ -22,11 +22,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_RAW = REPO_ROOT / "data" / "raw"
 EXTRACTED_DIR = REPO_ROOT / "data" / "extracted"
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from ingest.source_links import load_source_links
 
 # ---------------------------------------------------------------------------
 # Section name → retrieval section key
@@ -45,6 +51,9 @@ SECTION_MAP: list[tuple[re.Pattern, str]] = [
     (re.compile(r"cross.cutting\s+themes", re.I),                     "cross_cutting_themes"),
     (re.compile(r"additional\s+notes\s+and\s+lessons", re.I),         "additional_notes"),
     (re.compile(r"fields\s+with\s+limited\s+or\s+no\s+evidence", re.I), "evidence_gaps"),
+]
+SKIP_SECTION_PATTERNS = [
+    re.compile(r"pre[-\s]*(flight|writing).*audit", re.I),
 ]
 
 # Split ONLY on ## section headings, not ### question headings.
@@ -102,9 +111,12 @@ MIN_BODY_CHARS = 150  # Skip chunks with too little actual content
 
 def _build_chunks(case_id: str, meta: dict, ver2_text: str) -> list[dict]:
     sections = _split_into_sections(ver2_text)
+    source_links = load_source_links(case_id)
     chunks = []
     idx = 0
     for heading, body in sections:
+        if any(pattern.search(heading) for pattern in SKIP_SECTION_PATTERNS):
+            continue
         # Skip near-empty sections (just a title with no real content)
         if len(body.strip()) < MIN_BODY_CHARS:
             continue
@@ -123,6 +135,7 @@ def _build_chunks(case_id: str, meta: dict, ver2_text: str) -> list[dict]:
             "location": meta.get("location", ""),
             "country": meta.get("country", ""),
             "source": f"Pipeline Ver2 — {meta.get('name', case_id)}",
+            "source_links": source_links,
             "text": full_text,
         })
         idx += 1
