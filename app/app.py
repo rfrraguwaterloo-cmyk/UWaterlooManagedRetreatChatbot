@@ -433,10 +433,10 @@ if not st.session_state.disclaimer_accepted:
         line-height: 1.6;
         width: 100%;
     }
-    /* Push the Streamlit button to sit right below the box, right-aligned */
+    /* Push the Streamlit button to sit right below the box, centered */
     .disclaimer-wrap + div [data-testid="stButton"] {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         max-width: 720px;
         margin: 0.75rem auto 0 auto;
     }
