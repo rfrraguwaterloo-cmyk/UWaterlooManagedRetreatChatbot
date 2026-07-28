@@ -119,6 +119,75 @@ def _render_source_links(raw_links, limit: int = 5) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 
+def _render_navigation() -> None:
+    st.markdown(
+        """
+        <style>
+        .rfr-nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: -0.75rem 0 1.5rem 0;
+            padding: 0.75rem 0;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #dfe4ea;
+            backdrop-filter: blur(8px);
+        }
+        .rfr-nav__brand {
+            font-weight: 700;
+            color: #17324d;
+            white-space: nowrap;
+        }
+        .rfr-nav__links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.35rem;
+        }
+        .rfr-nav__links a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 2rem;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .rfr-nav__links a:hover {
+            background: #edf3f7;
+            color: #17324d;
+            text-decoration: none;
+        }
+        @media (max-width: 720px) {
+            .rfr-nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .rfr-nav__links {
+                justify-content: flex-start;
+            }
+        }
+        </style>
+        <nav class="rfr-nav" aria-label="Primary navigation">
+            <div class="rfr-nav__brand">RFR Knowledge Platform</div>
+            <div class="rfr-nav__links">
+                <a href="#ask">Ask</a>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#previous-responses">Previous Responses</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def _case_sort_key(case_id: str) -> int:
     m = re.search(r"\d+", case_id or "")
     return int(m.group()) if m else 10_000
@@ -399,8 +468,11 @@ if not st.session_state.disclaimer_accepted:
             st.rerun()
     st.stop()
 
+_render_navigation()
+
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
+    st.markdown('<span id="about"></span>', unsafe_allow_html=True)
     st.header("About You & Your Community")
     st.markdown(
         """
@@ -447,6 +519,7 @@ with main_col:
     st.title("AI-Assisted Knowledge Platform for Managed Retreat")
     st.caption("Powered by RFR research — answers grounded in real managed retreat case studies from around the world.")
 
+    st.markdown('<span id="ask"></span>', unsafe_allow_html=True)
     st.subheader("Ask a question")
     st.markdown(
         "Examples: *What funding models have worked for coastal buyout programs?* · "
@@ -552,6 +625,7 @@ with main_col:
 
             if retrieved_cs:
                 st.markdown("---")
+                st.markdown('<span id="case-studies"></span>', unsafe_allow_html=True)
                 st.markdown("### Case Studies Used in This Answer")
                 st.caption(
                     "These are the case studies whose extracted content was retrieved "
@@ -578,6 +652,7 @@ with main_col:
 
 # ── History panel (right column) ──────────────────────────────────────────────
 with history_col:
+    st.markdown('<span id="previous-responses"></span>', unsafe_allow_html=True)
     st.subheader("Previous Responses")
 
     if not st.session_state.history:
