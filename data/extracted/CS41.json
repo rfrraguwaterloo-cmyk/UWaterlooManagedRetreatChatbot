@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Charlotte, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Charlotte",
     "source_links": [
       {
@@ -26,6 +29,9 @@
     "section": "coding_questions",
     "location": "Charlotte, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Charlotte",
     "source_links": [
       {
@@ -47,6 +53,9 @@
     "section": "institutional_environment",
     "location": "Charlotte, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Charlotte",
     "source_links": [
       {
@@ -68,6 +77,9 @@
     "section": "planning_processes",
     "location": "Charlotte, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Charlotte",
     "source_links": [
       {

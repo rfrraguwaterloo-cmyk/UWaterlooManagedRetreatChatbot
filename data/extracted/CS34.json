@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "San Antonio, Texas",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Texas",
     "source": "Pipeline Ver2 — San Antonio",
     "source_links": [
       {
@@ -25,6 +28,9 @@
     "section": "coding_questions",
     "location": "San Antonio, Texas",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Texas",
     "source": "Pipeline Ver2 — San Antonio",
     "source_links": [
       {
@@ -45,6 +51,9 @@
     "section": "institutional_environment",
     "location": "San Antonio, Texas",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Texas",
     "source": "Pipeline Ver2 — San Antonio",
     "source_links": [
       {
@@ -65,6 +74,9 @@
     "section": "planning_processes",
     "location": "San Antonio, Texas",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Texas",
     "source": "Pipeline Ver2 — San Antonio",
     "source_links": [
       {

@@ -8,6 +8,7 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from rag.pipeline import run_pipeline
+from ingest.geo_metadata import geographic_metadata, normalize_country
 sys.path.insert(0, str(Path(__file__).parent))
 from sheets_logger import log_query
 
@@ -116,6 +117,139 @@ def _render_source_links(raw_links, limit: int = 5) -> None:
             st.markdown(f"- {title}")
         if link.get("pdf_url"):
             st.markdown(f"  - [PDF]({link['pdf_url']})")
+
+
+def _case_sort_key(case_id: str) -> int:
+    m = re.search(r"\d+", case_id or "")
+    return int(m.group()) if m else 10_000
+
+
+def _indexed_case_records() -> list[dict]:
+    extracted_dir = Path("data/extracted")
+    records = []
+    for f in sorted(extracted_dir.glob("CS*.json"), key=lambda p: _case_sort_key(p.stem)):
+        try:
+            chunks = json.loads(f.read_text())
+        except Exception:
+            continue
+        if not chunks:
+            continue
+
+        first = chunks[0]
+        cid = first.get("case_id", f.stem)
+        location = first.get("location", "")
+        raw_country = first.get("country", "")
+        geo = geographic_metadata(location, raw_country)
+        records.append({
+            "case_id": cid,
+            "name": load_case_meta().get(cid, {}).get("name", cid),
+            "location": location,
+            "country": normalize_country(raw_country),
+            "continent": first.get("continent") or geo["continent"],
+            "admin_area": first.get("admin_area") or geo["admin_area"],
+        })
+    return records
+
+
+def _metadata_query_kind(query: str) -> str | None:
+    q = query.lower()
+    mentions_geo = re.search(
+        r"\b(continent|country|countries|region|area|province|state|location|europe|asia|africa|north america|south america|oceania)\b",
+        q,
+    )
+    mentions_cases = re.search(r"\bcase stud(?:y|ies)\b|\bcases\b", q)
+    asks_counts = re.search(r"\b(count|counts|frequency|frequencies|breakdown|how many|number of|table)\b", q)
+    asks_list = re.search(r"\b(list|show|which|what)\b", q)
+    asks_summarize = re.search(r"\b(summarize|summary|summaries)\b", q)
+
+    if mentions_cases and asks_counts and mentions_geo:
+        return "geo_counts"
+    if mentions_cases and asks_summarize and mentions_geo:
+        return "geo_summary"
+    if mentions_cases and asks_list and mentions_geo:
+        return "geo_list"
+    return None
+
+
+def _markdown_table(headers: list[str], rows: list[list[str | int]]) -> str:
+    header = "| " + " | ".join(headers) + " |"
+    divider = "| " + " | ".join("---:" if h.lower() == "count" else "---" for h in headers) + " |"
+    body = ["| " + " | ".join(str(cell) for cell in row) + " |" for row in rows]
+    return "\n".join([header, divider, *body])
+
+
+def _frequency_rows(records: list[dict], field: str) -> list[list[str | int]]:
+    counts = {}
+    for record in records:
+        value = record.get(field) or "Unknown"
+        counts[value] = counts.get(value, 0) + 1
+    return [[value, count] for value, count in sorted(counts.items(), key=lambda item: (-item[1], item[0]))]
+
+
+def _requested_geo_value(query: str, records: list[dict]) -> tuple[str, str] | None:
+    q = query.lower()
+    fields = ("continent", "country", "admin_area")
+    for field in fields:
+        values = sorted({r.get(field, "") for r in records if r.get(field)}, key=len, reverse=True)
+        for value in values:
+            if value and value.lower() in q:
+                return field, value
+    return None
+
+
+def _metadata_answer_markdown(query: str) -> str | None:
+    kind = _metadata_query_kind(query)
+    if not kind:
+        return None
+
+    records = _indexed_case_records()
+    if not records:
+        return "No indexed case studies were found."
+
+    q = query.lower()
+    wants_only_tables = "only include" in q and "table" in q
+
+    if kind == "geo_counts":
+        tables = []
+        if "continent" in q or "region" in q or "area" in q or "country" not in q:
+            tables.append(_markdown_table(["Continent", "Count"], _frequency_rows(records, "continent")))
+        if "country" in q or "countries" in q or "region" in q or "area" in q:
+            tables.append(_markdown_table(["Country", "Count"], _frequency_rows(records, "country")))
+        if "province" in q or "state" in q:
+            rows = [row for row in _frequency_rows(records, "admin_area") if row[0] != "Unknown"]
+            tables.append(_markdown_table(["State/Province/Area", "Count"], rows))
+        return "\n\n".join(tables)
+
+    requested = _requested_geo_value(query, records)
+    filtered = records
+    label = ""
+    if requested:
+        field, value = requested
+        filtered = [record for record in records if record.get(field) == value]
+        label = value
+
+    if kind == "geo_summary":
+        outside_count = len(records) - len(filtered) if requested else 0
+        rows = [
+            [record["case_id"], record["name"], record["location"], record["country"]]
+            for record in filtered
+        ]
+        pieces = []
+        if not wants_only_tables:
+            pieces.append(f"### Case studies in {label}" if label else "### Matching case studies")
+        pieces.append(_markdown_table(["Case ID", "Name", "Location", "Country"], rows))
+        if requested:
+            pieces.append(_markdown_table([f"Outside {label}", "Count"], [[f"Outside {label}", outside_count]]))
+        return "\n\n".join(pieces)
+
+    if kind == "geo_list":
+        rows = [
+            [record["case_id"], record["name"], record["location"], record["country"], record["continent"]]
+            for record in filtered
+        ]
+        return _markdown_table(["Case ID", "Name", "Location", "Country", "Continent"], rows)
+
+    return None
 
 
 def _query_param_is_true(key: str) -> bool:
@@ -329,6 +463,18 @@ with main_col:
     if st.button("Get answer", type="primary"):
         if not query.strip():
             st.warning("Please enter a question.")
+        elif metadata_answer := _metadata_answer_markdown(query):
+            chunks = []
+            st.session_state.history.insert(0, {
+                "query":   query,
+                "answer":  metadata_answer,
+                "chunks":  chunks,
+                "context": dict(answers),
+            })
+            st.session_state.history = st.session_state.history[:MAX_HISTORY_ITEMS]
+            _save_history(conversation_id, st.session_state.history)
+
+            st.markdown(metadata_answer)
         elif re.search(r"\b(what|which|list|show|how many).{0,30}case stud", query, re.I):
             # Meta question — list all case studies directly from extracted JSONs
             cs_meta = load_case_meta()

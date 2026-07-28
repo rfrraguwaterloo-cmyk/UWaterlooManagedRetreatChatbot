@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {
@@ -78,6 +81,9 @@
     "section": "coding_questions",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {
@@ -151,6 +157,9 @@
     "section": "institutional_environment",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {
@@ -224,6 +233,9 @@
     "section": "planning_processes",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {
@@ -297,6 +309,9 @@
     "section": "community_engagement",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {

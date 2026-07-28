@@ -5,6 +5,9 @@
     "section": "is_there_any_evidence_of_a_proactive_or_reactive_trigger_in_the_mr_decision_process",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -41,6 +44,9 @@
     "section": "date_number_of_households_affected_number_of_population_affected_total_funding",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -77,6 +83,9 @@
     "section": "what_is_the_occurrence_of_the_hazard_s_considered_in_the_mr_decision_process_single_hazard_multiple_hazards",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -113,6 +122,9 @@
     "section": "what_is_the_origin_of_the_hazards_considered_in_the_mr_decision_process_technological_hazard_natural_hazard",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -149,6 +161,9 @@
     "section": "was_this_hazard_considered_in_the_mr_decision_process_coastal_flooding_erosion_riverine_pluvial_flooding_lake_flooding_erosion_wildfire_volcano_land_subsidence_landslide_debris_flow_earthquake_tsunami_hurricane_other",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -185,6 +200,9 @@
     "section": "what_was_the_geographic_scale_of_the_mr_project_individual_homes_a_few_streets_neighbourhood_entire_community_sub_watershed_watershed_region",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -221,6 +239,9 @@
     "section": "who_or_what_was_retreated_individuals_groups_neighbourhoods_communities_critical_infrastructure_hazard_protection_structures_industrial_assets",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -257,6 +278,9 @@
     "section": "other_notes",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -293,6 +317,9 @@
     "section": "what_is_the_focus_or_scope_of_the_mr_project_individual_buyout_retreat_community_buyout_retreat_leasebacks_easements_and_buffers_other_acquisition_tools_managed_realignment_of_infrastructure",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -329,6 +356,9 @@
     "section": "what_legal_constraints_or_requirements_were_identified_during_the_mr_decision_process_are_there_any_legal_frameworks_or_regulations_that_guide_the_mr_decision_process_litigation_legal_authority_over_retreat_relevant_regulations_acts_home_acquisition_land_acquisition_title_s_transfer_land_rezoning_retreat_land_development_compliance_enforcement_other",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -365,6 +395,9 @@
     "section": "what_were_the_funding_sources_for_the_mr_project_local_municipal_only_provincial_state_only_federal_only_multiple_funders_international_aid_local_municipal_provincial_state_federal_individual_ngos_lenders_insurance",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -401,6 +434,9 @@
     "section": "what_was_considered_to_maintain_or_improve_the_tax_base_in_the_mr_decision_process_new_industry_new_housing_for_bo_recipients_assisting_bo_recipients_to_find_housing_in_community_redevelopment_of_retreat_lands_livelihoods_supports_other",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -437,6 +473,9 @@
     "section": "what_level_type_of_compensation_mechanisms_were_considered_in_the_mr_decision_process_market_value_tax_value_post_disaster_value_additional_incentives_bonuses_and_top_ups_free_supports_and_services_demolition_moving_advice_etc_other",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -473,6 +512,9 @@
     "section": "what_is_the_time_horizon_considered_in_the_mr_decision_process_pre_retreat_planning_immediate_risks_1_5_years_emerging_risks_5_10_anticipated_future_risks_10_100_post_retreat_follow_up",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -509,6 +551,9 @@
     "section": "what_planning_elements_were_considered_in_the_mr_decision_process_multi_criteria_decision_analysis_mcda_adaptive_management_bottom_up_top_down_multi_sectoral_single_stage_retreat_multi_stage_retreat_degree_of_transparency_public_private_partnerships_coordination_w_other_sectors_and_jurisdictions_bureaucracy_reduction_cost_benefit_analysis_cba_participatory_collaborative",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -545,6 +590,9 @@
     "section": "what_decision_support_tools_were_used_in_the_mr_decision_process_cba_mcda_housing_assessment_hazard_maps_models_cc_projection_models_demographic_projections_process_guidance_social_vulnerability_assessments_socioeconomic_projections_new_site_evaluation_process",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -581,6 +629,9 @@
     "section": "what_planning_measures_were_taken_for_receiving_areas_in_the_mr_decision_process_availability_of_existing_housing_identifying_priority_areas_construction_of_new_housing_individuals_vs_neighbourhoods_communities_social_carrying_capacity",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -617,6 +668,9 @@
     "section": "what_uses_were_planned_for_retreat_lands_allow_hazard_resilient_rebuilding_reducing_eliminating_servicing_community_involvement_in_decision_making_natural_use_multi_purpose_use_demolition_infrastructure_removal_asset_retirement_decontamination_rehabilitation_rezoning_site_design_restoration_planting_landscaping_commemoration_maintenance_ownership_transfer_conservation_land_trust_recognition_of_retreat_land_benefits",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -653,6 +707,9 @@
     "section": "what_degree_of_choice_was_provided_to_affected_people_in_the_mr_decision_process_completely_voluntary_voluntary_w_incentives_or_future_restrictions_voluntary_w_strong_persuasion_involuntary_w_some_degree_of_opt_out_completely_involuntary_mandatory",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -689,6 +746,9 @@
     "section": "what_land_user_groups_were_involved_or_considered_in_the_mr_decision_process_homeowners_leased_land_owners_renters_commercial_community_ngo_first_nations_indigenous_government",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -725,6 +785,9 @@
     "section": "what_actors_participated_in_the_governance_structure_of_the_mr_decision_process_is_there_evidence_that_they_shaped_the_mr_outcomes_funders_affected_community_receiving_communities_political_champions_government_agencies_public_general_private_sector_consultants_private_sector_affected_area_private_sector_receiving_area_first_nations_indigenous_communities_ngos_cbos_academics_researchers",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -761,6 +824,9 @@
     "section": "who_ultimately_made_decisions_in_the_mr_decision_process_property_owners_government_community_hazard_experts_financial_institutions",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -797,6 +863,9 @@
     "section": "community_engagement",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -833,6 +902,9 @@
     "section": "what_community_resources_supported_the_transition_during_the_mr_process_homeowner_bo_caseworker_temporary_housing_advisor_relocation_assistance_real_estate_hazard_advisor_community_capacity_building_livelihood_restoration_support_other",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -869,6 +941,9 @@
     "section": "community_engagement",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -905,6 +980,9 @@
     "section": "what_language_or_framing_was_used_to_engage_the_community_in_the_mr_decision_process_links_to_community_resilience_building_frame_as_opportunity_managed_planned_facilitated_assisted_retreat_relocation_resettlement_migration_movement_community_visioning_part_of_community_visioning_other_term_s_chosen_by_the_community",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -941,6 +1019,9 @@
     "section": "what_special_considerations_for_first_nations_communities_were_included_in_the_mr_decision_process",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -977,6 +1058,9 @@
     "section": "what_equity_considerations_were_addressed_in_the_mr_decision_process_equity_in_retreat_compensation_reducing_historical_inequities_vulnerable_marginalized_community_members_homeowners_vs_renters_vs_communal_owners_fairness_in_decision_making_processes_cultural_and_built_heritage_impacts_continued_access_to_services_in_new_location_intergenerational_equity",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -1013,6 +1097,9 @@
     "section": "what_resilience_build_back_better_bbb_or_disaster_risk_reduction_drr_goals_were_achieved_through_the_mr_decision_process_resilient_infrastructure_reduced_hazard_exposure_increased_community_resilience_maintain_enhance_social_capital_maintain_enhance_housing_quality_stock_maintain_enhance_healthy_ecosystems_maintaining_tax_base_enhancing_tax_base",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -1049,6 +1136,9 @@
     "section": "additional_notes",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -1085,6 +1175,9 @@
     "section": "evidence_gaps",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {

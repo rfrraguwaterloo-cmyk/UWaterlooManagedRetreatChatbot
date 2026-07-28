@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Shaanxi Province",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Shaanxi Ecological Resettlement",
     "source_links": [
       {
@@ -31,6 +34,9 @@
     "section": "coding_questions",
     "location": "Shaanxi Province",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Shaanxi Ecological Resettlement",
     "source_links": [
       {

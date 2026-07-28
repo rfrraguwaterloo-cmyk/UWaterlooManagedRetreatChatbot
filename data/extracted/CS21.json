@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Falshöft, Schleswig-Holstein",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Schleswig-Holstein",
     "source": "Pipeline Ver2 — Falshöft",
     "source_links": [
       {
@@ -66,6 +69,9 @@
     "section": "coding_questions",
     "location": "Falshöft, Schleswig-Holstein",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Schleswig-Holstein",
     "source": "Pipeline Ver2 — Falshöft",
     "source_links": [
       {
@@ -127,6 +133,9 @@
     "section": "institutional_environment",
     "location": "Falshöft, Schleswig-Holstein",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Schleswig-Holstein",
     "source": "Pipeline Ver2 — Falshöft",
     "source_links": [
       {
@@ -188,6 +197,9 @@
     "section": "planning_processes",
     "location": "Falshöft, Schleswig-Holstein",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Schleswig-Holstein",
     "source": "Pipeline Ver2 — Falshöft",
     "source_links": [
       {

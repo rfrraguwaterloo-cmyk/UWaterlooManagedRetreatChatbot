@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Isle de Jean Charles, Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Isle de Jean Charles Resettlement",
     "source_links": [
       {
@@ -37,6 +40,9 @@
     "section": "coding_questions",
     "location": "Isle de Jean Charles, Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Isle de Jean Charles Resettlement",
     "source_links": [
       {
@@ -69,6 +75,9 @@
     "section": "institutional_environment",
     "location": "Isle de Jean Charles, Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Isle de Jean Charles Resettlement",
     "source_links": [
       {
@@ -101,6 +110,9 @@
     "section": "planning_processes",
     "location": "Isle de Jean Charles, Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Isle de Jean Charles Resettlement",
     "source_links": [
       {

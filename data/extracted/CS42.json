@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Kinston, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Kinston",
     "source_links": [
       {
@@ -39,6 +42,9 @@
     "section": "coding_questions",
     "location": "Kinston, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Kinston",
     "source_links": [
       {
@@ -73,6 +79,9 @@
     "section": "institutional_environment",
     "location": "Kinston, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Kinston",
     "source_links": [
       {
@@ -107,6 +116,9 @@
     "section": "planning_processes",
     "location": "Kinston, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Kinston",
     "source_links": [
       {

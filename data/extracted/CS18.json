@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "High River, Alberta",
     "country": "Canada",
+    "country_normalized": "Canada",
+    "continent": "North America",
+    "admin_area": "Alberta",
     "source": "Pipeline Ver2 — High River Buyout Program",
     "source_links": [
       {
@@ -24,6 +27,9 @@
     "section": "coding_questions",
     "location": "High River, Alberta",
     "country": "Canada",
+    "country_normalized": "Canada",
+    "continent": "North America",
+    "admin_area": "Alberta",
     "source": "Pipeline Ver2 — High River Buyout Program",
     "source_links": [
       {
@@ -43,6 +49,9 @@
     "section": "institutional_environment",
     "location": "High River, Alberta",
     "country": "Canada",
+    "country_normalized": "Canada",
+    "continent": "North America",
+    "admin_area": "Alberta",
     "source": "Pipeline Ver2 — High River Buyout Program",
     "source_links": [
       {

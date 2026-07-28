@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Oakwood Beach, Staten Island, New York",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Oakwood Beach Buyout Program",
     "source_links": [
       {
@@ -36,6 +39,9 @@
     "section": "coding_questions",
     "location": "Oakwood Beach, Staten Island, New York",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Oakwood Beach Buyout Program",
     "source_links": [
       {
@@ -67,6 +73,9 @@
     "section": "institutional_environment",
     "location": "Oakwood Beach, Staten Island, New York",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Oakwood Beach Buyout Program",
     "source_links": [
       {
@@ -98,6 +107,9 @@
     "section": "planning_processes",
     "location": "Oakwood Beach, Staten Island, New York",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Oakwood Beach Buyout Program",
     "source_links": [
       {

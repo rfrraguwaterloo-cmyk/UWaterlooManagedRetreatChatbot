@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Chennai, Tamil Nadu",
     "country": "India",
+    "country_normalized": "India",
+    "continent": "Asia",
+    "admin_area": "Tamil Nadu",
     "source": "Pipeline Ver2 — Chennai",
     "source_links": [
       {
@@ -32,6 +35,9 @@
     "section": "coding_questions",
     "location": "Chennai, Tamil Nadu",
     "country": "India",
+    "country_normalized": "India",
+    "continent": "Asia",
+    "admin_area": "Tamil Nadu",
     "source": "Pipeline Ver2 — Chennai",
     "source_links": [
       {
@@ -59,6 +65,9 @@
     "section": "institutional_environment",
     "location": "Chennai, Tamil Nadu",
     "country": "India",
+    "country_normalized": "India",
+    "continent": "Asia",
+    "admin_area": "Tamil Nadu",
     "source": "Pipeline Ver2 — Chennai",
     "source_links": [
       {

@@ -5,6 +5,9 @@
     "section": "case_name_and_location",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -29,6 +32,9 @@
     "section": "hazard_s",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -53,6 +59,9 @@
     "section": "type_of_retreat",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -77,6 +86,9 @@
     "section": "scale",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -101,6 +113,9 @@
     "section": "key_actors",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -125,6 +140,9 @@
     "section": "timeline",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -149,6 +167,9 @@
     "section": "key_outcomes",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -173,6 +194,9 @@
     "section": "narrative_summary",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -197,6 +221,9 @@
     "section": "general_information",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -221,6 +248,9 @@
     "section": "institutional_environment",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -245,6 +275,9 @@
     "section": "planning_processes",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {

@@ -33,6 +33,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from ingest.source_links import load_source_links
+from ingest.geo_metadata import geographic_metadata
 
 # ---------------------------------------------------------------------------
 # Section name → retrieval section key
@@ -112,6 +113,7 @@ MIN_BODY_CHARS = 150  # Skip chunks with too little actual content
 def _build_chunks(case_id: str, meta: dict, ver2_text: str) -> list[dict]:
     sections = _split_into_sections(ver2_text)
     source_links = load_source_links(case_id)
+    geo = geographic_metadata(meta.get("location", ""), meta.get("country", ""))
     chunks = []
     idx = 0
     for heading, body in sections:
@@ -134,6 +136,7 @@ def _build_chunks(case_id: str, meta: dict, ver2_text: str) -> list[dict]:
             "section": section_key,
             "location": meta.get("location", ""),
             "country": meta.get("country", ""),
+            **geo,
             "source": f"Pipeline Ver2 — {meta.get('name', case_id)}",
             "source_links": source_links,
             "text": full_text,

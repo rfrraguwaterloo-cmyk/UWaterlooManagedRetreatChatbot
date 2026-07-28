@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Matata, Bay of Plenty",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Bay of Plenty",
     "source": "Pipeline Ver2 — Matata Managed Retreat",
     "source_links": [
       {
@@ -34,6 +37,9 @@
     "section": "coding_questions",
     "location": "Matata, Bay of Plenty",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Bay of Plenty",
     "source": "Pipeline Ver2 — Matata Managed Retreat",
     "source_links": [
       {
@@ -63,6 +69,9 @@
     "section": "institutional_environment",
     "location": "Matata, Bay of Plenty",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Bay of Plenty",
     "source": "Pipeline Ver2 — Matata Managed Retreat",
     "source_links": [
       {
@@ -92,6 +101,9 @@
     "section": "planning_processes",
     "location": "Matata, Bay of Plenty",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Bay of Plenty",
     "source": "Pipeline Ver2 — Matata Managed Retreat",
     "source_links": [
       {

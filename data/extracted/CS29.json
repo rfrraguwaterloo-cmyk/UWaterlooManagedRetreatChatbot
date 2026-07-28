@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "Southern Province",
     "source": "Pipeline Ver2 — Seenigama",
     "source_links": [
       {
@@ -61,6 +64,9 @@
     "section": "coding_questions",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "Southern Province",
     "source": "Pipeline Ver2 — Seenigama",
     "source_links": [
       {
@@ -117,6 +123,9 @@
     "section": "institutional_environment",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "Southern Province",
     "source": "Pipeline Ver2 — Seenigama",
     "source_links": [
       {

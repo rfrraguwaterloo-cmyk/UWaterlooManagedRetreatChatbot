@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Hambantota",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Hambantota Post-Tsunami Relocation",
     "source_links": [
       {
@@ -25,6 +28,9 @@
     "section": "coding_questions_and_answers",
     "location": "Hambantota",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Hambantota Post-Tsunami Relocation",
     "source_links": [
       {

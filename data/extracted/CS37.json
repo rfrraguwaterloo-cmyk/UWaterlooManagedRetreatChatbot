@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Kabyaza",
     "country": "Rwanda",
+    "country_normalized": "Rwanda",
+    "continent": "Africa",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Kabyaza",
     "source_links": [
       {
@@ -37,6 +40,9 @@
     "section": "coding_questions",
     "location": "Kabyaza",
     "country": "Rwanda",
+    "country_normalized": "Rwanda",
+    "continent": "Africa",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Kabyaza",
     "source_links": [
       {
@@ -69,6 +75,9 @@
     "section": "institutional_environment",
     "location": "Kabyaza",
     "country": "Rwanda",
+    "country_normalized": "Rwanda",
+    "continent": "Africa",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Kabyaza",
     "source_links": [
       {

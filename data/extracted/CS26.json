@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {
@@ -70,6 +73,9 @@
     "section": "coding_questions",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {
@@ -135,6 +141,9 @@
     "section": "institutional_environment",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {
@@ -200,6 +209,9 @@
     "section": "planning_processes",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {
@@ -265,6 +277,9 @@
     "section": "community_engagement",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {

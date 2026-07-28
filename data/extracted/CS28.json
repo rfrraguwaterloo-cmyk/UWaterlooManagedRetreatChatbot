@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Valmeyer, Illinois",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Illinois",
     "source": "Pipeline Ver2 — Valmeyer",
     "source_links": [
       {
@@ -93,6 +96,9 @@
     "section": "coding_questions",
     "location": "Valmeyer, Illinois",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Illinois",
     "source": "Pipeline Ver2 — Valmeyer",
     "source_links": [
       {
@@ -181,6 +187,9 @@
     "section": "institutional_environment",
     "location": "Valmeyer, Illinois",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Illinois",
     "source": "Pipeline Ver2 — Valmeyer",
     "source_links": [
       {
@@ -269,6 +278,9 @@
     "section": "planning_processes",
     "location": "Valmeyer, Illinois",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Illinois",
     "source": "Pipeline Ver2 — Valmeyer",
     "source_links": [
       {

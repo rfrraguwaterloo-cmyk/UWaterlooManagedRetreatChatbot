@@ -5,6 +5,9 @@
     "section": "general_information",
     "location": "Simbach am Inn, Bavaria",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Bavaria",
     "source": "Pipeline Ver2 — Simbach am Inn Household Relocation",
     "source_links": [
       {
@@ -26,6 +29,9 @@
     "section": "institutional_environment",
     "location": "Simbach am Inn, Bavaria",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Bavaria",
     "source": "Pipeline Ver2 — Simbach am Inn Household Relocation",
     "source_links": [
       {
@@ -47,6 +53,9 @@
     "section": "planning_processes",
     "location": "Simbach am Inn, Bavaria",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Bavaria",
     "source": "Pipeline Ver2 — Simbach am Inn Household Relocation",
     "source_links": [
       {
@@ -68,6 +77,9 @@
     "section": "community_engagement",
     "location": "Simbach am Inn, Bavaria",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Bavaria",
     "source": "Pipeline Ver2 — Simbach am Inn Household Relocation",
     "source_links": [
       {

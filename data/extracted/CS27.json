@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Grantham, Queensland",
     "country": "Australia",
+    "country_normalized": "Australia",
+    "continent": "Oceania",
+    "admin_area": "Queensland",
     "source": "Pipeline Ver2 — Grantham",
     "source_links": [
       {
@@ -74,6 +77,9 @@
     "section": "coding_questions",
     "location": "Grantham, Queensland",
     "country": "Australia",
+    "country_normalized": "Australia",
+    "continent": "Oceania",
+    "admin_area": "Queensland",
     "source": "Pipeline Ver2 — Grantham",
     "source_links": [
       {
@@ -143,6 +149,9 @@
     "section": "institutional_environment",
     "location": "Grantham, Queensland",
     "country": "Australia",
+    "country_normalized": "Australia",
+    "continent": "Oceania",
+    "admin_area": "Queensland",
     "source": "Pipeline Ver2 — Grantham",
     "source_links": [
       {
@@ -212,6 +221,9 @@
     "section": "planning_processes",
     "location": "Grantham, Queensland",
     "country": "Australia",
+    "country_normalized": "Australia",
+    "continent": "Oceania",
+    "admin_area": "Queensland",
     "source": "Pipeline Ver2 — Grantham",
     "source_links": [
       {

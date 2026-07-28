@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Ilha do Cardoso, São Paulo",
     "country": "Brazil",
+    "country_normalized": "Brazil",
+    "continent": "South America",
+    "admin_area": "São Paulo",
     "source": "Pipeline Ver2 — Ilha do Cardoso",
     "source_links": [
       {
@@ -39,6 +42,9 @@
     "section": "coding_questions",
     "location": "Ilha do Cardoso, São Paulo",
     "country": "Brazil",
+    "country_normalized": "Brazil",
+    "continent": "South America",
+    "admin_area": "São Paulo",
     "source": "Pipeline Ver2 — Ilha do Cardoso",
     "source_links": [
       {
@@ -73,6 +79,9 @@
     "section": "institutional_environment",
     "location": "Ilha do Cardoso, São Paulo",
     "country": "Brazil",
+    "country_normalized": "Brazil",
+    "continent": "South America",
+    "admin_area": "São Paulo",
     "source": "Pipeline Ver2 — Ilha do Cardoso",
     "source_links": [
       {
@@ -107,6 +116,9 @@
     "section": "planning_processes",
     "location": "Ilha do Cardoso, São Paulo",
     "country": "Brazil",
+    "country_normalized": "Brazil",
+    "continent": "South America",
+    "admin_area": "São Paulo",
     "source": "Pipeline Ver2 — Ilha do Cardoso",
     "source_links": [
       {

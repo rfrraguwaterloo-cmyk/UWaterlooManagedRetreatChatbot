@@ -27,6 +27,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from ingest.source_links import load_source_links
+from ingest.geo_metadata import geographic_metadata
 
 # Match overview section — handles #, ##, and variations in heading text
 _OVERVIEW_RE = re.compile(
@@ -121,6 +122,7 @@ def build_summary_chunks() -> list[dict]:
             continue
 
         meta = _load_case_meta(case_id)
+        geo = geographic_metadata(meta.get("location", ""), meta.get("country", ""))
         full_text = (
             f"Case study: {meta.get('name', case_id)} "
             f"({meta.get('location', '')}, {meta.get('country', '')})\n"
@@ -134,6 +136,7 @@ def build_summary_chunks() -> list[dict]:
             "section": "overview_summary",
             "location": meta.get("location", ""),
             "country": meta.get("country", ""),
+            **geo,
             "source": f"Pipeline Ver2 — {meta.get('name', case_id)}",
             "source_links": load_source_links(case_id),
             "text": full_text,

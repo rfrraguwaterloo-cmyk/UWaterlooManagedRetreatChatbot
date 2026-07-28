@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "East Riding of Yorkshire",
     "country": "UK",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "",
     "source": "Pipeline Ver2 — East Riding Managed Retreat",
     "source_links": [
       {
@@ -29,6 +32,9 @@
     "section": "coding_questions",
     "location": "East Riding of Yorkshire",
     "country": "UK",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "",
     "source": "Pipeline Ver2 — East Riding Managed Retreat",
     "source_links": [
       {
@@ -53,6 +59,9 @@
     "section": "institutional_environment",
     "location": "East Riding of Yorkshire",
     "country": "UK",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "",
     "source": "Pipeline Ver2 — East Riding Managed Retreat",
     "source_links": [
       {

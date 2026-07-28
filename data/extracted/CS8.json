@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Cedar Rapids, Iowa",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Iowa",
     "source": "Pipeline Ver2 — Cedar Rapids Buyout Program",
     "source_links": [
       {
@@ -29,6 +32,9 @@
     "section": "coding_questions",
     "location": "Cedar Rapids, Iowa",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Iowa",
     "source": "Pipeline Ver2 — Cedar Rapids Buyout Program",
     "source_links": [
       {
@@ -53,6 +59,9 @@
     "section": "institutional_environment",
     "location": "Cedar Rapids, Iowa",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Iowa",
     "source": "Pipeline Ver2 — Cedar Rapids Buyout Program",
     "source_links": [
       {
@@ -77,6 +86,9 @@
     "section": "planning_processes",
     "location": "Cedar Rapids, Iowa",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Iowa",
     "source": "Pipeline Ver2 — Cedar Rapids Buyout Program",
     "source_links": [
       {

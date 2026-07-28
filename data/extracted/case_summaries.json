@@ -5,6 +5,9 @@
     "section": "overview_summary",
     "location": "Isle de Jean Charles, Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Isle de Jean Charles Resettlement",
     "source_links": [
       {
@@ -37,6 +40,9 @@
     "section": "overview_summary",
     "location": "Shaanxi Province",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Shaanxi Ecological Resettlement",
     "source_links": [
       {
@@ -63,6 +69,9 @@
     "section": "overview_summary",
     "location": "Oakwood Beach, Staten Island, New York",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Oakwood Beach Buyout Program",
     "source_links": [
       {
@@ -94,6 +103,9 @@
     "section": "overview_summary",
     "location": "Metro Manila",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Metro Manila Resettlement (Oplan LIKAS)",
     "source_links": [
       {
@@ -130,6 +142,9 @@
     "section": "overview_summary",
     "location": "Matata, Bay of Plenty",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Bay of Plenty",
     "source": "Pipeline Ver2 — Matata Managed Retreat",
     "source_links": [
       {
@@ -159,6 +174,9 @@
     "section": "overview_summary",
     "location": "Pointe-Gatineau, Quebec",
     "country": "Canada",
+    "country_normalized": "Canada",
+    "continent": "North America",
+    "admin_area": "Quebec",
     "source": "Pipeline Ver2 — Pointe-Gatineau Home Buyout Program",
     "source_links": [
       {
@@ -183,6 +201,9 @@
     "section": "overview_summary",
     "location": "Hambantota",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Hambantota Post-Tsunami Relocation",
     "source_links": [
       {
@@ -203,6 +224,9 @@
     "section": "overview_summary",
     "location": "Cedar Rapids, Iowa",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Iowa",
     "source": "Pipeline Ver2 — Cedar Rapids Buyout Program",
     "source_links": [
       {
@@ -227,6 +251,9 @@
     "section": "overview_summary",
     "location": "Grand Forks, North Dakota",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Dakota",
     "source": "Pipeline Ver2 — Grand Forks Floodplain Buyout",
     "source_links": [
       {
@@ -243,6 +270,9 @@
     "section": "overview_summary",
     "location": "San Juan, Puerto Rico",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Puerto Rico",
     "source": "Pipeline Ver2 — San Juan Managed Retreat",
     "source_links": [
       {
@@ -267,6 +297,9 @@
     "section": "overview_summary",
     "location": "Terrebonne Parish, Louisiana",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Louisiana",
     "source": "Pipeline Ver2 — Terrebonne Parish Resettlement",
     "source_links": [
       {
@@ -288,6 +321,9 @@
     "section": "overview_summary",
     "location": "Dhye, Mustang District",
     "country": "Nepal",
+    "country_normalized": "Nepal",
+    "continent": "Asia",
+    "admin_area": "Mustang District",
     "source": "Pipeline Ver2 — Dhye Community Relocation",
     "source_links": [
       {
@@ -313,6 +349,9 @@
     "section": "overview_summary",
     "location": "Soldiers Grove, Wisconsin",
     "country": "USA",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Wisconsin",
     "source": "Pipeline Ver2 — Soldiers Grove Floodplain Relocation",
     "source_links": [
       {
@@ -334,6 +373,9 @@
     "section": "overview_summary",
     "location": "Simbach am Inn, Bavaria",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Bavaria",
     "source": "Pipeline Ver2 — Simbach am Inn Household Relocation",
     "source_links": [
       {
@@ -355,6 +397,9 @@
     "section": "overview_summary",
     "location": "Tegua, Torba Province",
     "country": "Vanuatu",
+    "country_normalized": "Vanuatu",
+    "continent": "Oceania",
+    "admin_area": "Torba Province",
     "source": "Pipeline Ver2 — Tegua Island Planned Relocation",
     "source_links": [
       {
@@ -386,6 +431,9 @@
     "section": "overview_summary",
     "location": "Vunidogola, Koralau Island",
     "country": "Fiji",
+    "country_normalized": "Fiji",
+    "continent": "Oceania",
+    "admin_area": "Koralau Island",
     "source": "Pipeline Ver2 — Vunidogola Village Relocation",
     "source_links": [
       {
@@ -437,6 +485,9 @@
     "section": "overview_summary",
     "location": "San Martin Region",
     "country": "Peru",
+    "country_normalized": "Peru",
+    "continent": "South America",
+    "admin_area": "",
     "source": "Pipeline Ver2 — San Martin Planned Relocation",
     "source_links": [
       {
@@ -458,6 +509,9 @@
     "section": "overview_summary",
     "location": "High River, Alberta",
     "country": "Canada",
+    "country_normalized": "Canada",
+    "continent": "North America",
+    "admin_area": "Alberta",
     "source": "Pipeline Ver2 — High River Buyout Program",
     "source_links": [
       {
@@ -477,6 +531,9 @@
     "section": "overview_summary",
     "location": "Nusa Hope, New Georgia",
     "country": "Solomon Islands",
+    "country_normalized": "Solomon Islands",
+    "continent": "Oceania",
+    "admin_area": "New Georgia",
     "source": "Pipeline Ver2 — Nusa Hope Village Relocation",
     "source_links": [
       {
@@ -501,6 +558,9 @@
     "section": "overview_summary",
     "location": "East Riding of Yorkshire",
     "country": "UK",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "",
     "source": "Pipeline Ver2 — East Riding Managed Retreat",
     "source_links": [
       {
@@ -525,6 +585,9 @@
     "section": "overview_summary",
     "location": "Falshöft, Schleswig-Holstein",
     "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Schleswig-Holstein",
     "source": "Pipeline Ver2 — Falshöft",
     "source_links": [
       {
@@ -586,6 +649,9 @@
     "section": "overview_summary",
     "location": "Allenville, Arizona",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Arizona",
     "source": "Pipeline Ver2 — Allenville",
     "source_links": [
       {
@@ -678,6 +744,9 @@
     "section": "overview_summary",
     "location": "Portland, Oregon",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Oregon",
     "source": "Pipeline Ver2 — Portland",
     "source_links": [
       {
@@ -751,6 +820,9 @@
     "section": "overview_summary",
     "location": "Queens, New York",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New York",
     "source": "Pipeline Ver2 — Queens",
     "source_links": [
       {
@@ -820,6 +892,9 @@
     "section": "overview_summary",
     "location": "Auckland, Aukland Region",
     "country": "New Zealand",
+    "country_normalized": "New Zealand",
+    "continent": "Oceania",
+    "admin_area": "Aukland Region",
     "source": "Pipeline Ver2 — Auckland",
     "source_links": [
       {
@@ -894,6 +969,9 @@
     "section": "overview_summary",
     "location": "Linz, Danube floodplain",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Danube floodplain",
     "source": "Pipeline Ver2 — Linz",
     "source_links": [
       {
@@ -959,6 +1037,9 @@
     "section": "overview_summary",
     "location": "Grantham, Queensland",
     "country": "Australia",
+    "country_normalized": "Australia",
+    "continent": "Oceania",
+    "admin_area": "Queensland",
     "source": "Pipeline Ver2 — Grantham",
     "source_links": [
       {
@@ -1028,6 +1109,9 @@
     "section": "overview_summary",
     "location": "Valmeyer, Illinois",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Illinois",
     "source": "Pipeline Ver2 — Valmeyer",
     "source_links": [
       {
@@ -1116,6 +1200,9 @@
     "section": "overview_summary",
     "location": "Seenigama, Southern Province",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "Southern Province",
     "source": "Pipeline Ver2 — Seenigama",
     "source_links": [
       {
@@ -1172,6 +1259,9 @@
     "section": "overview_summary",
     "location": "Woodbridge Township, New Jersey",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "New Jersey",
     "source": "Pipeline Ver2 — Woodbridge Township",
     "source_links": [
       {
@@ -1210,6 +1300,9 @@
     "section": "overview_summary",
     "location": "Kazungula district, Zambezi River",
     "country": "Zambia",
+    "country_normalized": "Zambia",
+    "continent": "Africa",
+    "admin_area": "Zambezi River",
     "source": "Pipeline Ver2 — Kazungula district",
     "source_links": [
       {
@@ -1226,6 +1319,9 @@
     "section": "overview_summary",
     "location": "Nono District, Oromiya National Region State",
     "country": "Ethiopia",
+    "country_normalized": "Ethiopia",
+    "continent": "Africa",
+    "admin_area": "Oromiya National Region State",
     "source": "Pipeline Ver2 — Nono District",
     "source_links": [
       {
@@ -1241,6 +1337,9 @@
     "section": "overview_summary",
     "location": "Colombo City, Western Province",
     "country": "Sri Lanka",
+    "country_normalized": "Sri Lanka",
+    "continent": "Asia",
+    "admin_area": "Western Province",
     "source": "Pipeline Ver2 — Colombo City",
     "source_links": [
       {
@@ -1257,6 +1356,9 @@
     "section": "overview_summary",
     "location": "San Antonio, Texas",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Texas",
     "source": "Pipeline Ver2 — San Antonio",
     "source_links": [
       {
@@ -1277,6 +1379,9 @@
     "section": "overview_summary",
     "location": "Cagayan de Oro, Northern Mindanao",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "Northern Mindanao",
     "source": "Pipeline Ver2 — Cagayan de Oro",
     "source_links": [
       {
@@ -1297,6 +1402,9 @@
     "section": "overview_summary",
     "location": "Greenville, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Greenville",
     "source_links": [
       {
@@ -1339,6 +1447,9 @@
     "section": "overview_summary",
     "location": "Kabyaza",
     "country": "Rwanda",
+    "country_normalized": "Rwanda",
+    "continent": "Africa",
+    "admin_area": "",
     "source": "Pipeline Ver2 — Kabyaza",
     "source_links": [
       {
@@ -1371,6 +1482,9 @@
     "section": "overview_summary",
     "location": "Rinari, Taiwan",
     "country": "Taiwan",
+    "country_normalized": "Taiwan",
+    "continent": "Asia",
+    "admin_area": "Taiwan",
     "source": "Pipeline Ver2 — Rinari",
     "source_links": [
       {
@@ -1387,6 +1501,9 @@
     "section": "overview_summary",
     "location": "Danube river, Lower Austria",
     "country": "Austria",
+    "country_normalized": "Austria",
+    "continent": "Europe",
+    "admin_area": "Lower Austria",
     "source": "Pipeline Ver2 — Danube river",
     "source_links": [
       {
@@ -1409,6 +1526,9 @@
     "section": "overview_summary",
     "location": "Madoi County, Qinghai",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "Qinghai",
     "source": "Pipeline Ver2 — Madoi County",
     "source_links": [
       {
@@ -1425,6 +1545,9 @@
     "section": "overview_summary",
     "location": "Charlotte, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Charlotte",
     "source_links": [
       {
@@ -1446,6 +1569,9 @@
     "section": "overview_summary",
     "location": "Kinston, North Carolina",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "North Carolina",
     "source": "Pipeline Ver2 — Kinston",
     "source_links": [
       {
@@ -1480,6 +1606,9 @@
     "section": "overview_summary",
     "location": "Chennai, Tamil Nadu",
     "country": "India",
+    "country_normalized": "India",
+    "continent": "Asia",
+    "admin_area": "Tamil Nadu",
     "source": "Pipeline Ver2 — Chennai",
     "source_links": [
       {
@@ -1507,6 +1636,9 @@
     "section": "overview_summary",
     "location": "Iloilo, Western Visayas Region",
     "country": "Philippines",
+    "country_normalized": "Philippines",
+    "continent": "Asia",
+    "admin_area": "Western Visayas Region",
     "source": "Pipeline Ver2 — Iloilo",
     "source_links": [
       {
@@ -1532,6 +1664,9 @@
     "section": "overview_summary",
     "location": "Songjia Town, Cangshang Town, and Lengshui Town, Ankang City Shaanxi Province",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "Ankang City Shaanxi Province",
     "source": "Pipeline Ver2 — Songjia Town, Cangshang Town, and Lengshui Town",
     "source_links": [
       {
@@ -1559,6 +1694,9 @@
     "section": "overview_summary",
     "location": "Chengguan, Shangnan County",
     "country": "China",
+    "country_normalized": "China",
+    "continent": "Asia",
+    "admin_area": "Shangnan County",
     "source": "Pipeline Ver2 — Chengguan",
     "source_links": [
       {
@@ -1581,6 +1719,9 @@
     "section": "overview_summary",
     "location": "Ilha do Cardoso, São Paulo",
     "country": "Brazil",
+    "country_normalized": "Brazil",
+    "continent": "South America",
+    "admin_area": "São Paulo",
     "source": "Pipeline Ver2 — Ilha do Cardoso",
     "source_links": [
       {
@@ -1615,6 +1756,9 @@
     "section": "overview_summary",
     "location": "Buenaventura, San Juan River Delta",
     "country": "Colombia",
+    "country_normalized": "Colombia",
+    "continent": "South America",
+    "admin_area": "San Juan River Delta",
     "source": "Pipeline Ver2 — Buenaventura",
     "source_links": [
       {
@@ -1683,6 +1827,9 @@
     "section": "overview_summary",
     "location": "Punta Gorda, Florida",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Florida",
     "source": "Pipeline Ver2 — Punta Gorda",
     "source_links": [
       {

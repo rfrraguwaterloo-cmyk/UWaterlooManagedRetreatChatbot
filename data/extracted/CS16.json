@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Vunidogola, Koralau Island",
     "country": "Fiji",
+    "country_normalized": "Fiji",
+    "continent": "Oceania",
+    "admin_area": "Koralau Island",
     "source": "Pipeline Ver2 — Vunidogola Village Relocation",
     "source_links": [
       {
@@ -56,6 +59,9 @@
     "section": "coding_questions",
     "location": "Vunidogola, Koralau Island",
     "country": "Fiji",
+    "country_normalized": "Fiji",
+    "continent": "Oceania",
+    "admin_area": "Koralau Island",
     "source": "Pipeline Ver2 — Vunidogola Village Relocation",
     "source_links": [
       {
@@ -107,6 +113,9 @@
     "section": "institutional_environment",
     "location": "Vunidogola, Koralau Island",
     "country": "Fiji",
+    "country_normalized": "Fiji",
+    "continent": "Oceania",
+    "admin_area": "Koralau Island",
     "source": "Pipeline Ver2 — Vunidogola Village Relocation",
     "source_links": [
       {

@@ -5,6 +5,9 @@
     "section": "overview",
     "location": "Allenville, Arizona",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Arizona",
     "source": "Pipeline Ver2 — Allenville",
     "source_links": [
       {
@@ -97,6 +100,9 @@
     "section": "coding_questions",
     "location": "Allenville, Arizona",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Arizona",
     "source": "Pipeline Ver2 — Allenville",
     "source_links": [
       {
@@ -189,6 +195,9 @@
     "section": "institutional_environment",
     "location": "Allenville, Arizona",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Arizona",
     "source": "Pipeline Ver2 — Allenville",
     "source_links": [
       {
@@ -281,6 +290,9 @@
     "section": "planning_processes",
     "location": "Allenville, Arizona",
     "country": "United States",
+    "country_normalized": "United States",
+    "continent": "North America",
+    "admin_area": "Arizona",
     "source": "Pipeline Ver2 — Allenville",
     "source_links": [
       {
