@@ -460,12 +460,10 @@ if not st.session_state.disclaimer_accepted:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    _, btn_col = st.columns([5, 2])
-    with btn_col:
-        if st.button("I understand — continue to the tool", type="primary"):
-            st.session_state.disclaimer_accepted = True
-            _set_query_param("disclaimer_accepted", "true")
-            st.rerun()
+    if st.button("I understand — continue to the tool", type="primary"):
+        st.session_state.disclaimer_accepted = True
+        _set_query_param("disclaimer_accepted", "true")
+        st.rerun()
     st.stop()
 
 _render_navigation()
