@@ -2,6 +2,7 @@ import sys
 import json
 import re
 import ast
+import uuid
 from pathlib import Path
 import streamlit as st
 
@@ -43,6 +44,8 @@ def _ensure_embedding_index_built():
 
 QUESTIONS_PATH = Path("questionnaire/questions.json")
 DATA_RAW = Path("data/raw")
+HISTORY_DIR = Path(".streamlit_history")
+MAX_HISTORY_ITEMS = 20
 
 
 @st.cache_data
@@ -139,6 +142,52 @@ def _set_query_param(key: str, value: str) -> None:
     st.experimental_set_query_params(**params)
 
 
+def _get_query_param(key: str) -> str:
+    if hasattr(st, "query_params"):
+        value = st.query_params.get(key, "")
+        if isinstance(value, list):
+            value = value[0] if value else ""
+        return str(value)
+
+    values = st.experimental_get_query_params()
+    value = values.get(key, [""])
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    return str(value)
+
+
+def _get_or_create_conversation_id() -> str:
+    existing = _get_query_param("conversation_id")
+    if re.fullmatch(r"[0-9a-f]{32}", existing or ""):
+        return existing
+
+    conversation_id = uuid.uuid4().hex
+    _set_query_param("conversation_id", conversation_id)
+    return conversation_id
+
+
+def _history_path(conversation_id: str) -> Path:
+    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+    return HISTORY_DIR / f"{conversation_id}.json"
+
+
+def _load_history(conversation_id: str) -> list[dict]:
+    path = _history_path(conversation_id)
+    if not path.exists():
+        return []
+    try:
+        history = json.loads(path.read_text())
+    except Exception:
+        return []
+    return history if isinstance(history, list) else []
+
+
+def _save_history(conversation_id: str, history: list[dict]) -> None:
+    path = _history_path(conversation_id)
+    serializable_history = history[:MAX_HISTORY_ITEMS]
+    path.write_text(json.dumps(serializable_history, indent=2))
+
+
 # ── Build embedding index before any Streamlit calls ──────────────────────────
 _ensure_embedding_index_built()
 
@@ -146,8 +195,9 @@ _ensure_embedding_index_built()
 st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retreat", layout="wide")
 
 # ── Session state ─────────────────────────────────────────────────────────────
+conversation_id = _get_or_create_conversation_id()
 if "history" not in st.session_state:
-    st.session_state.history = []
+    st.session_state.history = _load_history(conversation_id)
 if "disclaimer_accepted" not in st.session_state:
     st.session_state.disclaimer_accepted = _query_param_is_true("disclaimer_accepted")
 elif not st.session_state.disclaimer_accepted and _query_param_is_true("disclaimer_accepted"):
@@ -316,6 +366,8 @@ with main_col:
                 "chunks":  chunks,
                 "context": dict(answers),
             })
+            st.session_state.history = st.session_state.history[:MAX_HISTORY_ITEMS]
+            _save_history(conversation_id, st.session_state.history)
 
             # Log to Google Sheets
             _log_err = log_query(query, answer, chunks, questionnaire_answers=answers, model=model_choice)
@@ -387,6 +439,7 @@ with history_col:
     else:
         if st.button("Clear history", type="secondary"):
             st.session_state.history = []
+            _save_history(conversation_id, st.session_state.history)
             st.rerun()
 
         for i, entry in enumerate(st.session_state.history):
