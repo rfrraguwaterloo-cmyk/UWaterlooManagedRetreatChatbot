@@ -115,6 +115,30 @@ def _render_source_links(raw_links, limit: int = 5) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 
+def _query_param_is_true(key: str) -> bool:
+    if hasattr(st, "query_params"):
+        value = st.query_params.get(key)
+        if isinstance(value, list):
+            value = value[0] if value else ""
+        return str(value).lower() in {"1", "true", "yes"}
+
+    values = st.experimental_get_query_params()
+    value = values.get(key, [""])
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    return str(value).lower() in {"1", "true", "yes"}
+
+
+def _set_query_param(key: str, value: str) -> None:
+    if hasattr(st, "query_params"):
+        st.query_params[key] = value
+        return
+
+    params = st.experimental_get_query_params()
+    params[key] = value
+    st.experimental_set_query_params(**params)
+
+
 # ── Build embedding index before any Streamlit calls ──────────────────────────
 _ensure_embedding_index_built()
 
@@ -125,7 +149,9 @@ st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retrea
 if "history" not in st.session_state:
     st.session_state.history = []
 if "disclaimer_accepted" not in st.session_state:
-    st.session_state.disclaimer_accepted = False
+    st.session_state.disclaimer_accepted = _query_param_is_true("disclaimer_accepted")
+elif not st.session_state.disclaimer_accepted and _query_param_is_true("disclaimer_accepted"):
+    st.session_state.disclaimer_accepted = True
 
 # ── Disclaimer modal ──────────────────────────────────────────────────────────
 if not st.session_state.disclaimer_accepted:
@@ -185,6 +211,7 @@ if not st.session_state.disclaimer_accepted:
     with btn_col:
         if st.button("I understand — continue to the tool", type="primary"):
             st.session_state.disclaimer_accepted = True
+            _set_query_param("disclaimer_accepted", "true")
             st.rerun()
     st.stop()
 
