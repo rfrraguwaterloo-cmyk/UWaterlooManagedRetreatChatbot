@@ -509,7 +509,7 @@ with st.sidebar:
     else:
         st.caption("✓ Full context provided.")
 
-    model_choice = "claude"
+    model_choice = "openai"
 
 # ── Two-column layout ─────────────────────────────────────────────────────────
 main_col, history_col = st.columns([2, 1], gap="large")

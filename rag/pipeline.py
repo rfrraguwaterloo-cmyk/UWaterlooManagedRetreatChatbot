@@ -44,7 +44,7 @@ def query_claude(prompt: str, max_tokens: int = 4096) -> str:
 def query_openai(prompt: str, max_tokens: int = 2048) -> str:
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
         max_completion_tokens=max_tokens,
         messages=[{"role": "user", "content": prompt}],
     )
