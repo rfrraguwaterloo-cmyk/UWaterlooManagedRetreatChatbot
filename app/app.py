@@ -7,7 +7,7 @@ from pathlib import Path
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from rag.pipeline import run_pipeline
+from rag.pipeline import RAGProviderError, run_pipeline
 from ingest.geo_metadata import geographic_metadata, normalize_country
 sys.path.insert(0, str(Path(__file__).parent))
 from sheets_logger import log_query
@@ -569,12 +569,16 @@ with main_col:
             chunks = []
         else:
             with st.spinner("Searching case studies and generating response..."):
-                answer, chunks = run_pipeline(
-                    query,
-                    questionnaire_answers=answers if answers else None,
-                    model=model_choice,
-                    return_chunks=True,
-                )
+                try:
+                    answer, chunks = run_pipeline(
+                        query,
+                        questionnaire_answers=answers if answers else None,
+                        model=model_choice,
+                        return_chunks=True,
+                    )
+                except RAGProviderError as exc:
+                    st.error(str(exc))
+                    st.stop()
 
             # Save to history
             st.session_state.history.insert(0, {

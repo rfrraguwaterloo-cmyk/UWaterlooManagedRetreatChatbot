@@ -2,6 +2,7 @@ import os
 import re
 import requests
 import anthropic
+from openai import APIConnectionError, APIError, AuthenticationError, RateLimitError
 from openai import OpenAI
 from dotenv import load_dotenv
 from rag.retriever import MRRetriever
@@ -21,6 +22,14 @@ _OVERVIEW_RE = re.compile(
 )
 
 
+class RAGProviderError(RuntimeError):
+    """Raised when the configured LLM provider cannot return an answer."""
+
+
+def _env_value(name: str) -> str:
+    return (os.getenv(name) or "").strip()
+
+
 def query_ollama(prompt: str) -> str:
     response = requests.post(
         OLLAMA_URL,
@@ -32,23 +41,45 @@ def query_ollama(prompt: str) -> str:
 
 
 def query_claude(prompt: str, max_tokens: int = 4096) -> str:
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-    message = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=max_tokens,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return message.content[0].text.strip()
+    try:
+        client = anthropic.Anthropic(api_key=_env_value("ANTHROPIC_API_KEY"))
+        message = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=max_tokens,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return message.content[0].text.strip()
+    except Exception as exc:
+        raise RAGProviderError(
+            "The Anthropic API could not generate an answer right now. "
+            "Please check the Anthropic billing/API key configuration."
+        ) from exc
 
 
 def query_openai(prompt: str, max_tokens: int = 2048) -> str:
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    response = client.chat.completions.create(
-        model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
-        max_completion_tokens=max_tokens,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return response.choices[0].message.content.strip()
+    try:
+        client = OpenAI(api_key=_env_value("OPENAI_API_KEY"))
+        response = client.chat.completions.create(
+            model=_env_value("OPENAI_MODEL") or "gpt-4o-mini",
+            max_completion_tokens=max_tokens,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.choices[0].message.content.strip()
+    except AuthenticationError as exc:
+        raise RAGProviderError(
+            "The OpenAI API key was rejected. Please update the OPENAI_API_KEY secret "
+            "in Hugging Face and try again."
+        ) from exc
+    except RateLimitError as exc:
+        raise RAGProviderError(
+            "The OpenAI API is rate-limited or out of quota right now. Please check "
+            "OpenAI billing/limits and try again."
+        ) from exc
+    except (APIConnectionError, APIError) as exc:
+        raise RAGProviderError(
+            "The OpenAI API could not be reached from Hugging Face right now. "
+            "Please try again in a moment."
+        ) from exc
 
 
 def run_pipeline(
