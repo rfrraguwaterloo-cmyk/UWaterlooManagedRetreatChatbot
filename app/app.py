@@ -3,7 +3,9 @@ import json
 import re
 import ast
 import uuid
+from html import escape
 from pathlib import Path
+from urllib.parse import urlencode
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -119,9 +121,48 @@ def _render_source_links(raw_links, limit: int = 5) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 
-def _render_navigation() -> None:
-    st.markdown(
-        """
+def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
+    links = _parse_source_links(raw_links)
+    if not links:
+        st.caption("No source links available for this case yet.")
+        return
+
+    selected = links if limit is None else links[:limit]
+    for link in selected:
+        title = link.get("title") or link.get("doi") or link.get("url") or "Source"
+        url = link.get("url") or (f"https://doi.org/{link['doi']}" if link.get("doi") else "")
+        if url:
+            st.markdown(f"- [{title}]({url})")
+        else:
+            st.markdown(f"- {title}")
+        if link.get("pdf_url"):
+            st.markdown(f"  - [PDF]({link['pdf_url']})")
+
+
+def _nav_url(page: str, conversation_id: str) -> str:
+    params = {
+        "disclaimer_accepted": "true",
+        "conversation_id": conversation_id,
+        "page": page,
+    }
+    return "?" + urlencode(params)
+
+
+def _render_navigation(current_page: str, conversation_id: str) -> None:
+    nav_items = [
+        ("ask", "Ask"),
+        ("case_studies", "Case Studies"),
+        ("previous_responses", "Previous Responses"),
+        ("about", "About"),
+    ]
+    nav_links = "\n".join(
+        (
+            f'<a class="{"is-active" if page == current_page else ""}" '
+            f'href="{escape(_nav_url(page, conversation_id))}">{label}</a>'
+        )
+        for page, label in nav_items
+    )
+    nav_html = """
         <style>
         .rfr-nav {
             position: sticky;
@@ -163,6 +204,11 @@ def _render_navigation() -> None:
             color: #17324d;
             text-decoration: none;
         }
+        .rfr-nav__links a.is-active {
+            background: #edf3f7;
+            color: #17324d;
+            font-weight: 700;
+        }
         @media (max-width: 720px) {
             .rfr-nav {
                 align-items: flex-start;
@@ -177,13 +223,12 @@ def _render_navigation() -> None:
         <nav class="rfr-nav" aria-label="Primary navigation">
             <div class="rfr-nav__brand">RFR Knowledge Platform</div>
             <div class="rfr-nav__links">
-                <a href="#ask">Ask</a>
-                <a href="#case-studies">Case Studies</a>
-                <a href="#previous-responses">Previous Responses</a>
-                <a href="#about">About</a>
+                __NAV_LINKS__
             </div>
         </nav>
-        """,
+        """.replace("__NAV_LINKS__", nav_links)
+    st.markdown(
+        nav_html,
         unsafe_allow_html=True,
     )
 
@@ -319,6 +364,136 @@ def _metadata_answer_markdown(query: str) -> str | None:
         return _markdown_table(["Case ID", "Name", "Location", "Country", "Continent"], rows)
 
     return None
+
+
+def _current_page() -> str:
+    page = _get_query_param("page") or "ask"
+    allowed = {"ask", "case_studies", "previous_responses", "about"}
+    return page if page in allowed else "ask"
+
+
+@st.cache_data
+def _load_case_summary_chunks() -> list[dict]:
+    path = Path("data/extracted/case_summaries.json")
+    if not path.exists():
+        return []
+    try:
+        chunks = json.loads(path.read_text())
+    except Exception:
+        return []
+    return chunks if isinstance(chunks, list) else []
+
+
+def _case_summary_records() -> list[dict]:
+    meta = load_case_meta()
+    records = []
+    for chunk in _load_case_summary_chunks():
+        cid = chunk.get("case_id", "")
+        case_meta = meta.get(cid, {})
+        records.append({
+            "case_id": cid,
+            "name": case_meta.get("name") or cid,
+            "location": chunk.get("location", ""),
+            "country": normalize_country(chunk.get("country", "")),
+            "continent": chunk.get("continent", ""),
+            "summary": _clean_excerpt(chunk.get("text", ""), max_chars=900),
+            "source_links": chunk.get("source_links"),
+        })
+    return sorted(records, key=lambda record: _case_sort_key(record["case_id"]))
+
+
+def _render_case_studies_page() -> None:
+    st.title("Case Studies")
+    st.caption("Indexed managed retreat case studies with summary notes and paper/source links.")
+
+    records = _case_summary_records()
+    if not records:
+        st.warning("No case-study summaries were found. Run the ingest and summary chunk scripts first.")
+        return
+
+    countries = sorted({record["country"] for record in records if record["country"]})
+    continents = sorted({record["continent"] for record in records if record["continent"]})
+    filter_col, country_col = st.columns([1, 1])
+    with filter_col:
+        continent_filter = st.selectbox("Continent", ["All"] + continents)
+    with country_col:
+        country_filter = st.selectbox("Country", ["All"] + countries)
+
+    filtered = [
+        record for record in records
+        if (continent_filter == "All" or record["continent"] == continent_filter)
+        and (country_filter == "All" or record["country"] == country_filter)
+    ]
+    st.caption(f"Showing {len(filtered)} of {len(records)} indexed case studies.")
+
+    for record in filtered:
+        with st.expander(f"{record['case_id']} — {record['name']} ({record['country']})", expanded=False):
+            st.markdown(f"**Location:** {record['location']}")
+            if record["continent"]:
+                st.markdown(f"**Continent:** {record['continent']}")
+            st.markdown("**Summary:**")
+            st.markdown(record["summary"])
+            st.markdown("**Sources:**")
+            _render_apa_source_links(record["source_links"], limit=None)
+
+
+def _render_previous_responses_page(conversation_id: str, questions: list[dict]) -> None:
+    st.title("Previous Responses")
+    st.caption("Full responses saved for this browser conversation.")
+
+    history = _load_history(conversation_id)
+    if not history:
+        st.info("No previous responses are saved for this conversation yet.")
+        return
+
+    if st.button("Clear previous responses", type="secondary"):
+        st.session_state.history = []
+        _save_history(conversation_id, st.session_state.history)
+        st.rerun()
+
+    for i, entry in enumerate(history):
+        response_number = len(history) - i
+        st.markdown(f"## Response {response_number}")
+        st.markdown(f"**Question:** {entry.get('query', '')}")
+
+        context = entry.get("context") or {}
+        if context:
+            with st.expander("Context used", expanded=False):
+                for qid, val in context.items():
+                    q_text = next((q["text"] for q in questions if q["id"] == qid), qid)
+                    st.markdown(f"**{q_text}** {val}")
+
+        st.markdown(entry.get("answer", ""))
+
+        chunks = entry.get("chunks") or []
+        if chunks:
+            with st.expander("Case studies and sources used", expanded=False):
+                seen_ids = set()
+                for chunk in chunks:
+                    metadata = chunk.get("metadata", {})
+                    cid = metadata.get("case_id", "")
+                    if cid in seen_ids:
+                        continue
+                    seen_ids.add(cid)
+                    st.markdown(f"**{cid} — {metadata.get('source', '')}**")
+                    _render_apa_source_links(metadata.get("source_links"), limit=5)
+
+        st.divider()
+
+
+def _render_about_page() -> None:
+    st.title("About")
+    st.markdown(
+        """
+        This AI-assisted knowledge platform supports exploration of managed retreat
+        case-study literature from the Retreat From Risk project.
+
+        The tool retrieves evidence from indexed case-study summaries and sections,
+        then generates a grounded response for planning, policy, and research use.
+        It is a research aid only and does not replace professional planning, legal,
+        engineering, or policy advice.
+        """
+    )
 
 
 def _query_param_is_true(key: str) -> bool:
@@ -466,7 +641,8 @@ if not st.session_state.disclaimer_accepted:
         st.rerun()
     st.stop()
 
-_render_navigation()
+current_page = _current_page()
+_render_navigation(current_page, conversation_id)
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
@@ -508,6 +684,18 @@ with st.sidebar:
         st.caption("✓ Full context provided.")
 
     model_choice = "claude"
+
+if current_page == "case_studies":
+    _render_case_studies_page()
+    st.stop()
+
+if current_page == "previous_responses":
+    _render_previous_responses_page(conversation_id, questions)
+    st.stop()
+
+if current_page == "about":
+    _render_about_page()
+    st.stop()
 
 # ── Two-column layout ─────────────────────────────────────────────────────────
 main_col, history_col = st.columns([2, 1], gap="large")
