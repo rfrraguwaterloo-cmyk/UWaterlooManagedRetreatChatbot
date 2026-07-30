@@ -139,6 +139,7 @@ def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
 def _render_navigation(current_page: str, conversation_id: str) -> None:
     nav_items = [
         ("ask", "Ask"),
+        ("how_to_use", "How to Use"),
         ("case_studies", "Case Studies"),
         ("previous_responses", "Previous Responses"),
         ("about", "About"),
@@ -168,7 +169,7 @@ def _render_navigation(current_page: str, conversation_id: str) -> None:
         """,
         unsafe_allow_html=True,
     )
-    cols = st.columns([4.5, 0.9, 1.35, 1.75, 0.95])
+    cols = st.columns([3.9, 0.85, 1.25, 1.35, 1.75, 0.9])
     cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
     for col, (page, label) in zip(cols[1:], nav_items):
         if col.button(
@@ -319,7 +320,7 @@ def _metadata_answer_markdown(query: str) -> str | None:
 
 def _current_page() -> str:
     page = _get_query_param("page") or "ask"
-    allowed = {"ask", "case_studies", "previous_responses", "about"}
+    allowed = {"ask", "how_to_use", "case_studies", "previous_responses", "about"}
     return page if page in allowed else "ask"
 
 
@@ -443,6 +444,70 @@ def _render_about_page() -> None:
         then generates a grounded response for planning, policy, and research use.
         It is a research aid only and does not replace professional planning, legal,
         engineering, or policy advice.
+        """
+    )
+
+
+def _render_how_to_use_page() -> None:
+    st.title("How to Use This Tool")
+    st.caption("Guidelines for asking stronger questions and reading the answers responsibly.")
+
+    st.markdown(
+        """
+        ### 1. Add context in the sidebar
+
+        The sidebar questions are optional, but they help tailor the answer to your situation.
+        Use them to describe who you are, the type of hazard you are thinking about, where your
+        community is in the managed retreat process, and what concerns matter most.
+
+        ### 2. Ask one focused question at a time
+
+        Good questions usually name the topic you care about and the kind of answer you need.
+
+        **Examples:**
+        - What funding models have worked for floodplain buyout programs?
+        - How did communities maintain social cohesion after relocation?
+        - What barriers appeared in Indigenous or culturally distinct communities?
+        - Which cases involved strong public opposition, and how was it handled?
+        - What lessons from North American cases apply to municipal planners?
+
+        ### 3. Use case IDs when you want a specific case
+
+        If you ask about a case ID, the tool retrieves that case directly.
+
+        **Examples:**
+        - Summarize CS42.
+        - What were the equity issues in CS41?
+        - Compare CS8 and CS28.
+
+        ### 4. Use metadata questions for fast counts and lists
+
+        The tool answers geography and catalog questions directly from indexed metadata,
+        rather than asking the AI model to guess.
+
+        **Examples:**
+        - Give frequency tables by continent and country.
+        - Which case studies are in Europe?
+        - How many cases are outside North America?
+        - List all case studies in North Carolina.
+
+        ### 5. Check the case studies and source links
+
+        Open the **Case Studies** tab to review every indexed case. Each case includes a short
+        summary and clickable paper/source links in APA-style labels where available.
+
+        ### 6. Review previous answers
+
+        Open the **Previous Responses** tab to see the full answer history for your current
+        browser conversation. This is useful when comparing several questions or copying a
+        complete response with formatting.
+
+        ### 7. Treat answers as research support
+
+        The responses are generated from managed retreat case-study literature and may contain
+        omissions or interpretation errors. Verify important claims against the cited papers or
+        source links before using an answer in planning, policy, legal, engineering, or public
+        engagement work.
         """
     )
 
@@ -599,23 +664,7 @@ _render_navigation(current_page, conversation_id)
 with st.sidebar:
     st.markdown('<span id="about"></span>', unsafe_allow_html=True)
     st.header("About You & Your Community")
-    st.markdown(
-        """
-        **How to use this tool:**
-        Answer the questions below to help tailor responses to your context.
-        All questions are optional — skip any that don't apply.
-
-        Then type your question in the main panel. The tool will search
-        across real managed retreat case studies and generate a response
-        grounded in evidence from similar situations.
-
-        > 💡 **Tip:** The more specific your question, the more useful
-        > the answer. Try asking about funding models, community
-        > engagement strategies, or what happened in a particular
-        > type of community.
-        """
-    )
-    st.divider()
+    st.caption("Optional context for tailoring answers. Skip any question that does not apply.")
 
     questions = load_questions()
     answers = {}
@@ -635,6 +684,10 @@ with st.sidebar:
         st.caption("✓ Full context provided.")
 
     model_choice = "claude"
+
+if current_page == "how_to_use":
+    _render_how_to_use_page()
+    st.stop()
 
 if current_page == "case_studies":
     _render_case_studies_page()
