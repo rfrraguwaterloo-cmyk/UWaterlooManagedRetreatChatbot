@@ -438,7 +438,7 @@ def _render_about_page() -> None:
     st.markdown(
         """
         This AI-assisted knowledge platform supports exploration of managed retreat
-        case-study literature from the Retreat From Risk project.
+        case-study literature from the Retreat From Risk project by Anna Zhou from the University of Waterloo
 
         The tool retrieves evidence from indexed case-study summaries and sections,
         then generates a grounded response for planning, policy, and research use.
