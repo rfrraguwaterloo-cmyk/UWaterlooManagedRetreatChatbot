@@ -10,7 +10,10 @@ Three retrieval modes:
   retrieve_for_case()      — all chunks for a specific case study ID
 """
 import json
+import os
+import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -19,6 +22,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 EMBED_MODEL = "all-MiniLM-L6-v2"
 PRECOMPUTED_PATH = Path("data/extracted/precomputed_embeddings.json")
+STOPWORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "has", "have",
+    "how", "in", "is", "it", "of", "on", "or", "that", "the", "their", "this",
+    "to", "what", "when", "where", "which", "who", "why", "with", "worked",
+}
 
 # Module-level cache — loaded once per process
 _store = None
@@ -55,6 +63,14 @@ def _cosine_scores(query_vec):
     return _embeddings_np @ q
 
 
+def _tokens(text):
+    return [
+        token
+        for token in re.findall(r"[a-z0-9]{3,}", text.lower())
+        if token not in STOPWORDS
+    ]
+
+
 class MRRetriever:
     def __init__(self, n_results=8):
         self.model = None
@@ -72,6 +88,9 @@ class MRRetriever:
         if not store.get("ids"):
             return []
 
+        if os.getenv("RAG_RETRIEVAL_MODE", "lexical").lower() != "semantic":
+            return self._retrieve_lexical(query, filters=filters, max_per_case=max_per_case)
+
         q_vec = self._get_model().encode(query, convert_to_numpy=True)
         scores = _cosine_scores(q_vec)
         ranked = np.argsort(-scores)
@@ -86,6 +105,41 @@ class MRRetriever:
             if seen.get(cid, 0) < max_per_case:
                 seen[cid] = seen.get(cid, 0) + 1
                 output.append({"text": store["texts"][idx], "metadata": m})
+            if len(output) >= self.n_results:
+                break
+        return output
+
+    def _retrieve_lexical(self, query, filters=None, max_per_case=2):
+        store = _load_store()
+        query_terms = _tokens(query)
+        if not query_terms:
+            return []
+
+        query_counts = Counter(query_terms)
+        ranked = []
+        for idx, (text, metadata) in enumerate(zip(store.get("texts", []), store.get("metadatas", []))):
+            if filters and not all(metadata.get(k) == str(v) for k, v in filters.items()):
+                continue
+            text_l = text.lower()
+            text_terms = Counter(_tokens(text_l))
+            score = 0.0
+            for term, count in query_counts.items():
+                if term in text_terms:
+                    score += min(text_terms[term], 4) * count
+                if term in text_l:
+                    score += 0.75
+            if score:
+                ranked.append((score, idx))
+
+        ranked.sort(reverse=True)
+        seen = {}
+        output = []
+        for _, idx in ranked:
+            metadata = store["metadatas"][idx]
+            cid = metadata.get("case_id", "unknown")
+            if seen.get(cid, 0) < max_per_case:
+                seen[cid] = seen.get(cid, 0) + 1
+                output.append({"text": store["texts"][idx], "metadata": metadata})
             if len(output) >= self.n_results:
                 break
         return output
