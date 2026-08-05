@@ -11,6 +11,7 @@ from rag.prompt_builder import build_prompt
 load_dotenv()
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
+_retriever = None
 
 # Detect queries about a specific case study ID
 _CS_ID_RE = re.compile(r"\bCS(\d+)\b", re.IGNORECASE)
@@ -28,6 +29,13 @@ class RAGProviderError(RuntimeError):
 
 def _env_value(name: str) -> str:
     return (os.getenv(name) or "").strip()
+
+
+def _get_retriever() -> MRRetriever:
+    global _retriever
+    if _retriever is None:
+        _retriever = MRRetriever(n_results=8)
+    return _retriever
 
 
 def query_ollama(prompt: str) -> str:
@@ -89,7 +97,7 @@ def run_pipeline(
     model: str = "claude",
     return_chunks: bool = False,
 ) -> str | tuple[str, list[dict]]:
-    retriever = MRRetriever(n_results=8)
+    retriever = _get_retriever()
 
     # Mode 1: specific CS ID mentioned → fetch all chunks for that case
     cs_match = _CS_ID_RE.search(query)
