@@ -14,7 +14,6 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -58,15 +57,22 @@ def _cosine_scores(query_vec):
 
 class MRRetriever:
     def __init__(self, n_results=8):
-        self.model = SentenceTransformer(EMBED_MODEL)
+        self.model = None
         self.n_results = n_results
+
+    def _get_model(self):
+        if self.model is None:
+            from sentence_transformers import SentenceTransformer
+
+            self.model = SentenceTransformer(EMBED_MODEL)
+        return self.model
 
     def retrieve(self, query, filters=None, max_per_case=2):
         store = _load_store()
         if not store.get("ids"):
             return []
 
-        q_vec = self.model.encode(query, convert_to_numpy=True)
+        q_vec = self._get_model().encode(query, convert_to_numpy=True)
         scores = _cosine_scores(q_vec)
         ranked = np.argsort(-scores)
 

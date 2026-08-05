@@ -258,6 +258,33 @@ def _requested_geo_value(query: str, records: list[dict]) -> tuple[str, str] | N
 
 
 def _metadata_answer_markdown(query: str) -> str | None:
+    q = query.lower()
+    asks_all_case_summary = (
+        re.search(r"\b(summarize|summary|summaries|overview)\b", q)
+        and re.search(r"\b(all|every|the)\b.{0,20}\bcase stud(?:y|ies)\b", q)
+    )
+    if asks_all_case_summary:
+        summary_chunks = _load_case_summary_chunks()
+        if not summary_chunks:
+            return "No case-study summaries were found."
+
+        meta = load_case_meta()
+        rows = []
+        for chunk in sorted(summary_chunks, key=lambda c: _case_sort_key(c.get("case_id", ""))):
+            cid = chunk.get("case_id", "")
+            rows.append([
+                cid,
+                meta.get(cid, {}).get("name") or cid,
+                chunk.get("location", ""),
+                normalize_country(chunk.get("country", "")),
+                _clean_excerpt(chunk.get("text", ""), max_chars=260),
+            ])
+        return "\n\n".join([
+            "### Summary of Indexed Case Studies",
+            _markdown_table(["Case ID", "Name", "Location", "Country", "Short Summary"], rows),
+            f"Total: {len(rows)} case studies summarized.",
+        ])
+
     kind = _metadata_query_kind(query)
     if not kind:
         return None
@@ -266,7 +293,6 @@ def _metadata_answer_markdown(query: str) -> str | None:
     if not records:
         return "No indexed case studies were found."
 
-    q = query.lower()
     wants_only_tables = "only include" in q and "table" in q
 
     if kind == "geo_counts":
