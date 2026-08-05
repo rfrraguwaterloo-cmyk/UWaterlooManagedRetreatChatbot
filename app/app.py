@@ -608,6 +608,17 @@ st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retrea
 # ── Build embedding index after Streamlit page setup ─────────────────────────
 _ensure_embedding_index_built()
 
+st.markdown(
+    """
+    <style>
+    div[data-testid="InputInstructions"] {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # ── Session state ─────────────────────────────────────────────────────────────
 conversation_id = _get_or_create_conversation_id()
 if "history" not in st.session_state:
