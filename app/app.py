@@ -7,7 +7,7 @@ from pathlib import Path
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from rag.pipeline import RAGProviderError, run_pipeline
+from rag.pipeline import RAGProviderError, generate_answer, retrieve_chunks
 from ingest.geo_metadata import geographic_metadata, normalize_country
 sys.path.insert(0, str(Path(__file__).parent))
 from sheets_logger import log_query
@@ -602,6 +602,22 @@ def _save_history(conversation_id: str, history: list[dict]) -> None:
     path.write_text(json.dumps(serializable_history, indent=2))
 
 
+def _followup_context(history: list[dict], limit: int = 3) -> str:
+    if not history:
+        return ""
+
+    pieces = []
+    for entry in history[:limit]:
+        answer = re.sub(r"\s+", " ", entry.get("answer", "")).strip()
+        if len(answer) > 900:
+            answer = answer[:900].rsplit(" ", 1)[0] + " ..."
+        pieces.append(
+            f"Previous question: {entry.get('query', '')}\n"
+            f"Previous answer summary: {answer}"
+        )
+    return "\n\n".join(pieces)
+
+
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retreat", layout="wide")
 
@@ -752,7 +768,17 @@ with main_col:
         "and may contain errors or omissions. They do not constitute professional advice. "
         "All decisions remain the sole responsibility of the user."
     )
-    query = st.text_area("Your question:", height=100, placeholder="Type your question about managed retreat here...")
+    has_history = bool(st.session_state.history)
+    use_followup_context = False
+    if has_history:
+        use_followup_context = st.checkbox(
+            "Use previous responses as context for this question",
+            value=True,
+            help="Adds the last few questions and answers to the prompt so you can ask natural follow-ups.",
+        )
+
+    query_label = "Your follow-up question:" if use_followup_context else "Your question:"
+    query = st.text_area(query_label, height=100, placeholder="Type your question about managed retreat here...")
 
     if st.button("Get answer", type="primary"):
         if not query.strip():
@@ -791,17 +817,27 @@ with main_col:
             st.caption(f"Total: {len(all_cases)} case studies indexed.")
             chunks = []
         else:
-            with st.spinner("Searching case studies and generating response..."):
-                try:
-                    answer, chunks = run_pipeline(
-                        query,
-                        questionnaire_answers=answers if answers else None,
-                        model=model_choice,
-                        return_chunks=True,
-                    )
-                except RAGProviderError as exc:
-                    st.error(str(exc))
-                    st.stop()
+            status = st.empty()
+            try:
+                status.info("Searching case studies...")
+                chunks = retrieve_chunks(query)
+                status.info(f"Found {len(chunks)} relevant case-study excerpts. Generating response...")
+
+                prompt_context = dict(answers)
+                if use_followup_context:
+                    prompt_context["Recent conversation context"] = _followup_context(st.session_state.history)
+
+                answer = generate_answer(
+                    query,
+                    chunks,
+                    questionnaire_answers=prompt_context if prompt_context else None,
+                    model=model_choice,
+                )
+                status.success("Response generated.")
+            except RAGProviderError as exc:
+                status.empty()
+                st.error(str(exc))
+                st.stop()
 
             # Save to history
             st.session_state.history.insert(0, {

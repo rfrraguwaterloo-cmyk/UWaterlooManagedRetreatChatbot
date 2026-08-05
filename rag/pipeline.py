@@ -91,13 +91,10 @@ def query_openai(prompt: str, max_tokens: int = 2048) -> str:
         ) from exc
 
 
-def run_pipeline(
+def retrieve_chunks(
     query: str,
-    questionnaire_answers: dict | None = None,
     filters: dict | None = None,
-    model: str = "claude",
-    return_chunks: bool = False,
-) -> str | tuple[str, list[dict]]:
+) -> list[dict]:
     retriever = _get_retriever()
 
     # Mode 1: specific CS ID mentioned → fetch all chunks for that case
@@ -119,9 +116,17 @@ def run_pipeline(
     else:
         chunks = retriever.retrieve(query, filters=filters, max_per_case=2)
 
+    return chunks
+
+
+def generate_answer(
+    query: str,
+    chunks: list[dict],
+    questionnaire_answers: dict | None = None,
+    model: str = "claude",
+) -> str:
     if not chunks:
-        no_result = "No relevant case studies found in the knowledge base. Please ingest documents first."
-        return (no_result, []) if return_chunks else no_result
+        return "No relevant case studies found in the knowledge base. Please ingest documents first."
 
     prompt = build_prompt(query, chunks, questionnaire_answers)
 
@@ -132,6 +137,18 @@ def run_pipeline(
     else:
         answer = query_ollama(prompt)
 
+    return answer
+
+
+def run_pipeline(
+    query: str,
+    questionnaire_answers: dict | None = None,
+    filters: dict | None = None,
+    model: str = "claude",
+    return_chunks: bool = False,
+) -> str | tuple[str, list[dict]]:
+    chunks = retrieve_chunks(query, filters=filters)
+    answer = generate_answer(query, chunks, questionnaire_answers, model=model)
     return (answer, chunks) if return_chunks else answer
 
 
