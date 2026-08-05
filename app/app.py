@@ -582,11 +582,11 @@ def _save_history(conversation_id: str, history: list[dict]) -> None:
     path.write_text(json.dumps(serializable_history, indent=2))
 
 
-# ── Build embedding index before any Streamlit calls ──────────────────────────
-_ensure_embedding_index_built()
-
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(page_title="AI-Assisted Knowledge Platform for Managed Retreat", layout="wide")
+
+# ── Build embedding index after Streamlit page setup ─────────────────────────
+_ensure_embedding_index_built()
 
 # ── Session state ─────────────────────────────────────────────────────────────
 conversation_id = _get_or_create_conversation_id()
