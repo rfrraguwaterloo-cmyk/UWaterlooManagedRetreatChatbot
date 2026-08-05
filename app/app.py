@@ -14,34 +14,28 @@ from sheets_logger import log_query
 
 
 def _ensure_embedding_index_built():
-    """Ensure precomputed_embeddings.json has texts+metadatas (needed by numpy retriever)."""
+    """Ensure the hosted app has a usable precomputed embedding index.
+
+    Keep this intentionally lightweight. Building embeddings imports torch and
+    sentence-transformers, which can make tiny hosted instances stall before
+    the first page renders.
+    """
     precomputed = Path("data/extracted/precomputed_embeddings.json")
-    needs_rebuild = True
-    if precomputed.exists():
-        import json as _json
-        pre = _json.loads(precomputed.read_text())
-        from ingest.embed_and_index import _content_hash, load_all_chunks
+    if not precomputed.exists():
+        raise FileNotFoundError(
+            f"Precomputed embeddings not found at {precomputed}. "
+            "Run python ingest/embed_and_index.py before deploying."
+        )
 
-        chunks = load_all_chunks()
-        texts = [c.get("text", _json.dumps(c)) for c in chunks]
-        ids = [f"{c.get('case_id', 'unknown')}_{c.get('chunk_index', i)}" for i, c in enumerate(chunks)]
-        from ingest.embed_and_index import build_metadatas
-
-        metadatas = build_metadatas(chunks)
-        content_hash = _content_hash(ids, texts, metadatas)
-        if (
-            pre.get("ids") == ids
-            and pre.get("texts") == texts
-            and pre.get("metadatas") == metadatas
-            and pre.get("content_hash") == content_hash
-        ):
-            print(f"Embeddings ready ({len(pre['ids'])} chunks).")
-            needs_rebuild = False
-    if needs_rebuild:
-        print("Building embeddings index...")
-        from ingest.embed_and_index import embed_and_index
-        embed_and_index()
-        print("Embeddings index ready.")
+    pre = json.loads(precomputed.read_text())
+    required = ("ids", "texts", "metadatas", "embeddings")
+    missing = [key for key in required if key not in pre]
+    if missing:
+        raise ValueError(
+            "precomputed_embeddings.json is missing required fields: "
+            + ", ".join(missing)
+        )
+    print(f"Embeddings index available ({len(pre.get('ids', []))} chunks).")
 
 QUESTIONS_PATH = Path("questionnaire/questions.json")
 DATA_RAW = Path("data/raw")

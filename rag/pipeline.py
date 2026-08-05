@@ -5,7 +5,6 @@ import anthropic
 from openai import APIConnectionError, APIError, AuthenticationError, RateLimitError
 from openai import OpenAI
 from dotenv import load_dotenv
-from rag.retriever import MRRetriever
 from rag.prompt_builder import build_prompt
 
 load_dotenv()
@@ -31,9 +30,11 @@ def _env_value(name: str) -> str:
     return (os.getenv(name) or "").strip()
 
 
-def _get_retriever() -> MRRetriever:
+def _get_retriever() -> "MRRetriever":
     global _retriever
     if _retriever is None:
+        from rag.retriever import MRRetriever
+
         _retriever = MRRetriever(n_results=8)
     return _retriever
 
