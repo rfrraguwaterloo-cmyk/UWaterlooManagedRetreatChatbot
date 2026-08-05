@@ -41,6 +41,8 @@ try:
 except ImportError:
     pass
 
+from .fetch_papers import find_case_dir
+
 
 def load_drive_folders() -> dict:
     if not DRIVE_FOLDERS_FILE.exists():
@@ -81,9 +83,9 @@ def main():
         sys.exit(1)
 
     case_id = args.case_id.upper()
-    dest_dir = REPO_ROOT / "data" / "raw" / case_id
-    if not dest_dir.exists():
-        print(f"ERROR: case directory not found: {dest_dir}")
+    dest_dir = find_case_dir(case_id)
+    if not dest_dir:
+        print(f"ERROR: case directory not found for {case_id} under {REPO_ROOT / 'data' / 'raw'}")
         sys.exit(1)
 
     dest_name = args.rename if args.rename else args.filename

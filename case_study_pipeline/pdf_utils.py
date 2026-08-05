@@ -14,6 +14,11 @@ import pdfplumber
 from fpdf import FPDF
 
 SOURCE_EXTENSIONS = {".pdf", ".txt", ".md"}
+SOURCE_METADATA_FILENAMES = {
+    "dois.txt",
+    "paper_discovery_report.md",
+    "sources.txt",
+}
 
 # Roughly maps "smart" unicode punctuation (and a few common symbols) to ASCII so
 # the core PDF fonts (latin-1 only) can render them without crashing.
@@ -61,7 +66,11 @@ def extract_source_documents(folder: Path, max_chars_per_file: int | None = None
 
     files = sorted(
         p for p in folder.iterdir()
-        if p.is_file() and p.suffix.lower() in SOURCE_EXTENSIONS
+        if (
+            p.is_file()
+            and p.suffix.lower() in SOURCE_EXTENSIONS
+            and p.name not in SOURCE_METADATA_FILENAMES
+        )
     )
     if not files:
         raise FileNotFoundError(

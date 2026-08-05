@@ -36,10 +36,21 @@ _RUN_DIR_RE = re.compile(r"^run_\d+", re.IGNORECASE)
 # ---------------------------------------------------------------------------
 
 def _all_case_ids() -> list[str]:
-    return sorted(
-        p.name for p in DATA_RAW.iterdir()
-        if p.is_dir() and re.match(r"^CS\d+$", p.name)
-    )
+    ids = []
+    for p in DATA_RAW.iterdir():
+        if p.is_dir():
+            m = re.match(r"^(CS\d+)", p.name)
+            if m:
+                ids.append(m.group(1))
+    return sorted(set(ids), key=lambda x: int(x[2:]))
+
+
+def _find_case_folder(case_id: str) -> Path | None:
+    """Find a case folder named either CS37 or CS37-Kabyaza_RWA."""
+    for p in DATA_RAW.iterdir():
+        if p.is_dir() and re.match(rf"^{re.escape(case_id)}($|-)", p.name):
+            return p
+    return None
 
 
 def _grade_run(run_dir: Path, case_id: str) -> int:
@@ -80,7 +91,12 @@ def _write_selected(
 # ---------------------------------------------------------------------------
 
 def select_for_case(case_id: str, force: bool = False) -> None:
-    pipeline_output = DATA_RAW / case_id / "pipeline_output"
+    case_folder = _find_case_folder(case_id)
+    if case_folder is None:
+        print(f"  [{case_id}] No folder found in data/raw/. Skipping.")
+        return
+
+    pipeline_output = case_folder / "pipeline_output"
 
     if not pipeline_output.exists():
         print(f"  [{case_id}] No pipeline_output/ — skipping.")

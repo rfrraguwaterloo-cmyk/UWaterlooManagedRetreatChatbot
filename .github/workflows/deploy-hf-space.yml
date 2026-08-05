@@ -1,0 +1,75 @@
+name: Deploy Hugging Face Space
+
+on:
+  workflow_dispatch:
+    inputs:
+      space_id:
+        description: "Target Hugging Face Space, e.g. UWRFR/UWaterlooManagedRetreat"
+        required: true
+        default: "UWRFR/UWaterlooManagedRetreat"
+      create_pr:
+        description: "Open a Hugging Face PR instead of pushing directly"
+        required: true
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-hf-space
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HF_SPACE_ID: ${{ github.event.inputs.space_id || vars.HF_SPACE_ID || 'UWRFR/UWaterlooManagedRetreat' }}
+      CREATE_PR: ${{ github.event.inputs.create_pr || 'false' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Hugging Face CLI
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade "huggingface_hub[cli]"
+
+      - name: Validate required files
+        run: |
+          test -f README.md
+          test -f app/app.py
+          test -f requirements.txt
+          test -f data/extracted/precomputed_embeddings.json
+
+      - name: Upload Space files
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "Missing HF_TOKEN GitHub secret" >&2
+            exit 1
+          fi
+
+          CREATE_PR_FLAG=""
+          if [ "$CREATE_PR" = "true" ]; then
+            CREATE_PR_FLAG="--create-pr"
+          fi
+
+          hf upload "$HF_SPACE_ID" . \
+            --type space \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".venv/*" \
+            --exclude "venv/*" \
+            --exclude "__pycache__/*" \
+            --exclude ".streamlit_history/*" \
+            --exclude "data/raw/*" \
+            --exclude "*.pdf" \
+            --commit-message "Deploy from GitHub Actions: $GITHUB_SHA" \
+            $CREATE_PR_FLAG

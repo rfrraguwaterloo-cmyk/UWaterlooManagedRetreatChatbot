@@ -98,6 +98,68 @@ as `run_case_study.py`. Each writes `<CASE_ID>_Check1_report.{md,pdf}` or
 Requires `OPENAI_API_KEY` (in `rfr-rag/.env` or the environment) -- no Anthropic key
 needed for these two scripts.
 
+## High-precision paper discovery
+
+Use `discover_sources.py` before running the extraction pipeline when a case
+needs source cleanup, DOI lookup, or supplemental paper discovery.
+
+```bash
+python3 -m case_study_pipeline.discover_sources --case-id CS36
+python3 -m case_study_pipeline.discover_sources \
+  --case-id CS36 \
+  --alias "Pitt County" \
+  --alias "Hurricane Floyd"
+```
+
+The discovery command is deliberately conservative:
+
+- Existing `sources.txt` / `dois.txt` entries are treated as accepted seed
+  sources, but still resolved through scholarly metadata APIs where possible.
+- New search results are not silently accepted. They are classified as
+  `review_required` or `rejected_by_identity_filter`.
+- Direct case evidence must match the core place identity, such as the village,
+  city, resettlement name, province/state, and country from the spreadsheet or
+  `case_meta.json`.
+- National/provincial/local legal and policy papers can be surfaced as
+  `candidate_policy_context`, but they stay separate from direct case evidence.
+
+The command writes:
+
+```text
+data/raw/<CASE>/
+├── sources.json                 # structured accepted seed sources
+├── paper_candidates.json         # all candidates with evidence/scoring
+└── paper_discovery_report.md     # human-readable review report
+```
+
+Recommended review rule: only use `accepted_seed` sources and manually approved
+`review_required` candidates in the LLM extraction. Do not use rejected/background
+papers unless a human reclassifies them after reading the full text.
+
+## Automated source acquisition
+
+After discovery, run `acquire_sources.py` to populate the case folder with source
+files the extraction pipeline can read:
+
+```bash
+python3 -m case_study_pipeline.acquire_sources --case-id CS39
+python3 -m case_study_pipeline.acquire_sources \
+  --case-id CS38 \
+  --extra-url "https://www.academia.edu/37237146/Heritage_and_Postdisaster_Recovery_Indigenous_Community_Resilience"
+```
+
+This command prefers publisher/open-access PDFs, then falls back to a
+provenance-labelled `.md` capture when the PDF is blocked but the article/report
+text is publicly reachable. That fallback is intentional: the extraction
+pipeline reads `.pdf`, `.txt`, and `.md`, so a full-text markdown capture is
+better than stopping the pipeline on a missing PDF. Use the generated
+`source_acquisition_report.json` to see what was acquired.
+
+If a publisher PDF is paywalled and no public full-text route is available, the
+script will not bypass access controls. In that case, the non-manual route is to
+add an authorized/open URL with `--extra-url`, or use the EZproxy/browser flow
+below for institutional access.
+
 ## Session notes
 
 `session_notes/` holds one-off "continue this work" notes written for specific case

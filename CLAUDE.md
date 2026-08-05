@@ -39,6 +39,44 @@ The Cowork sandbox is **ephemeral** (installed packages don't persist between se
    this — it documents the exact URL pattern (`ezproxy.py`) and the
    inbox-sorting + Drive-upload script (`sort_inbox.py`).
 
+### Searching for new supplemental papers (consensus search process)
+
+When looking for additional papers beyond what's in `sources.txt`, follow this process:
+
+**1. Read `sources.txt` first** — check what's already listed so you don't duplicate.
+
+**2. Always anchor searches on the location name** — every search must include the specific town/city name in quotes (e.g. `"Cagayan de Oro"`, `"Valmeyer"`). Papers must mention the actual place, not just the general topic.
+
+**3. Run 2–3 targeted searches in parallel:**
+- `"[Location]" "[disaster event]" resettlement OR buyout OR relocation journal doi`
+- `"[Location]" flood OR hazard managed retreat academic paper`
+- `"[Location]" "Natural Hazards" OR "IJDRR" OR "Climatic Change" doi`
+
+**4. Verify each paper actually covers the location** — fetch the abstract to confirm the location name appears in the paper itself, not just in a reference list or tangentially.
+
+**5. Get the DOI** for each confirmed paper so it can be downloaded directly.
+
+**6. Flag open access vs paywalled** — open access (PMC, ResearchGate, IOP open) can be downloaded directly; paywalled ones need UWaterloo EZproxy.
+
+> **The most common mistake:** finding papers *about* the general topic (flood buyouts, managed retreat in the Philippines, etc.) that don't actually study the specific case study location. The location name check is the critical filter.
+
+### Automated high-precision discovery
+
+Use the structured discovery command before relying on broad web or Consensus
+search results:
+
+```bash
+python3 -m case_study_pipeline.discover_sources --case-id CS36
+python3 -m case_study_pipeline.discover_sources --case-id CS36 --alias "Pitt County" --alias "Hurricane Floyd"
+```
+
+This writes `sources.json`, `paper_candidates.json`, and
+`paper_discovery_report.md` in the case folder. Existing `sources.txt` /
+`dois.txt` entries are treated as accepted seed sources. New papers are only
+marked `review_required` unless they pass strict identity checks against the
+case village/city, province/state, country, aliases, and managed-retreat terms.
+Policy/legal context is labelled separately from direct case evidence.
+
 ---
 
 ## Core research questions
