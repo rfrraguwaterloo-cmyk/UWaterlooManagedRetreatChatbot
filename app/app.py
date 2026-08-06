@@ -532,7 +532,9 @@ def _render_how_to_use_page() -> None:
 
         Open the **Previous Responses** tab to see the full answer history for your current
         browser conversation. This is useful when comparing several questions or copying a
-        complete response with formatting.
+        complete response with formatting. To preserve this history across restarts, the tool
+        may store previous questions and answers in the app's private storage. Do not enter
+        sensitive personal, legal, medical, financial, or confidential community information.
 
         ### 7. Treat answers as research support
 
@@ -707,6 +709,10 @@ if not st.session_state.disclaimer_accepted:
             <p><strong>The responsibility for any decision remains entirely with the user and their organisation.</strong>
             The researchers and institutions associated with the Retreat From Risk (RFR) project
             accept no liability for decisions made on the basis of information provided by this tool.</p>
+            <p><strong>Privacy and saved responses:</strong> To preserve your Previous Responses within
+            this browser conversation, the tool may store your questions, selected context, generated
+            answers, and retrieved source references in the app's private storage. Do not enter
+            sensitive personal, legal, medical, financial, or confidential community information.</p>
             <p>By continuing, you acknowledge that you have read and understood this notice.</p>
         </div>
     </div>
@@ -928,6 +934,9 @@ with main_col:
 with history_col:
     st.markdown('<span id="previous-responses"></span>', unsafe_allow_html=True)
     st.subheader("Previous Responses")
+    st.caption(
+        "Saved for this browser conversation. Avoid entering sensitive or confidential information."
+    )
 
     if not st.session_state.history:
         st.caption("Your previous answers will appear here.")
