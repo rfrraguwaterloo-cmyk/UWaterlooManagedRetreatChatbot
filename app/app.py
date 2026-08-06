@@ -3,6 +3,7 @@ import json
 import re
 import ast
 import uuid
+import os
 from pathlib import Path
 import streamlit as st
 
@@ -39,8 +40,19 @@ def _ensure_embedding_index_built():
 
 QUESTIONS_PATH = Path("questionnaire/questions.json")
 DATA_RAW = Path("data/raw")
-HISTORY_DIR = Path(".streamlit_history")
 MAX_HISTORY_ITEMS = 20
+
+
+def _history_dir() -> Path:
+    configured = os.getenv("RFR_HISTORY_DIR")
+    if configured:
+        return Path(configured)
+
+    bucket_mount = Path("/data")
+    if bucket_mount.exists() and os.access(bucket_mount, os.W_OK):
+        return bucket_mount / "streamlit_history"
+
+    return Path(".streamlit_history")
 
 
 @st.cache_data
@@ -581,8 +593,9 @@ def _get_or_create_conversation_id() -> str:
 
 
 def _history_path(conversation_id: str) -> Path:
-    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
-    return HISTORY_DIR / f"{conversation_id}.json"
+    history_dir = _history_dir()
+    history_dir.mkdir(parents=True, exist_ok=True)
+    return history_dir / f"{conversation_id}.json"
 
 
 def _load_history(conversation_id: str) -> list[dict]:
