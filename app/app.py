@@ -797,8 +797,8 @@ with main_col:
         )
 
     query_label = "Your follow-up question:" if use_followup_context else "Your question:"
-    st.caption("Ask about a case, location, funding model, policy issue, or community concern. Avoid entering sensitive or confidential information.")
-    query = st.text_area(query_label, height=100, placeholder="Type your question about managed retreat here...")
+    st.caption("Ask about a case, location, funding model, policy issue, or community concern.")
+    query = st.text_area(query_label, height=100, placeholder="Type your question about managed retreat here... Avoid entering sensitive or confidential information")
 
     if st.button("Get answer", type="primary"):
         if not query.strip():
