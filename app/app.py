@@ -686,13 +686,6 @@ if not st.session_state.disclaimer_accepted:
         line-height: 1.6;
         width: 100%;
     }
-    /* Push the Streamlit button to sit right below the box, centered */
-    .disclaimer-wrap + div [data-testid="stButton"] {
-        display: flex;
-        justify-content: center;
-        max-width: 720px;
-        margin: 0.75rem auto 0 auto;
-    }
     </style>
     <div class="disclaimer-wrap">
         <h1>AI-Assisted Knowledge Platform for Managed Retreat</h1>
@@ -717,10 +710,12 @@ if not st.session_state.disclaimer_accepted:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    if st.button("I understand — continue to the tool", type="primary"):
-        st.session_state.disclaimer_accepted = True
-        _set_query_param("disclaimer_accepted", "true")
-        st.rerun()
+    _, continue_col, _ = st.columns([1, 1, 1])
+    with continue_col:
+        if st.button("I understand — continue to the tool", type="primary", use_container_width=True):
+            st.session_state.disclaimer_accepted = True
+            _set_query_param("disclaimer_accepted", "true")
+            st.rerun()
     st.stop()
 
 current_page = _current_page()
