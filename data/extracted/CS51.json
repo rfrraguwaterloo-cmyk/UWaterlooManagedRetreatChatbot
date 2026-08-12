@@ -1,0 +1,306 @@
+[
+  {
+    "case_id": "CS51",
+    "chunk_index": 0,
+    "section": "overview",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Case Study Overview\n\n**Case Name and Location:** Ria Formosa / Praia de Faro, Algarve, southern Portugal\n\n**Hazard(s):** Atlantic storm-driven coastal erosion, beach overwash, dune breaching, and associated structural damage to barrier island settlements; exacerbated by the highly dynamic morphology of the barrier island system and, according to the RISC-KIT webguide, the potential for significant impacts from climate change and low-frequency extreme storm events.\n\n**Type of Retreat:** Managed retreat has not been documented in the reviewed sources. The dominant institutional response to storm damage at this site has been reactive repair and reconstruction in place — roads, seawalls, and buildings have been rebuilt at the same locations following each destructive storm event.\n\n**Scale:** The primary focus within the Ria Formosa system is Praia de Faro, a settlement approximately 5 km long built on the dunes of the Ancão Peninsula. The broader Ria Formosa system extends approximately 55–60 km along the southern Algarve coast, encompassing five barrier islands and two peninsulas. No specific count of households or residents subject to any managed retreat decision is available, as no such program has been documented.\n\n**Key Actors:** The Portuguese National Institute for the Ocean and Atmosphere (IPMA) provides wave climate forecasting. Local civil protection authorities have managed emergency responses (e.g., bridge closures following major storms). The EU-funded RISC-KIT research consortium studied Praia de Faro as a coastal hazard hotspot. Portugal's broader coastal zone management framework involves the national government (Decree-Laws, Resolutions of the Council of Ministers), the Institute of Nature Conservation (ICN), and municipal/local authorities. As of 2004, Coastal Zone Management Plans (POOCs) were being developed for all nine sectors of the continental Portuguese coast (Taveira Pinto 2004).\n\n**Timeline:** The hazard history spans from at least 1941 (a major regional storm) through 2009/2010 (the most recent major storm sequence documented in the reviewed sources). No managed retreat timeline or milestones have been identified in the sources. Portugal's ICZM framework was described as \"very recent\" in practice as of 2004.\n\n**Key Outcomes:** As documented in the reviewed sources, no managed retreat program has been implemented at Praia de Faro or elsewhere in the Ria Formosa system. The consistent response to storm damage has been reconstruction in place. The RISC-KIT project has contributed substantial hazard knowledge about the site, and Portugal's ICZM framework represents ongoing institutional development in coastal zone planning, but neither has produced a managed retreat program as documented in the reviewed sources.\n\n---\n\n### Narrative Summary\n\nThe Ria Formosa is a protected wildlife reservoir and coastal lagoon system on Portugal's southern Algarve coast. It is composed of a chain of dynamic barrier islands and peninsulas extending over roughly 55–60 km, separated by six tidal inlets. The settlement of Praia de Faro, built on the low-lying Ancão Peninsula dune system, has been repeatedly struck by major Atlantic storms throughout the twentieth and early twenty-first centuries. Major storm events occurred in 1941, 1961, 1978/1979–1980, 1989/1990, 1996, 1998, 2002, and 2009/2010, causing substantial beach erosion, dune overwash, destruction of seawalls, and damage to homes and infrastructure. The 1941 storm caused approximately 150 million EUR (in 2009 values) in damage across the Algarve, opened a new inlet at the Ancão Peninsula, and destroyed Cabanas Island. In the most recent documented event (winter 2009/2010), 44 of 71 private buildings in Fuzeta (Ilha de Armona) were partially or totally destroyed, and a new tidal inlet was opened.\n\nDespite this long record of recurring storm damage, the dominant institutional response has been to repair and rebuild in place. Following the 1989/1990 storms, emergency rock protection was constructed, a seawall section later collapsed, and the damaged road, walls, and buildings were rebuilt at the same locations. After the 1996 and 2002 storms, the destroyed seawall was again rebuilt at the same location. The RISC-KIT research project identified Praia de Faro as a coastal hazard hotspot in a highly dynamic system with potential for significant impacts from climate change and extreme storm events. Its stated major goals are ensuring public safety against storms and erosion and preserving natural values. Portugal has been developing Integrated Coastal Zone Management Plans (POOCs) for its continental coast, which include analysis of coastal systems and delimitation of uses relative to shoreline carrying capacity, but no retreat-specific program is described in the reviewed sources.\n\nIn sum, this case presents a well-documented high-risk coastal setting — a barrier island settlement with repeated storm damage and a reactive reconstruction pattern — but without evidence of a managed retreat decision or program having been formally adopted or implemented. The case is better characterized as a high-risk coastal management context in which managed retreat has not been documented, rather than as a case where managed retreat has occurred.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 1,
+    "section": "coding_questions",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Coding Questions\n\n---\n\n### Is there any evidence of a proactive or reactive trigger in the MR decision process? (Reactive/Proactive)\n\n**Direct Answer:** No managed retreat decision process has been identified in the reviewed sources. In terms of the broader historical coastal management pattern, responses to storm damage have been classically **Reactive**. There is nascent evidence of **Proactive** planning intent through Portugal's ICZM framework (Taveira Pinto 2004) and the RISC-KIT project's hotspot identification, but no proactive managed retreat decision has been documented.\n\n**Narrative Explanation:** The RISC-KIT webguide documents a repeated cycle: storms cause damage → emergency response (e.g., bridge closures, army barge access) → reconstruction at the same locations. After the 1989/1990 storms, \"the damaged areas (road, walls and buildings), were rebuilt exactly at the same spots.\" After the 1996 and 2002 storms, the destroyed seawall was \"rebuilt at the same location.\" This pattern is reactive: action occurs after damage, and the response restores the status quo rather than reducing future exposure.\n\nThe Taveira Pinto (2004) abstract describes Portugal's ICZM practice as \"very recent\" and notes that coastal zone management plans are being developed, indicating an emerging proactive institutional intent at the national level. However, this reflects general coastal planning, not a managed retreat decision process for Praia de Faro or any other specific site.\n\n**Coding Note:** Because no MR decision process has been confirmed, neither \"Reactive\" nor \"Proactive\" can be definitively applied as an MR trigger. If the site is included in the database as a potential or emergent MR context, \"Reactive\" best characterizes the historical coastal management approach documented in the sources.\n\n---\n\n### Date, Number of households affected, Number of population affected, Total funding\n\n**Direct Answer:**\n- **Date of MR program:** Not applicable — no managed retreat program identified.\n- **Key storm damage dates (documented):** 1941, 1961, 1978, 1979/1980, 1989/1990, 1996, 1998, 2002, 2009/2010.\n- **Households affected (MR program):** Not applicable.\n- **Households affected (storm damage, documented):** In the 2009/2010 storms, 44 of 71 private buildings in Fuzeta (Ilha de Armona) were partially or totally destroyed (RISC-KIT webguide). \"A few houses\" of fishermen at Praia de Faro were partially destroyed in the same event. Exact household counts for other events are not provided.\n- **Population affected:** Not quantified in the reviewed sources.\n- **Total funding (MR):** No MR funding identified. The 1941 storm caused approximately 150 million EUR (2009 value) in damage across the Algarve region (RISC-KIT webguide, citing Muir-Wood 2011). The RISC-KIT project is EU-funded research.\n\n**No evidence found in reviewed sources for MR-specific funding, household counts, or population counts.**\n\n---\n\n### What is the occurrence of the hazard(s) considered in the MR decision process? (Single Hazard/Multiple Hazards)\n\n**Direct Answer:** The hazard regime is best characterized as **Single Hazard** — coastal storm impact — encompassing beach erosion, dune overwash, shoreline retreat, and structural damage, all driven by Atlantic storm events.\n\n**Narrative Explanation:** The RISC-KIT webguide states: \"Storms constitute the major source of threat to the area as they may provoke substantial beach erosion and overwash.\" The webguide states that storms impact the area every year and that wave heights above the 3 m storm threshold are relatively frequent. The compounding of erosion, overwash, dune breaching, and flood-like inundation within individual storm events reflects a single coastal storm hazard regime rather than truly distinct multiple hazards.\n\nNo distinct riverine/pluvial flooding, wildfire, earthquake, or other separate hazard types are documented as drivers of management decisions.\n\n**Coding note:** Because no MR decision process has been identified, this coding reflects the hazard context of the site rather than the trigger of an MR program.\n\n---\n\n### What is the origin of the hazards considered in the MR decision process? (Technological Hazard/Natural Hazard)\n\n**Direct Answer:** **Natural Hazard.** The hazards are driven by Atlantic storm systems and natural coastal morphodynamic processes (wave action, sediment transport, tidal inlet migration and breaching).\n\n**Narrative Explanation:** The RISC-KIT webguide describes wave heights above storm thresholds as \"relatively frequent,\" storm-driven beach erosion and overwash as the primary threats, and the barrier islands as \"highly dynamic systems in a constant process of recycling, mostly driven by inlet breaching and migration.\" The webguide also notes that \"the combined factors of a low lying barrier island system with high ecological value and the existence of multiple anthropogenic activities, classify Ria Formosa as a very complex system with potential for the occurrence of significant impacts due to climate change and low-frequency, extreme storm events.\" Climate change is referenced as an amplifying factor but is not identified as the sole origin of current hazards. The primary hazard mechanism is natural Atlantic storm forcing on a geomorphically dynamic coastal system.\n\n---\n\n### Was this hazard considered in the MR decision process?\n\n**Direct Answer:** **Coastal Flooding/Erosion.** Beach erosion, dune overwash, shoreline retreat, and structural impacts from storm surge and wave action are the documented hazards.\n\n**Narrative Explanation:** The RISC-KIT webguide documents multiple storm events causing \"substantial beach erosion and overwash,\" shoreline retreat, seawall destruction, and building damage. The hazard is squarely within the Coastal Flooding/Erosion category as defined by the codebook (storm surge, flooding, wave erosion impacting coastal regions).\n\nNo evidence found for: Riverine/Pluvial Flooding, Lake Flooding/Erosion, Wildfire, Volcano, Land Subsidence, Landslide/Debris Flow, Earthquake, Tsunami, Hurricane, or Other distinct hazard types driving any management decision at this site.\n\n**Coding note:** As with other fields, this reflects the hazard context of the site; no MR decision process has been identified in which this hazard was formally \"considered.\"\n\n---\n\n### What was the geographic scale of the MR project? (Individual homes, A few streets, Neighbourhood, Entire community, Sub-watershed, Watershed region)\n\n**Direct Answer:** Not applicable — no MR project has been confirmed. In terms of the hazard impact area, the RISC-KIT project focuses on Praia de Faro as a hotspot, which corresponds to **Entire community** scale (a settlement approximately 5 km long on the Ancão Peninsula). The broader Ria Formosa system within which it sits extends approximately 55–60 km.\n\n**Narrative Explanation:** The RISC-KIT webguide states: \"the RISC-KIT project focuses on the hotspot of Praia de Faro, a settlement at the western part of the system about 5 km long, implemented over the dunes of the Ancão Peninsula.\" Storm impacts are documented across multiple communities within the broader Ria Formosa system (Praia de Faro, Fuzeta/Ilha de Armona, Culatra Island, Cabanas/Tavira area), but the primary research focus is on Praia de Faro as a single settlement.\n\nGiven that no MR project exists, the \"Entire community\" scale is the most defensible characterization of the hazard impact context for Praia de Faro; \"Watershed region\" is avoided as it overclaims the spatial scope of the documented focus.\n\n---\n\n### Who or what was retreated? (Individuals, Groups/Neighbourhoods, Communities, Critical infrastructure, Hazard protection structures, Industrial assets)\n\n**Direct Answer:** No retreat has been documented. Historical responses involved reconstruction in place rather than retreat of any category of people, assets, or infrastructure.\n\n**No evidence found in reviewed sources of any retreat having taken place.**\n\n---\n\n### Other notes (General Information)\n\nThe reviewed sources for this case are: (1) the RISC-KIT Coastal Management Webguide for Ria Formosa, an open web page providing hazard history, site description, and predictability information; (2) the abstract and metadata of Taveira Pinto (2004) on the practice of coastal zone management in Portugal — full text was behind a paywall and could not be reviewed; and (3) an attempted capture of a paper on coastal wetland reclamation in Ria Formosa (Tracking 130 years...), which was entirely inaccessible due to a bot-detection/CAPTCHA block. The contents of sources (2) and (3) beyond what is captured could not be reviewed and may contain relevant information about land use management, historical land cover change, and coastal governance that would inform this coding.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 2,
+    "section": "institutional_environment",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Institutional Environment\n\n---\n\n### What is the focus or scope of the MR project? (Individual buyout/retreat, Community buyout/retreat, Leasebacks/easements/buffers, Other acquisition tools, Managed realignment of infrastructure)\n\n**Direct Answer:** No evidence found in reviewed sources of any MR program with a defined focus or scope.\n\n**Narrative Explanation:** The Taveira Pinto (2004) abstract references Coastal Zone Management Plans (POOCs) that include \"a delimitation of uses in relation to the carrying capacity of the shoreline,\" which could theoretically involve development restrictions. However, this does not constitute a managed retreat or property acquisition program as defined by the codebook. No buyout, community resettlement, easement, or infrastructure realignment program is described in the reviewed sources.\n\n---\n\n### What legal constraints or requirements were identified during the MR decision process?\n\n**Direct Answer:** No MR decision process has been identified. The relevant legal context described by Taveira Pinto (2004) includes:\n\n- **Relevant regulations/acts:** Portugal's Coastal Zone Management Plans (POOCs) are developed under a national regulatory framework involving Decree-Laws (DL) and Resolutions of the Council of Ministers (RCM). Ria Formosa is designated a wildlife reservoir (protected area), implying legal protection status that governs development and land use (RISC-KIT webguide; Taveira Pinto 2004 abbreviations reference ICN — Instituto de Conservação da Natureza).\n- **Legal authority over retreat:** The Taveira Pinto (2004) abstract references national institutions and legislative instruments but does not describe legal authority being invoked for managed retreat.\n\nNo evidence of: litigation related to retreat, home or land acquisition processes for retreat, title transfer, rezoning for retreat purposes, or compliance/enforcement mechanisms related to a managed retreat program.\n\n**No evidence found in reviewed sources for MR-specific legal instruments or constraints.**\n\n---\n\n### What were the funding sources for the MR project?\n\n**Direct Answer:** No MR funding has been identified in the reviewed sources.\n\n**Narrative Explanation:** The RISC-KIT project, which conducted research on the site, is EU-funded. The Taveira Pinto (2004) abstract references EU Demonstration Programmes on Integrated Coastal Zone Management (1997–1999) as part of Portugal's ICZM development. Emergency storm responses (bridge closures, army barge access) suggest involvement of national/local government resources, but no specific managed retreat funding has been documented.\n\n---\n\n### What was considered to maintain (or improve) the tax base in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What level/type of compensation mechanisms were considered in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources of any compensation mechanism related to managed retreat.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 3,
+    "section": "planning_processes",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Planning Processes\n\n---\n\n### What is the time horizon considered in the MR decision process?\n\n**Direct Answer:** No formal MR planning process has been identified. In terms of the broader coastal management context:\n\nThe RISC-KIT project implicitly addresses **anticipated future risks (10–100 years)** through its framing of climate change impacts and long-term coastal dynamics. The Taveira Pinto (2004) paper discusses ICZM in the context of both current erosion problems and future risk reduction, suggesting an **anticipated future risks** orientation at the national planning level.\n\nThe historical management response at Praia de Faro has addressed **immediate risks (1–5 years)** reactively, through emergency repairs after storm events.\n\nNo MR-specific planning time horizon is documented in the reviewed sources.\n\n---\n\n### What planning elements were considered in the MR decision process?\n\n**Direct Answer:** No MR planning process has been identified. The broader coastal management context includes:\n\n- **Top-down:** Portugal's ICZM framework is nationally initiated; Decree-Laws and Council of Ministers Resolutions set the regulatory framework (Taveira Pinto 2004).\n- **Multi-sectoral:** Taveira Pinto (2004) describes engagement across nature conservation, coastal engineering, urban planning, and EU policy.\n- **Degree of transparency:** ICZM processes included EU Demonstration Programmes with reporting and assessment components (Taveira Pinto 2004).\n\nNo evidence of MCDA, adaptive management, bottom-up/community-led planning, public-private partnerships, CBA, participatory/collaborative elements, single or multi-stage retreat planning, or coordination elements specifically related to any MR decision.\n\n---\n\n### What decision support tools were used in the MR decision process?\n\n**Direct Answer:** In the broader coastal management context (not MR-specific):\n\n- **Hazard maps and models:** The RISC-KIT project produced hazard assessments and a historical storm database for Praia de Faro (RISC-KIT webguide).\n- **Process guidance:** Portugal's ICZM framework involves structured plan development for each coastal sector (Taveira Pinto 2004).\n- **CC projection models (implicit):** The RISC-KIT webguide references climate change as an amplifying factor, suggesting some use of climate projections in the research framing, though not explicitly linked to MR decisions.\n\nWave climate forecasting is provided by IPMA using the WAM model (spatial resolution 0.25°) and the European Shelf LAM model (resolution 10°), providing 5-day forecasts updated daily (RISC-KIT webguide).\n\nNo evidence found for: CBA, MCDA, housing assessment, demographic projections, social vulnerability assessments, socioeconomic projections, or new site evaluation processes in relation to any MR decision.\n\n---\n\n### What planning measures were taken for receiving areas in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources. No retreat has occurred; no receiving area planning has been documented.\n\n---\n\n### What uses were planned for retreat lands?\n\n**Answer:** No evidence found in reviewed sources. No retreat lands have been created.\n\n**Contextual note:** The Ria Formosa is a protected wildlife reservoir (protected area) with tidal flats, salt marshes, sand dunes, and small sandy islands (RISC-KIT webguide). If barrier island settlements were vacated in a hypothetical future retreat scenario, the natural character of the lagoon system would represent the ecological baseline to which lands might return. This is an observation about the ecological context, not a documented plan.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 4,
+    "section": "community_engagement",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Community Engagement\n\n---\n\n### What degree of choice was provided to affected people in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources. No MR decision process has been identified in which affected residents were offered any degree of choice.\n\n---\n\n### What land user groups were involved or considered in the MR decision process?\n\n**Direct Answer:** No formal MR process has been identified. The reviewed sources implicitly reference the following groups present in the hazard-affected area, based on storm impact descriptions:\n\n- **Homeowners:** Private residential buildings at Praia de Faro and other barrier island settlements are documented as storm-damaged (RISC-KIT webguide).\n- **Commercial:** Restaurants (e.g., \"Havana to Zé Maria restaurants\"), fishing infrastructure (armaçōes), and a bar (marAmais at Culatra/Farol) are mentioned as affected by storms (RISC-KIT webguide).\n- **Community/NGO:** Fishing communities on the barrier islands have historical presence dating to at least 1941 (RISC-KIT webguide).\n\nNo evidence of formal involvement of renters, leased land owners, First Nations/Indigenous groups, or government as land users in any MR process.\n\n---\n\n### What actors participated in the governance structure of the MR decision process?\n\n**Direct Answer:** No MR governance structure has been identified. The broader coastal management governance documented in the sources includes:\n\n- **Government agencies:** IPMA (wave forecasting), ICN (nature conservation), national government (Decree-Laws, POOCs), local civil protection authorities (emergency response) (RISC-KIT webguide; Taveira Pinto 2004).\n- **Funders:** EU (RISC-KIT project; EU Demonstration Programmes on ICZM) (Taveira Pinto 2004; RISC-KIT webguide).\n- **Academics/researchers:** Faculty of Engineering, University of Porto (Taveira Pinto 2004); RISC-KIT research consortium (RISC-KIT webguide).\n\nThese actors are documented as participants in broader coastal management governance, not in an MR governance structure. No evidence of: affected community participation in governance, receiving communities, political champions for retreat, private sector consultants, NGOs/CBOs, or First Nations/Indigenous communities in any governance structure related to MR.\n\n---\n\n### Who ultimately made decisions in the MR decision process?\n\n**Direct Answer:** No MR decision-making process has been identified. Historical coastal management decisions — specifically reconstruction in place after storm damage — appear to have been made by **Government** (local civil protection authorities, national coastal management bodies), as evidenced by bridge closures, army barge access, and seawall construction decisions (RISC-KIT webguide).\n\n---\n\n### Was this engagement approach explicitly incorporated into the MR decision process?\n\n**Answer:** No evidence found in reviewed sources. No community engagement approach related to MR has been documented.\n\n---\n\n### What community resources supported the transition during the MR process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What supports were provided to facilitate engagement during the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What language or framing was used to engage the community in the MR decision process?\n\n**Direct Answer:** No evidence found in reviewed sources of any MR-specific language or framing directed at the community. The RISC-KIT project frames its goals as \"ensuring public safety mainly against storms and erosion and preserving natural values\" (RISC-KIT webguide) — a risk-management and conservation framing, not a retreat framing.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 5,
+    "section": "socio_cultural_considerations",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Socio-Cultural Considerations\n\n---\n\n### What special considerations for First Nations communities were included in the MR decision process?\n\n**Answer:** Not identified in the reviewed sources. No First Nations or Indigenous communities are referenced in connection with this case in any of the reviewed sources. This field is not applicable to this case as documented.\n\n*(Note: The comparative remark about North American Indigenous land systems that appeared in Version 1 has been removed as it was unsupported by the source documents.)*\n\n---\n\n### What equity considerations were addressed in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources of equity considerations being addressed in any MR decision process.\n\n**Contextual observation:** The storm history documented in the RISC-KIT webguide suggests that fishing communities on the barrier islands — with fishing infrastructure (armaçōes) documented as a major economic and cultural feature from at least the 1940s onwards — bore disproportionate storm impacts. The destruction and disappearance of fishing camps (e.g., three fishing camps lost after 1941 geomorphological changes; tuna fishing facilities destroyed in the 1960s) illustrates material loss among lower-income coastal communities. This observation is drawn from the hazard history narrative and is not evidence of equity consideration within any MR planning framework.\n\n---\n\n### What resilience, Build Back Better (BBB), or disaster risk reduction (DRR) goals were achieved through the MR decision process?\n\n**Answer:** No MR-related resilience or DRR outcomes have been documented.\n\n**Broader context:** The documented pattern of reconstructing damaged structures \"exactly at the same spots\" (RISC-KIT webguide) represents an absence of BBB principles — reconstruction in place perpetuates risk exposure rather than reducing it. The construction of rock seawalls and a seawall after the 1989/1990 storms represents hard-engineering hazard mitigation rather than retreat-based DRR. Outcomes in terms of hazard exposure reduction are not documented in the reviewed sources.\n\n---\n\n### Add any relevant notes related to the cross-cutting themes\n\n**Institutional Environment:**\nPortugal's coastal zone management framework was described as \"very recent\" in practice as of 2004 (Taveira Pinto 2004). The abstract identifies \"poor sediment availability combined with years of neglected management and over-exploitation of resources\" as contributing to coastal erosion problems. The legal framework (Decree-Laws, Council of Ministers Resolutions) exists, and POOCs are being developed for all nine sectors of the continental coast, providing analysis of coastal systems and delimitation of uses relative to carrying capacity (Taveira Pinto 2004). The protected area status of Ria Formosa creates both an opportunity (ecological value recognized in law) and potentially a constraint on land use change. IPMA provides operational wave climate forecasting capability relevant to early warning. However, none of this institutional infrastructure is documented as having produced an MR program.\n\n**Planning Processes:**\nThe RISC-KIT project represents a substantial investment in hazard knowledge production for Praia de Faro, including historical storm databases, wave climate modelling, and hotspot identification. The RISC-KIT webguide notes the site is a \"very complex system with potential for the occurrence of significant impacts due to climate change and low-frequency, extreme storm events.\" This knowledge infrastructure could in principle support future proactive managed retreat planning, but the translation of risk knowledge into retreat policy is not documented in the reviewed sources. The repeated \"protect and rebuild\" response to storm damage illustrates the challenge of transitioning to retreat even in a recognized high-risk setting.\n\n**Community Engagement:**\nNo evidence of community engagement in coastal management planning is provided in the reviewed sources. The storm impact history suggests that fishing communities on the barrier islands were repeatedly affected — losing homes, boats, fishing camps, and infrastructure — but are not described as agents in planning decisions in the reviewed sources.\n\n**Socio-Cultural Considerations:**\nThe fishing communities of the Ria Formosa barrier islands are documented as having a significant and long-standing presence on the islands, with fishing infrastructure (armaçōes) described as economically and culturally important from at least 1941 onwards (RISC-KIT webguide). The destruction of three fishing camps following the 1941 storm-driven geomorphological changes, and the subsequent loss of tuna fishing infrastructure in the 1960s, illustrates how storm-driven landscape change can sever place-based community attachments and livelihoods. These socio-cultural dimensions — place attachment, livelihood dependency, long historical community presence — are relevant to any future MR planning but are not addressed in the reviewed sources as part of any decision process.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 6,
+    "section": "additional_notes",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Additional Notes and Lessons Learned\n\n**1. Confirmation that no managed retreat is documented.** The reviewed sources — the RISC-KIT Coastal Management Webguide, the Taveira Pinto (2004) abstract, and an inaccessible paper on wetland reclamation — do not describe a managed retreat program at Ria Formosa/Praia de Faro. If this case was included in the systematic review database on the basis of managed retreat having occurred, that classification warrants verification against additional sources, particularly Portuguese-language government documents and local authority planning records that are not among the reviewed materials.\n\n**2. Locked-in maladaptive pattern.** The repeated cycle of storm damage and in-place reconstruction at Praia de Faro is a well-documented example of maladaptive coastal management — continued investment in structures and settlements in high-risk locations that face worsening conditions under climate change. The RISC-KIT webguide explicitly states that damaged areas \"were rebuilt exactly at the same spots\" and that destroyed seawalls \"were rebuilt at the same location.\" This \"protection trap\" is directly relevant to managed retreat research as an illustration of institutional inertia and the difficulty of transitioning away from hard-engineering responses.\n\n**3. Barrier island dynamics as a physical argument for retreat.** The Ria Formosa barrier island system is described as \"highly dynamic\" with two of six tidal inlets now artificial, three relocated, and only one preserving natural behaviour (RISC-KIT webguide). The 1941 storm alone opened a new inlet and destroyed an entire island (Cabanas Island). This geomorphic instability means that the long-term viability of permanent settlements on these islands is highly uncertain on physical grounds alone, independent of climate change. This provides a strong physical science argument for managed retreat that has not been translated into policy in the reviewed sources.\n\n**4. Ecological co-benefit argument for retreat.** The protected wildlife reservoir status of Ria Formosa and the ecological value of its tidal flats, salt marshes, sand dunes, and barrier island habitats (RISC-KIT webguide) mean that managed retreat of settlements could directly restore natural coastal buffer habitats. The RISC-KIT framing of \"preserving natural values\" as a major local goal acknowledges this ecological dimension but has not been linked to a managed retreat program.\n\n**5. Gap between hazard knowledge and retreat policy.** The RISC-KIT project represents significant investment in coastal hazard knowledge at Praia de Faro. The gap between this knowledge infrastructure and the absence of any managed retreat policy reflects a broader governance challenge documented in the literature: knowledge production does not automatically translate into retreat decisions, especially when institutional inertia, property rights, and community attachment to place create barriers.\n\n**6. Limited source coverage and access.** Two of three sources are only partially accessible (the Taveira Pinto 2004 paper — abstract only; the wetland reclamation paper — entirely inaccessible). The full content of these sources could contain important information about land use history, governance arrangements, or retreat-related policy that could not be reviewed. This represents a significant limitation of the current coding.\n\n**7. Auditor disagreement note.** The Check 1 audit correctly identified \"UNESCO-recognized\" as unsupported — the source uses \"wildlife reservoir (protected area)\" — and this has been corrected throughout. All other auditor findings have been applied. No Version 1 claims are being defended against the audit.\n\n---"
+  },
+  {
+    "case_id": "CS51",
+    "chunk_index": 7,
+    "section": "evidence_gaps",
+    "location": "Ria Formosa, Algarve",
+    "country": "Portugal",
+    "country_normalized": "Portugal",
+    "continent": "Unknown",
+    "admin_area": "Algarve",
+    "source": "Pipeline Ver2 — Ria Formosa",
+    "source_links": [
+      {
+        "title": "Supplemental article assisted in determining governance and funding: \"The Practice of Coastal Zone Management in Portugal,\" Journal of Coastal Conservation, 2004. DOI:",
+        "doi": "10.1652/1400-0350(2004)010",
+        "url": "https://doi.org/10.1652/1400-0350(2004)010"
+      },
+      {
+        "title": "RISC-KIT Project / Ecologic Institute (n.d.). Ria Formosa, Portugal. Coastal Management Webguide — RISC-KIT. EU FP7-funded project (grant 609906).",
+        "url": "https://coastal-management.eu/node/214.html"
+      },
+      {
+        "title": "Tracking 130 years of coastal wetland reclamation in Ria Formosa, Portugal: Opportunities for conservation and aquaculture",
+        "doi": "10.1016/j.landusepol.2020.104544",
+        "url": "https://doi.org/10.1016/j.landusepol.2020.104544"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1652/1400-0350(2004)010[0147:tpoczm]2.0.co;2",
+        "url": "https://openalex.org/W2180191366"
+      },
+      {
+        "title": "The practice of coastal zone management in Portugal",
+        "doi": "10.1007/bf02818951",
+        "url": "https://openalex.org/W4245399769"
+      }
+    ],
+    "text": "Case study: Ria Formosa (Ria Formosa, Algarve, Portugal)\nSection: Fields with Limited or No Evidence\n\nThe following questionnaire topics have little or no evidence in the reviewed sources, primarily because no managed retreat program has been confirmed for this case:\n\n1. **Proactive/reactive MR trigger** — cannot be coded for an MR decision that has not been identified\n2. **Date of MR program** — not applicable\n3. **Number of households/population affected by MR** — not applicable; storm damage figures available but not MR-specific\n4. **Total MR funding** — not applicable\n5. **Geographic scale of MR project** — not applicable; hazard impact area described\n6. **Who or what was retreated** — not applicable; no retreat documented\n7. **Focus/scope of MR project** — not applicable\n8. **Legal constraints in MR process** — not applicable; broader ICZM legal context described in abstract only\n9. **MR funding sources** — not applicable\n10. **Tax base considerations in MR** — no evidence\n11. **Compensation mechanisms** — no evidence\n12. **Time horizon of MR planning** — not applicable\n13. **Planning elements in MR decision** — not applicable\n14. **Decision support tools for MR** — not applicable (hazard modelling exists in broader research context, not linked to MR)\n15. **Planning for receiving areas** — no evidence\n16. **Uses planned for retreat lands** — no evidence\n17. **Degree of choice for affected people** — no evidence\n18. **Land user groups formally involved in MR process** — no evidence of formal process\n19. **Actors in MR governance structure** — no evidence of MR governance; broader"
+  }
+]

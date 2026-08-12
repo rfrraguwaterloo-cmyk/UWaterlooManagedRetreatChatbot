@@ -1,0 +1,306 @@
+[
+  {
+    "case_id": "CS50",
+    "chunk_index": 0,
+    "section": "overview",
+    "location": "Rostock, Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Mecklenburg-Vorpommern",
+    "source": "Pipeline Ver2 — Rostock",
+    "source_links": [
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "doi": "10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "doi": "10.1007/s11852-017-0542-4",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schumacher, J., Schönwald, S., & Schernewski, G. (2014). Measuring sustainability and climate change adaptation in coastal communities: A German case study. In Coastal adaptation processes in the German Baltic Sea Region (Coastline Reports 23, pp. 37-54). EUCC - The Coastal Union Germany. https://eucc-d-inline.database",
+        "url": "https://eucc-d-inline.databases.eucc-d.de/files/documents/00001171_CR23_final.pdf"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "doi": "10.1007/s11852-018-0597-x",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "doi": "10.3390/su142315737",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "doi": "10.3390/app13042623",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "doi": "10.2112/JCOASTRES-D-15-00217.1",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "Schumacher, J. K. (2014). Measuring sustainability and climate change adaptation in coastal communities: An application of the QualityCoast indicators for Markgrafenheide/Hütelmoor [Master's thesis, University Centre of the Westfjords]. https://hdl.handle.net/1946/19597. Open access record, but direct PDF download was",
+        "url": "https://hdl.handle.net/1946/19597"
+      }
+    ],
+    "text": "Case study: Rostock (Rostock, Mecklenburg-Vorpommern, Germany)\nSection: CASE STUDY OVERVIEW\n\n**Case Name and Location:** Markgrafenheide–Hütelmoor Combined Coastal Protection, Realignment and Wetland Restoration Scheme; village of Markgrafenheide, rural coastal district of the City of Rostock (district Rostocker-Heide), federal state of Mecklenburg-Vorpommern, Germany; southern Baltic Sea coast.\n\n**Hazard(s):** Coastal erosion, storm surge flooding, and sea-level rise. The federal state of Mecklenburg-Vorpommern has an outer Baltic coastline of 354 km, 70% of which is subject to erosion, with an average retreat of 0.34 m/yr [Weisner & Schernewski 2013]. Coastal retreat reaches its maximum near Markgrafenheide and the adjacent Hütelmoor wetland, at up to 210 m per century in front of Lake Heiligensee [Schernewski et al. 2018; Schumacher et al. 2014]. During the last decades, sea level rose at a rate of approximately 1.2 mm/yr in the region, and an accelerated rate of rise is likely in the future [Weisner & Schernewski 2013]. The Schernewski et al. 2018 article additionally notes that the coast near Markgrafenheide subsides by about 1 mm/yr resulting from isostatic movements, producing the highest relative sea-level rise in the entire Baltic at approximately 1.3 mm/yr absolute sea-level rise plus approximately 1 mm/yr isostatic subsidence [Schernewski et al. 2018]. The settlement was also at risk of inland flooding via its connection to Breitling Bay through Lake Radelsee.\n\n**Type of Retreat:** Managed coastal realignment. This project is not a population buyout or community resettlement. Rather, the managed retreat concerns the deliberate abandonment of hard coastal protection infrastructure (groyne systems, beach and dune nourishment) in front of the Hütelmoor nature reserve, combined with construction of a storm surge protection ring-dyke around the Markgrafenheide settlement, and ecological restoration (rewetting) of the drained coastal moor. No residential properties were purchased or relocated; the sources do not describe any household buyout or relocation program. The managed retreat pertains to the retreat of the coastal defence line and associated drainage infrastructure, allowing natural coastal dynamics to resume over the nature reserve.\n\n**Scale:** The scheme covers a total area of approximately 1,000 ha and approximately 6 km of coastline, comprising the seaside resort Markgrafenheide (with approximately 560 inhabitants as of the mid-2010s, down from approximately 890 in 1980 and 770 in 2000) and the adjacent Hütelmoor nature reserve (approximately 490 ha of coastal moor) [Schernewski et al. 2018; Schumacher et al. 2014]. The broader district Rostocker-Heide had a total population of approximately 1,582 with a very low population density of approximately 30 inhabitants/km² [Schernewski et al. 2018].\n\n**Key Actors:** The State Authority for Agriculture and Environment (StALU MM — Staatliches Amt für Landwirtschaft und Umwelt Mittleres Mecklenburg) was the responsible public authority, operating under the coastal protection strategy of the Federal State of Mecklenburg-Vorpommern. The City of Rostock is the overarching municipal unit. State legal and planning frameworks governed coastal protection, conservation, and public participation, including the Federal State's Water Act (LWaG) and the Nature Protection Act (LNatG M-V) [Schernewski et al. 2018]. Research and retrospective analysis were conducted by scientists at the Leibniz Institute for Baltic Sea Research Warnemünde (IOW). Local inhabitants, regular wetland visitors, the municipal advisory council, tourism businesses, and local media were all important actors—frequently in an oppositional or complicating role.\n\n**Timeline:**\n- 1957: Hütelmoor declared a conservation area (540 ha)\n- 1976: Complex ditch system and pumping station constructed; intensive agricultural use begins\n- 1990: German reunification; intensive agricultural use terminates; new nature and coastal protection laws applied; drainage of Hütelmoor terminates\n- 1992: Consulting company suggests three possible options for the protection of Markgrafenheide\n- 1995: Storm surge (water levels 1.60 m above sea level); dune breach in front of Lake Heiligensee and water intrusion into Hütelmoor; coastal dune nourished and re-established as a reactive measure\n- 1998: Responsible authority selects ring-dyke option and combines it with a plan to restore the drained Hütelmoor into a brackish moor\n- 2001: Beginning of plan approval procedure and Environmental Impact Assessment for ring-dyke solution\n- 2002: Public participation procedure in which planning documents could be viewed and commented upon\n- 2004: First public information meeting in Markgrafenheide\n- 2004–2006: Construction of ring-dyke around settlement area (completed 2006; total town protection costs approximately €9.94 million)\n- 2008: Complete removal of pumping station and construction of ground sill to elevate water levels 0.8 m above mean sea level; fast water level increase causes changes in flora and fauna as well as inundation of walking and cycling paths\n- 2010: Elevation of cycling/walking paths\n- 2011: Extreme rain events during summer cause inundation of entire wetland; public controversy revived\n- 2012: Further elevation of cycling/walking paths (approximately €34,000 in additional costs)\n- 2010–2011: Scheme considered technically fully implemented from a coastal protection standpoint\n- 5 January 2017: Heaviest storm surge since 2006 (1.6 m above sea level in Warnemünde); dune not breached; moor remains largely a freshwater system\n- Post-2012: Local controversy subsided; area has become a recreation zone\n\n[Sources: Schernewski et al. 2018; Weisner & Schernewski 2013; Schumacher et al. 2014; Schernewski et al. 2023]\n\n**Key Outcomes:** From a coastal protection and environmental restoration perspective, the scheme is assessed as successful and as an outstanding example of coastal protection and nature conservation [Karnauskaitė et al. 2018]. The settlement of Markgrafenheide is protected from storm surges and inland flooding; natural coastal dynamics have been restored along the Hütelmoor coastline; and the abandoned groyne system in front of the Hütelmoor now acts as a sand source, benefiting the town of Graal-Müritz (4 km north-east) by reducing erosion and providing sand for its beaches [Schernewski et al. 2018]. However, the original ecological objective—restoration of a brackish coastal moor—has not been achieved as of the available literature, because the dune belt has not yet breached to allow regular saltwater intrusion; instead a freshwater moor with extensive reed cover has developed [Schernewski et al. 2018]. Carbon sequestration analysis using the InVEST Coastal Blue Carbon model shows the Hütelmoor transitioning from a net emitter of CO₂ equivalents (7,990 tonnes/year in 1980) toward a net sink (projected 118 tCO₂e sequestration/year by 2040), though methane emissions increased temporarily after rewetting [Schernewski et al. 2023]. Public participation was formally conducted but widely criticized as insufficient: strong local opposition developed, the entire process from problem identification to full implementation took 14 years, and modifications (including additional path elevations) were required in response to public pressure [Schernewski et al. 2018].\n\n---\n\n**Narrative Summary:**\n\nMarkgrafenheide is a small Baltic Sea tourist village of approximately 560 people within the City of Rostock, Germany, situated on one of the most erosion-prone stretches of the German Baltic coast. For decades, the outer coast was protected through groyne systems, beach and dune nourishment, and a revetment wall. However, the combination of accelerating sea-level rise, coastal subsidence, increasing erosion rates, and the threat of inland flooding from the connected Breitling Bay via Lake Radelsee made the existing protection approach increasingly costly and technically untenable. A serious storm surge in 1995—which breached the protective dune in front of Lake Heiligensee and caused saltwater intrusion into the Hütelmoor—catalysed a decision by state coastal protection authorities in 1998 to pursue a fundamentally new strategy.\n\nRather than extending hard protection along the entire coastline at high and escalating cost, the responsible state authority opted for a combined approach. The settlement area received a new ring-dyke (completed 2006; total town protection costs approximately €9.94 million). Simultaneously—as a statutory compensation measure under nature protection law—the adjacent Hütelmoor nature reserve was to be de-protected, allowing the coast to realign naturally. The pumping station draining the moor was removed in 2008, and a ground sill was installed to elevate water levels 0.8 m above mean sea level, initiating the rewetting process. By abandoning the groyne system in front of the Hütelmoor, the coastline became a sand source benefiting Graal-Müritz to the north-east. The scheme is described as one of the largest cases where coastal realignment has been successfully implemented, and one of the few where this took place in a populated and intensively utilized tourism area [Schernewski et al. 2018].\n\nImplementation proved technically successful from a coastal engineering and ecological perspective, though it fell well short of objectives for public participation and community acceptance. The process faced strong local opposition and a negative public perception. Based on surveys and a media review, 89% of local respondents in a 2011 survey felt poorly or very poorly informed, despite formal public meetings and published documentation; 81% sourced their information primarily from local newspapers and free-distribution advertisers [Schernewski et al. 2018]. Expert interviews indicated that negative media coverage—particularly by freely distributed advertisers that tended toward polarizing or sensationalist framing—played a dominant role in shaping public opinion. The sources note local specifics including the cultural background (GDR history, where participatory planning was unfamiliar), an ageing and largely retired population, and a local economy entirely dependent on tourism as contextual factors shaping the opposition [Schernewski et al. 2018]. The entire process from problem identification to full implementation took 14 years. Post-2012, controversy subsided, the area has been re-established as a recreation zone with viewpoints and information panels, and ecological restoration continues—though the brackish moor objective awaits a future dune breach.\n\n---"
+  },
+  {
+    "case_id": "CS50",
+    "chunk_index": 1,
+    "section": "coding_questions",
+    "location": "Rostock, Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Mecklenburg-Vorpommern",
+    "source": "Pipeline Ver2 — Rostock",
+    "source_links": [
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "doi": "10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "doi": "10.1007/s11852-017-0542-4",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schumacher, J., Schönwald, S., & Schernewski, G. (2014). Measuring sustainability and climate change adaptation in coastal communities: A German case study. In Coastal adaptation processes in the German Baltic Sea Region (Coastline Reports 23, pp. 37-54). EUCC - The Coastal Union Germany. https://eucc-d-inline.database",
+        "url": "https://eucc-d-inline.databases.eucc-d.de/files/documents/00001171_CR23_final.pdf"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "doi": "10.1007/s11852-018-0597-x",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "doi": "10.3390/su142315737",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "doi": "10.3390/app13042623",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "doi": "10.2112/JCOASTRES-D-15-00217.1",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "Schumacher, J. K. (2014). Measuring sustainability and climate change adaptation in coastal communities: An application of the QualityCoast indicators for Markgrafenheide/Hütelmoor [Master's thesis, University Centre of the Westfjords]. https://hdl.handle.net/1946/19597. Open access record, but direct PDF download was",
+        "url": "https://hdl.handle.net/1946/19597"
+      }
+    ],
+    "text": "Case study: Rostock (Rostock, Mecklenburg-Vorpommern, Germany)\nSection: CODING QUESTIONS\n\n---\n\n### Is there any evidence of a proactive or reactive trigger in the MR decision process? (Reactive/Proactive)\n\n**Answer:** Both reactive and proactive elements are present. The dominant coding is **Proactive**, with a reactive catalyst.\n\n**Narrative:** The 1995 storm surge (water levels 1.60 m above sea level), which caused a dune breach in front of Lake Heiligensee and saltwater intrusion into the Hütelmoor, served as a reactive catalyst that accelerated decision-making. Following the 1995 event, dune reconstruction was undertaken as an immediate reactive measure. However, the core decision—made in 1998—to pursue a ring-dyke combined with managed coastal realignment and moor restoration was proactive in character: it was based on the long-term challenges of climate change, rising sea level, increasing erosion rates, and the escalating cost and feasibility of maintaining conventional coastal protection [Weisner & Schernewski 2013; Schernewski et al. 2018].\n\nThe scheme is consistently described in the literature as a \"climate change adaptation measure\" and as a deliberate departure from the traditional \"holding the line at any cost\" approach toward a long-term sustainable coastal management strategy [Schernewski et al. 2018]. The Environmental Impact Assessment and plan approval procedure began in 2001—several years before implementation—confirming a planning-led, proactive approach. The reactive element (1995 storm surge) is noted as context, but the overall character of the decision and planning process is proactive.\n\n**Coding rationale:** Proactive (primary), with a reactive catalyst (the 1995 storm surge). The codebook defines \"Proactive\" as planned in advance to reduce future risk before major impacts occur, which accurately describes the 1998 decision and subsequent planning. The 1995 event is better understood as a catalyst accelerating an already-anticipated need than as a post-disaster response triggering the retreat.\n\n---\n\n### Date, Number of Households Affected, Number of Population Affected, Total Funding\n\n**Date of key decision:** 1998 (ring-dyke and realignment option selected by responsible authority). Formal planning began 2001; ring-dyke construction 2004–2006; moor restoration from 2008 onward [Schernewski et al. 2018].\n\n**Population affected:** Approximately 560 inhabitants of Markgrafenheide (as of the mid-2010s, with a population of approximately 890 in 1980 and 770 in 2000) [Schumacher et al. 2014; Schernewski et al. 2018]. The broader district Rostocker-Heide had approximately 1,582 inhabitants [Schernewski et al. 2018]. Additional tourists and day visitors—Markgrafenheide hosts more than 100,000 tourist overnight stays annually—are also significantly affected given the tourism-dependent local economy [Schernewski et al. 2022].\n\n**Households:** Not explicitly stated in the sources reviewed.\n\n**Total funding:** The town protection measure (beach and dune nourishment 1991–2003: €5.18 million; 38 groyne rows established in 2002 and extended in 2005: €2.12 million; ring-dyke construction 2004–2006: €2.64 million) cost a total of approximately **€9.94 million** [Schernewski et al. 2018]. An additional approximately €34,000 was spent on elevated cycling/walking paths in 2012 [Schernewski et al. 2018]. Costs for the moor restoration component are not separately quantified in the reviewed sources. The project's implementation funding was from state-level public funds through the StALU MM [Schernewski et al. 2018]. Federal co-funding of coastal protection projects in Germany is common but not explicitly broken out in the reviewed sources.\n\n**Note:** The BONUS BaltCoast research project (funded jointly by the EU's Seventh Programme for research and Baltic Sea national funding institutions) and the German Federal Ministry of Education and Research (grant number 03F0911B, project \"Coastal Futures\"; and HORIZON-MISS-2022-OCEAN-01-01, project \"Effective\") funded subsequent research and monitoring activities described in the reviewed papers, but these are research grants for scientific analysis, not project capital costs [Karnauskaitė et al. 2018; Schernewski et al. 2022; Schernewski et al. 2023].\n\n---\n\n### What is the occurrence of the hazard(s) considered in the MR decision process? (Single Hazard/Multiple Hazards)\n\n**Answer:** **Multiple Hazards**\n\n**Narrative:** The sources identify several interacting hazards: (1) coastal erosion—the dominant ongoing process, with retreat rates up to 210 m per century near Markgrafenheide and the Hütelmoor [Schernewski et al. 2018; Schumacher et al. 2014]; (2) storm surge flooding—both direct coastal flooding and inland flooding risk via the connection to Breitling Bay through Lake Radelsee [Schernewski et al. 2018]; and (3) sea-level rise—approximately 1.2 mm/yr regionally [Weisner & Schernewski 2013], with the area also experiencing approximately 1 mm/yr of isostatic subsidence resulting in the highest relative sea-level rise in the entire Baltic [Schernewski et al. 2018].\n\nThe codebook defines \"Multiple Hazards\" as two or more hazards impacting the same area, or cascading hazards occurring concurrently. Both conditions apply here: sea-level rise accelerates erosion and increases storm surge inundation risk, and the inland flooding risk from the Breitling Bay via Lake Radelsee constitutes a distinct flooding pathway explicitly addressed by the ring-dyke.\n\n---\n\n### What is the origin of the hazards considered in the MR decision process? (Technological Hazard/Natural Hazard)\n\n**Answer:** **Natural Hazard** (with climate change as a context/driver)\n\n**Narrative:** All hazards—coastal erosion, storm surge, and sea-level rise—are natural geophysical and climatic processes. There is no technological or industrial hazard involved. The literature consistently frames the project as a \"climate change adaptation measure\" [Schernewski et al. 2018; Weisner & Schernewski 2013], and sea-level rise and increased storm intensity are understood as driven by anthropogenic climate change. Under the codebook schema, the hazard origin is coded as Natural Hazard; climate change is the broader context and driver but is identified in the codebook as a discarded top-level classification rather than a hazard origin code.\n\n---\n\n### Was this hazard considered in the MR decision process?\n\n- **Coastal Flooding/Erosion:** ✓ YES — coastal erosion is the primary ongoing hazard (up to 210 m per century near the study site); storm surge coastal flooding is central to the protection rationale [Schernewski et al. 2018; Weisner & Schernewski 2013].\n- **Riverine/Pluvial Flooding:** Partially evidenced. Inland flooding risk from the Breitling Bay connection via Lake Radelsee is explicitly addressed by the ring-dyke design [Schernewski et al. 2018], constituting a lacustrine/estuarine flooding pathway. The sources do not describe classic riverine or pluvial flooding processes separately.\n- **Lake Flooding/Erosion:** ✓ YES — Lake Heiligensee and Lake Radelsee are explicitly identified as flooding pathways and erosion hotspots [Schernewski et al. 2018; Schumacher et al. 2014].\n- **Wildfire:** No evidence found in reviewed sources.\n- **Volcano:** No evidence found in reviewed sources.\n- **Land Subsidence:** ✓ YES — isostatic subsidence of approximately 1 mm/yr is documented and factored into relative sea-level rise projections for the area [Schernewski et al. 2018].\n- **Landslide/Debris Flow:** No evidence found in reviewed sources.\n- **Earthquake:** No evidence found in reviewed sources.\n- **Tsunami:** No evidence found in reviewed sources.\n- **Hurricane:** No evidence (Baltic Sea storm surges are addressed but not tropical cyclones).\n- **Other:** No evidence found in reviewed sources.\n\n**Primary codes: Coastal Flooding/Erosion; Lake Flooding/Erosion; Land Subsidence.** Riverine/pluvial flooding is not clearly evidenced as a separate hazard type in the reviewed sources; the inland flooding risk is best characterized under Lake Flooding/Erosion (via Lake Radelsee) rather than riverine/pluvial flooding.\n\n---\n\n### What was the geographic scale of the MR project? (Individual homes), (A few streets), (Neighbourhood), (Entire community), (Sub-watershed), (Watershed region)\n\n**Answer:** **Entire community** and **Sub-watershed**\n\n**Narrative:** The scheme covers the entire community of Markgrafenheide (approximately 560 inhabitants, approximately 1,000 ha total area, approximately 6 km of coastline). The ring-dyke encircles the entire settlement area [Schernewski et al. 2018; Weisner & Schernewski 2013]. The Hütelmoor restoration and coastal realignment covers the adjacent approximately 490 ha nature reserve coastline. Together, this constitutes the full planning unit of the Markgrafenheide–Hütelmoor area.\n\nThe sources also note cross-boundary effects: sand redistribution from the abandoned groyne system in front of the Hütelmoor benefits coastal erosion management in Graal-Müritz, approximately 4 km to the north-east [Schernewski et al. 2018]. This suggests sub-watershed-level coastal process management extending beyond the immediate planning area. Both \"Entire community\" (the village) and \"Sub-watershed\" (the broader coastal unit including the moor, beach, and coastal sand transport processes) are appropriate codings.\n\n---\n\n### Who or what was retreated? (Individuals), (Groups/Neighbourhoods), (Communities), (Critical infrastructure), (Hazard protection structures), (Industrial assets)\n\n**Answer:** **Hazard protection structures** (primary)\n\n**Narrative:** The managed retreat in this case is primarily the retreat of coastal protection *infrastructure*, not of people or residences. Specifically:\n- The groyne system in front of the Hütelmoor was **abandoned and left to decay** as part of the realignment strategy [Schernewski et al. 2018].\n- The pumping station that had drained the Hütelmoor for agricultural use was **completely removed** in 2008 [Schernewski et al. 2018; Schumacher et al. 2014].\n- The protective dune in front of the nature reserve was no longer nourished, allowing natural erosion [Schernewski et al. 2018].\n- A gravel path behind the dune was replaced by a 2 km long hiking path on the dune, and other walking paths were elevated [Schernewski et al. 2018].\n\nNo residential properties were purchased or acquired. No individuals, households, or communities were relocated. \"Hazard protection structures\" is the primary and most appropriate code. The drainage infrastructure (ditch system, pumping station) could additionally be described as \"other infrastructure retirement\" rather than \"critical infrastructure\" in the codebook sense, as the sources do not characterize it as critical infrastructure for the community. This case is atypical within the managed retreat literature in that the \"retreat\" is of the coastal defence line and associated drainage infrastructure, not of people.\n\n---\n\n### Other Notes\n\nThe scheme is described as one of the largest cases where coastal realignment has been successfully implemented, and one of the few examples where this took place in a populated and intensively utilized tourism area [Schernewski et al. 2018]. It is explicitly linked to climate change adaptation and sustainable long-term coastal management. The dual nature of the project—hard protection for the settlement combined with realignment and restoration for the nature reserve—is presented as innovative and cost-effective compared to extending hard protection along the entire coastline.\n\n---"
+  },
+  {
+    "case_id": "CS50",
+    "chunk_index": 2,
+    "section": "institutional_environment",
+    "location": "Rostock, Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Mecklenburg-Vorpommern",
+    "source": "Pipeline Ver2 — Rostock",
+    "source_links": [
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "doi": "10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "doi": "10.1007/s11852-017-0542-4",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schumacher, J., Schönwald, S., & Schernewski, G. (2014). Measuring sustainability and climate change adaptation in coastal communities: A German case study. In Coastal adaptation processes in the German Baltic Sea Region (Coastline Reports 23, pp. 37-54). EUCC - The Coastal Union Germany. https://eucc-d-inline.database",
+        "url": "https://eucc-d-inline.databases.eucc-d.de/files/documents/00001171_CR23_final.pdf"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "doi": "10.1007/s11852-018-0597-x",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "doi": "10.3390/su142315737",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "doi": "10.3390/app13042623",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "doi": "10.2112/JCOASTRES-D-15-00217.1",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "Schumacher, J. K. (2014). Measuring sustainability and climate change adaptation in coastal communities: An application of the QualityCoast indicators for Markgrafenheide/Hütelmoor [Master's thesis, University Centre of the Westfjords]. https://hdl.handle.net/1946/19597. Open access record, but direct PDF download was",
+        "url": "https://hdl.handle.net/1946/19597"
+      }
+    ],
+    "text": "Case study: Rostock (Rostock, Mecklenburg-Vorpommern, Germany)\nSection: INSTITUTIONAL ENVIRONMENT\n\n---\n\n### What is the focus or scope of the MR project? (Individual buyout/retreat), (Community buyout/retreat), (Leasebacks, easements and buffers), (Other acquisition tools), (Managed realignment of infrastructure)\n\n**Answer:** **Managed realignment of infrastructure**\n\n**Narrative:** The project does not involve individual or community property buyouts, leasebacks, or easements in the conventional sense. It is fundamentally a **managed realignment of coastal protection infrastructure**: the groyne system and protective dune maintenance in front of the Hütelmoor were deliberately abandoned; the pumping station was removed; and a new ring-dyke was built to shift the protection line to encircle only the settlement area [Weisner & Schernewski 2013; Schernewski et al. 2018]. The moor restoration occurred on already nature-reserve land (protected since 1957). Land acquisition may have occurred for the ring-dyke footprint, but the sources do not describe this as a buyout program targeting residential or commercial properties. \"Managed realignment of infrastructure\" is the most accurate code under the codebook.\n\n---\n\n### What legal constraints or requirements were identified during the MR decision process? Are there any legal frameworks or regulations that guide the MR decision process?\n\n**Answer:** **Relevant regulations/acts; Legal authority over retreat; Compliance & enforcement; Land acquisition (partial); Retreat land development**\n\n**Narrative:**\n\n- **Relevant regulations/acts:** Multiple legal frameworks are explicitly cited in the sources:\n  - The Federal State's Water Act (LWaG, Mecklenburg-Vorpommern): defines coastal protection obligation as limited to populated and built-up areas [Schernewski et al. 2018].\n  - The Nature Protection Act (LNatG M-V): requires preservation of natural dynamic coastlines and restoration of natural coastal floodplains [Schernewski et al. 2018].\n  - Environmental Impact Assessment (EIA) requirement: a formal EIA covering geology, morphometry, flora, fauna, and hydrology was mandated before implementation [Schernewski et al. 2018].\n  - Strategic Environmental Assessment (SEA) and Aarhus Convention: referenced as requiring public participation in environmental management decisions [Schernewski et al. 2018].\n  - EU Directives (EIA Directive, Water Framework Directive, Habitats Directive, Floods Directive): referenced as broader regulatory context in the planning documents and analysis [Schumacher et al. 2014; Schernewski et al. 2023].\n\n- **Legal authority over retreat:** The StALU MM held clear legal authority for coastal protection planning and implementation under federal state law. Coastal protection in built-up areas falls under water authorities; in non-built-up areas (like the Hütelmoor), water and soil associations [Schernewski et al. 2023]. This division of authority is noted as a structural feature of the German planning system.\n\n- **Compliance & enforcement:** A formal plan approval procedure (Planfeststellungsverfahren) was required, involving an EIA, a one-month public comment period in 2002, and a non-public hearing of objections. This is a legally binding administrative procedure [Schernewski et al. 2018].\n\n- **Land acquisition (partial):** The ring-dyke construction required land acquisition for its footprint. The moor restoration occurred on existing nature reserve land. Land acquisition is not described as a contested or central process in the sources.\n\n- **Retreat land development:** The Hütelmoor is designated as a nature protection area (since 1957), and post-retreat land use is governed by nature protection legislation. The regional spatial development program designates the Hütelmoor coastline as a reservation area for coastal protection, prohibiting further development [Schernewski et al. 2023].\n\n- **Litigation:** No formal litigation is described in the reviewed sources, but persistent public objections through the formal plan approval procedure and political opposition are documented [Schernewski et al. 2018].\n\n---\n\n### What were the funding sources for the MR project? (Multiple funders listed)\n\n**Answer:** **Provincial/State (primary); Multiple funders possible but not explicitly broken down across scales in the reviewed sources**\n\n**Narrative:** The sources confirm that the coastal protection and realignment scheme was implemented by the StALU MM as the responsible state authority of Mecklenburg-Vorpommern. Total town protection costs were approximately €9.94 million [Schernewski et al. 2018]. The reviewed sources do not explicitly describe the breakdown of funding between federal and state levels for the project capital costs. Federal co-funding of coastal protection infrastructure in Germany is common practice, but the reviewed sources do not confirm this explicitly for this case. The primary code is Provincial/State; \"Multiple funders\" may apply but cannot be confirmed from the available evidence.\n\n**Important distinction:** Research activities related to this case were funded by: the BONUS BaltCoast project (BONUS Art. 185, funded jointly by the EU's Seventh Programme and Baltic Sea national funding institutions) [Karnauskaitė et al. 2018; Schernewski et al. 2018]; the German Federal Ministry of Education and Research (grant number 03F0911B, project \"Coastal Futures\") [Schernewski et al. 2022; Schernewski et al. 2023]; and additional minor funding from the European Commission (HORIZON-MISS-2022-OCEAN-01-01, project \"Effective\") [Schernewski et al. 2023]. These are research grants for scientific analysis, not project capital costs, and should not be coded as project funding.\n\n---\n\n### What was considered to maintain (or improve) the tax base in the MR decision process?\n\n**Answer:** **Redevelopment of retreat lands; Other (tourism maintenance/support)**\n\n**Narrative:** The sources do not describe explicit tax base maintenance strategies in the manner typical of buyout programs. However, there are relevant considerations:\n\n- **Tourism maintenance:** The local economy of Markgrafenheide is entirely dependent on tourism [Schernewski et al. 2018]. Protection of the settlement through the ring-dyke was justified as essential for maintaining the tourism economy. The realignment of coastal protection infrastructure was paired with enhancement of the tourist beach in front of the settlement through nourishment.\n\n- **Redevelopment/re-use of retreat lands:** The Hütelmoor, once restored, is described as an enhanced recreation area for visitors and inhabitants, with new viewpoints, an elevated hiking path, and nature information panels installed [Schernewski et al. 2018]. This represents a form of repurposing retreat lands for ecological and recreational benefit.\n\n- **Nature tourism co-benefit:** The 2023 ecosystem service assessment explicitly suggests that \"the process for deciding on and implementing the renaturation measures might have developed smoother if the benefits of carbon sequestration and nature tourism had been clearer and expressed in monetary terms\" [Schernewski et al. 2023]. This implies an implicit recognition that restored lands could enhance the attractiveness of the area for tourism, though it was not formally framed as a tax-base strategy at the time of implementation.\n\n- No evidence of new industrial development, new housing for displaced residents, or livelihood support programs is found in the reviewed sources. This is consistent with the nature of the project (no population displacement occurred).\n\n---\n\n### What level/type of compensation mechanisms were considered in the MR decision process?\n\n**Answer:** **Free supports and services (infrastructure removal/modification)** — for infrastructure retirement; conventional residential compensation mechanisms are not applicable.\n\n**Narrative:** Since no residents were displaced and no properties were purchased, conventional compensation mechanisms (market value, tax value, post-disaster value, financial top-ups) are not applicable to this case. However, the following publicly funded infrastructure retirement and modification services were provided:\n\n- The pumping station was **completely removed** at public expense in 2008 as part of the restoration measure [Schernewski et al. 2018; Schumacher et al. 2014].\n- Walking and cycling paths inundated by rising water levels were **elevated at public cost** (2010, 2012; approximately €34,000 for the 2012 elevation) [Schernewski et al. 2018].\n- A gravel path behind the dune was replaced by a new 2 km long hiking path on the dune at public expense [Schernewski et al. 2018].\n- Beach nourishments (1991–2003, approximately €5.18 million) were publicly funded to maintain recreational beach access and dune protection in front of the settlement [Schernewski et al. 2018].\n\nThese constitute publicly funded infrastructure retirement and modification services rather than residential compensation. \"Free supports and services — demolition/infrastructure removal/asset retirement\" is the most applicable code, with the explicit note that this refers to infrastructure decommissioning, not household compensation.\n\n---"
+  },
+  {
+    "case_id": "CS50",
+    "chunk_index": 3,
+    "section": "planning_processes",
+    "location": "Rostock, Mecklenburg-Vorpommern",
+    "country": "Germany",
+    "country_normalized": "Germany",
+    "continent": "Europe",
+    "admin_area": "Mecklenburg-Vorpommern",
+    "source": "Pipeline Ver2 — Rostock",
+    "source_links": [
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "doi": "10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Weisner, E., & Schernewski, G. (2013). Adaptation to climate change: A combined coastal protection and re-alignment scheme in a Baltic tourism region. Journal of Coastal Research, Special Issue 65, 1963-1968. https://doi.org/10.2112/SI65-332.1",
+        "url": "https://doi.org/10.2112/SI65-332.1"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "doi": "10.1007/s11852-017-0542-4",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schernewski, G., Schumacher, J., Weisner, E., & Donges, L. (2018). A combined coastal protection, realignment and wetland restoration scheme in the southern Baltic: Planning process, public information and participation. Journal of Coastal Conservation, 22(3), 533-547. https://doi.org/10.1007/s11852-017-0542-4. PDF dow",
+        "url": "https://doi.org/10.1007/s11852-017-0542-4"
+      },
+      {
+        "title": "Schumacher, J., Schönwald, S., & Schernewski, G. (2014). Measuring sustainability and climate change adaptation in coastal communities: A German case study. In Coastal adaptation processes in the German Baltic Sea Region (Coastline Reports 23, pp. 37-54). EUCC - The Coastal Union Germany. https://eucc-d-inline.database",
+        "url": "https://eucc-d-inline.databases.eucc-d.de/files/documents/00001171_CR23_final.pdf"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "doi": "10.1007/s11852-018-0597-x",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Karnauskaitė, D., Schernewski, G., Schumacher, J., Grunert, R., & Povilanskas, R. (2018). Assessing coastal management case studies around Europe using an indicator based tool. Journal of Coastal Conservation, 22(3), 549-570. https://doi.org/10.1007/s11852-018-0597-x. Open access PDF downloaded. Includes the Markgrafen",
+        "url": "https://doi.org/10.1007/s11852-018-0597-x"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "doi": "10.3390/su142315737",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Voeckler, L. N., Lambrecht, L., Robbe, E., & Schumacher, J. (2022). Building with nature: Ecosystem service assessment of coastal-protection scenarios. Sustainability, 14(23), Article 15737. https://doi.org/10.3390/su142315737. Open access PDF downloaded. Uses photos and scenarios from Markgrafenheide/",
+        "url": "https://doi.org/10.3390/su142315737"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "doi": "10.3390/app13042623",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "Schernewski, G., Konrad, A., Roskothen, J., & von Thenen, M. (2023). Coastal adaptation to climate change and sea level rise: Ecosystem service assessments in spatial and sectoral planning. Applied Sciences, 13(4), Article 2623. https://doi.org/10.3390/app13042623. Open access PDF downloaded. Uses Markgrafenheide-Hütel",
+        "url": "https://doi.org/10.3390/app13042623"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "doi": "10.2112/JCOASTRES-D-15-00217.1",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "de la Vega-Leinert, A. C., Stoll-Kleemann, S., & Wegener, E. (2018). Managed realignment (MR) along the Eastern German Baltic Sea: A catalyst for conflict or for a coastal zone management consensus. Journal of Coastal Research, 34(3), 586-601. https://doi.org/10.2112/JCOASTRES-D-15-00217.1. Paywalled / citation-only. R",
+        "url": "https://doi.org/10.2112/JCOASTRES-D-15-00217.1"
+      },
+      {
+        "title": "Schumacher, J. K. (2014). Measuring sustainability and climate change adaptation in coastal communities: An application of the QualityCoast indicators for Markgrafenheide/Hütelmoor [Master's thesis, University Centre of the Westfjords]. https://hdl.handle.net/1946/19597. Open access record, but direct PDF download was",
+        "url": "https://hdl.handle.net/1946/19597"
+      }
+    ],
+    "text": "Case study: Rostock (Rostock, Mecklenburg-Vorpommern, Germany)\nSection: PLANNING PROCESSES\n\n---\n\n### What is the time horizon considered in the MR decision process?\n\n**Answer:** **Pre-retreat planning; Immediate risks (1–5 years); Anticipated future risks (10–100 years); Post-retreat follow-up**\n\n**Narrative:**\n\n- **Pre-retreat planning:** Extensive. Planning began in 1992 (consulting study of options) and a formal EIA and plan approval procedure ran from 2001 [Schernewski et al. 2018]. The entire planning period from problem identification to implementation was 14 years [Schernewski et al. 2018].\n\n- **Immediate risks (1–5 years):** The 1995 storm surge identified an immediate risk; the ring-dyke was designed to protect against storm surges of the historically observed magnitude. The construction period (2004–2006) addressed immediate risk for the settlement.\n\n- **Anticipated future risks (10–100 years):** Explicitly considered. The scheme was designed around projections of sea-level rise and increasing erosion over coming decades. The regional spatial development programs (2010 and 2011) designated reservation areas for coastal protection based on climate change projections [Schernewski et al. 2023]. Design water levels for flood protection were recently increased by 1 m until the year 2100 [Schernewski et al. 2022]. Climate change assessments for the Baltic Sea region (BACC assessments) are referenced as informing the planning rationale [Schernewski et al. 2023].\n\n- **Emerging risks (5–10 years):** Implicit but not separately identified as a distinct planning horizon in the reviewed sources.\n\n- **Post-retreat follow-up:** Ongoing monitoring and evaluation are documented, including ecosystem service assessments using the InVEST Carbon model and expert-based approaches [Schernewski et al. 2023], surveys of public perception (2010, 2011) [Schernewski et al. 2018], media analysis, and scientific publications retrospectively evaluating the scheme."
+  }
+]

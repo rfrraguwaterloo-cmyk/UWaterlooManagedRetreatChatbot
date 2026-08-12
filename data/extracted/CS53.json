@@ -1,0 +1,192 @@
+[
+  {
+    "case_id": "CS53",
+    "chunk_index": 0,
+    "section": "critical_source_quality_notice",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: CRITICAL SOURCE QUALITY NOTICE\n\n**All four source files provided for Case ID CS53 are failed web captures of paywalled Elsevier journal articles.** The automated capture process was blocked by publisher authentication systems (CAPTCHA/403 errors). The file content consists entirely of Elsevier web analytics infrastructure code (Adobe Analytics/Adobe Experience Cloud JavaScript) and authentication challenge pages. **No substantive text from any of the four academic papers was captured or made available for analysis.**\n\nThe four intended sources are:\n1. \"Biogeochemical value of managed realignment, Humber estuary, UK\" — DOI: 10.1016/j.scitotenv.2006.08.021 (*Science of the Total Environment*)\n2. \"Historical storage budgets of organic carbon, nutrient and contaminant elements in saltmarsh sediments: Biogeochemical context for managed realignment, Humber Estuary, UK\" — DOI: 10.1016/j.scitotenv.2008.07.044 (*Science of the Total Environment*)\n3. \"Managed realignment as compensation for the loss of intertidal mudflat: A short term solution to a long term problem?\" — DOI: 10.1016/j.ecss.2010.07.009 (*Estuarine, Coastal and Shelf Science*)\n4. \"Physical and biological development of a newly breached managed realignment site, Humber estuary, UK\" — DOI: 10.1016/j.marpolbul.2007.09.017 (*Marine Pollution Bulletin*)\n\n**What the source files contain:** Only Elsevier's web infrastructure code, CAPTCHA challenge pages, and HTTP error responses. No research text, abstract content, methods, results, or discussion sections were captured.\n\n**What can be established from the source files:** Only the paper titles, DOIs, journal names, and the capture timestamps — nothing else.\n\n**Consequence for this coding document:** The questionnaire cannot be completed from the reviewed sources. Every field below will record \"No evidence found in reviewed sources.\" The Case Study Overview is limited to what can be responsibly stated from title-level metadata alone. No codes will be assigned. No inferences about case characteristics will be presented as coded findings.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 1,
+    "section": "overview",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Case Study Overview\n\n**Case Name:** Managed Realignment, Humber Estuary, United Kingdom\n\n**Global North/South:** North (United Kingdom; supported by location in paper titles and journal metadata)\n\n**Source limitation:** The following overview is derived exclusively from the paper titles and journal DOIs provided. No substantive content was accessible from any of the four source documents. All statements below reflect only what can be responsibly read from title-level metadata.\n\nThe four paper titles indicate that this case study concerns **managed realignment** on the **Humber Estuary** in the United Kingdom. The papers use the phrase \"managed realignment\" consistently — this is the standard UK coastal management term for an intervention in which coastal defence structures (typically embankments or sea walls) are deliberately modified or breached to allow tidal inundation of previously enclosed land, creating or restoring intertidal habitat. The titles cover biogeochemical aspects of the realignment (carbon, nutrients, and contaminants in saltmarsh sediments), physical and biological development at a newly breached site, and a question about whether managed realignment can adequately compensate for loss of intertidal mudflat over the long term.\n\nThe publication dates of the four papers span 2006 to 2010, suggesting that fieldwork at the site(s) studied occurred in the early-to-mid 2000s. The research appears to constitute a multi-year scientific monitoring program at one or more Humber Estuary realignment sites.\n\n**What cannot be established from the source files:** The specific site(s) studied; the scale of the intervention; the regulatory, planning, or governance context; the trigger and decision process; funding sources; the identity of implementing agencies; whether any residential, agricultural, or other land users were displaced; and any social, equity, or community engagement dimensions.\n\n**Plain-language narrative (for a non-technical reader):** Based on the titles of the four papers alone, this case involves a type of coastal management practice used in England in which sea walls or earthen embankments along an estuary are breached or removed, allowing the tide to reclaim land that had previously been protected. The goal, as suggested by one of the paper titles, is to create new intertidal habitat (mudflat and saltmarsh) to compensate for losses of such habitat elsewhere. The four papers study what happens after such a breach: how sediments, carbon, nutrients, and pollutants behave; how the physical and biological environment of the newly flooded area develops; and whether these newly created habitats can truly replace what was lost. One title raises the question of whether this approach is only a short-term solution to a longer-term problem, suggesting the papers engage with debates about the adequacy of managed realignment as a compensation strategy.\n\n**Important caution:** Because no paper text was accessible, none of the above can be confirmed as describing the managed retreat decision process for this case. The papers appear to be natural science monitoring studies, not planning or governance analyses. Whether they describe a single site or multiple sites, who made the decision to realign, what the regulatory basis was, and whether people or assets were displaced cannot be determined from the titles alone.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 2,
+    "section": "general_information",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: General Information\n\n### Is there any evidence of a proactive or reactive trigger in the MR decision process? (Reactive/Proactive)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The paper titles do not describe the trigger for the managed realignment decision. No code can be assigned. Title-only inference is not sufficient to code this field.\n\n---\n\n### Date, Number of households affected, Number of population affected, Total funding\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The paper publication dates (2006–2010) indicate fieldwork likely occurred in the early-to-mid 2000s, but no specific implementation dates, household counts, population figures, or funding amounts can be extracted from the available materials. No code can be assigned.\n\n---\n\n### What is the occurrence of the hazard(s) considered in the MR decision process? (Single Hazard/Multiple Hazards)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The titles do not describe hazard occurrence. No code can be assigned.\n\n---\n\n### What is the origin of the hazards considered in the MR decision process? (Technological Hazard/Natural Hazard)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. No code can be assigned.\n\n---\n\n### Was this hazard considered in the MR decision process? (Coastal Flooding/Erosion, Riverine/Pluvial Flooding, etc.)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The titles do not describe the hazard type considered in the decision process. No code can be assigned.\n\n---\n\n### What was the geographic scale of the MR project? (Individual homes, A few streets, Neighbourhood, Entire community, Sub-watershed, Watershed region)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The geographic scale of the intervention cannot be determined from the titles alone. No code can be assigned.\n\n---\n\n### Who or what was retreated? (Individuals, Groups/Neighbourhoods, Communities, Critical infrastructure, Hazard protection structures, Industrial assets)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The titles reference a \"breached managed realignment site\" and \"intertidal mudflat\" compensation, suggesting the intervention involved coastal defence structures, but the nature and scope of what was retreated cannot be confirmed from titles alone. No code can be assigned.\n\n---\n\n### Other notes\n\nAll four source files are inaccessible due to publisher paywalls and authentication barriers encountered during automated capture. The files contain only Elsevier web analytics JavaScript infrastructure and CAPTCHA authentication pages — no research content of any kind.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 3,
+    "section": "institutional_environment",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Institutional Environment\n\n### What is the focus or scope of the MR project? (Individual buyout/retreat, Community buyout/retreat, Leasebacks/easements/buffers, Other acquisition tools, Managed realignment of infrastructure)\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. The titles use the term \"managed realignment,\" which in the codebook corresponds to \"Managed realignment of infrastructure,\" but this cannot be coded without source text confirming the scope, assets involved, and decision process.\n\n---\n\n### What legal constraints or requirements were identified during the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** No source text was accessible. No legal frameworks, regulations, or constraints can be identified from the titles alone.\n\n---\n\n### What were the funding sources for the MR project?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What was considered to maintain (or improve) the tax base in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What level/type of compensation mechanisms were considered in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 4,
+    "section": "planning_processes",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Planning Processes\n\n### What is the time horizon considered in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What planning elements were considered in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What decision support tools were used in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What planning measures were taken for receiving areas in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What uses were planned for retreat lands?\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** One title — \"Managed realignment as compensation for the loss of intertidal mudflat\" — indicates that the purpose of the realignment was to create intertidal habitat as compensation for mudflat loss. This would be consistent with a \"Natural use\" coding, but without access to the paper text, the specific land-use planning decisions, designations, or management arrangements cannot be confirmed. No code is assigned.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 5,
+    "section": "community_engagement",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Community Engagement\n\n### What degree of choice was provided to affected people in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What land user groups were involved or considered in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What actors participated in the governance structure of the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### Who ultimately made decisions in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### Was this engagement approach explicitly incorporated into the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What community resources supported the transition during the MR process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What supports were provided to facilitate engagement during the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What language or framing was used to engage the community in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** All four paper titles use the term \"managed realignment.\" This is the terminology in the accessible metadata. No other terms (retreat, resettlement, relocation, etc.) appear in the titles. However, the language used in the managed retreat decision process itself — as distinct from the scientific papers' terminology — cannot be determined from titles alone.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 6,
+    "section": "socio_cultural_considerations",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Socio-Cultural Considerations\n\n### What special considerations for First Nations communities were included in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** This is a United Kingdom case. The specific First Nations/Indigenous framework as described in the codebook does not apply in the same way to the UK context. Regardless, no source text was accessible.\n\n---\n\n### What equity considerations were addressed in the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n---\n\n### What resilience, Build Back Better (BBB), or disaster risk reduction (DRR) goals were achieved through the MR decision process?\n\n**Answer:** No evidence found in reviewed sources.\n\n**Narrative:** One title asks whether managed realignment is \"a short term solution to a long term problem,\" which indicates that the papers engage with questions of long-term effectiveness and adequacy of the approach. However, this does not provide evidence of specific resilience or DRR goals achieved in the managed retreat decision process. No code can be assigned.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 7,
+    "section": "cross_cutting_themes",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Cross-Cutting Themes\n\n### Add any relevant notes related to the themes that were not considered before. (Institutional Environment, Planning Processes, Community Engagement, Socio-Cultural Considerations)\n\n**Answer:** No evidence found in reviewed sources. All source files were inaccessible. No cross-cutting theme notes can be grounded in source text.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 8,
+    "section": "additional_notes",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Additional Notes and Lessons Learned\n\n**1. Source access failure is the defining feature of this case record.** The systematic review protocol relies on automated web capture of published journal articles. For CS53, all four captures failed due to publisher authentication barriers (Elsevier's ScienceDirect paywall). The captured files contain no research content. This failure means the case study cannot be coded and should be flagged for re-capture using institutional library access, author repositories, or interlibrary loan before any coding is attempted.\n\n**2. Nature of the case based on title-level metadata only.** The paper titles suggest that CS53 involves an ecological coastal managed realignment intervention on the Humber Estuary, UK. The papers appear to be natural science/biogeochemistry monitoring studies rather than social science, planning, or governance analyses of the retreat decision process. If this is correct, even full access to the papers might yield limited information on community engagement, compensation, governance, and socio-cultural dimensions — because those topics fall outside the apparent scope of the papers. However, this assessment is based solely on titles and cannot be confirmed.\n\n**3. Terminology.** All four titles use \"managed realignment\" — the standard UK coastal management term. This is noted as metadata-level information only; no claim is made about how the case participants framed the process.\n\n**4. Supplementary sources recommended.** If this case is to be coded, supplementary sources beyond the four identified papers would likely be needed to address social, governance, and community engagement dimensions. Relevant sources might include: UK Environment Agency documents, Humber Estuary Management Plan, relevant Shoreline Management Plans, and any planning or policy literature on the specific realignment site(s).\n\n**5. Response to Check 1 audit.** This Version 2 document was generated entirely from scratch, with all major issues from the Check 1 audit resolved:\n- All inferences that were presented too confidently in Version 1 have been removed or explicitly marked as title-only metadata observations.\n- No codes have been assigned anywhere in this document, consistent with the audit finding that no code should be based on title-only inference.\n- The description of the Humber Estuary as \"a large tidal estuary formed by the rivers Ouse and Trent\" has been removed, as this fact is not contained in the source files.\n- The claim about EU Habitats Directive obligations has been removed, as it is not supported by source text.\n- The claim that the case \"likely involves deliberate breaching of agricultural embankments\" has been removed.\n- The statement that one paper \"explicitly questions\" the long-term adequacy of managed realignment has been replaced with the more conservative: \"One title asks whether managed realignment is a short-term solution to a long-term problem.\"\n- The internally inconsistent structure of Version 1 (stating \"no evidence\" then assigning \"likely\" codes) has been eliminated.\n- The language-and-framing field has been revised to note only what appears in accessible metadata, without implying that other terms are absent from the underlying research.\n\n**6. No disagreement with the auditor's findings.** After reviewing the source files, I confirm that all major issues identified in the Check 1 audit are valid. The Version 1 document went beyond the evidence. Version 2 corrects all identified errors.\n\n---"
+  },
+  {
+    "case_id": "CS53",
+    "chunk_index": 9,
+    "section": "evidence_gaps",
+    "location": "Paull Holme Strays, Humberside",
+    "country": "United Kingdom",
+    "country_normalized": "United Kingdom",
+    "continent": "Europe",
+    "admin_area": "Humberside",
+    "source": "Pipeline Ver2 — Paull Holme Strays",
+    "source_links": [
+      {
+        "title": "Biogeochemical value of managed realignment, Humber estuary, UK",
+        "doi": "10.1016/j.scitotenv.2006.08.021",
+        "url": "https://doi.org/10.1016/j.scitotenv.2006.08.021"
+      }
+    ],
+    "text": "Case study: Paull Holme Strays (Paull Holme Strays, Humberside, United Kingdom)\nSection: Fields with Limited or No Evidence\n\n**All questionnaire fields have no evidence from the reviewed sources.** This is a complete failure of source accessibility, not a gap in the case itself. The following fields are explicitly listed as having no usable evidence from the captured source files:\n\n1. Proactive/Reactive trigger\n2. Date of retreat process\n3. Number of households affected\n4. Number of people affected\n5. Total funding\n6. Single vs. multiple hazards\n7. Hazard origin (natural/technological/climate change)\n8. Specific hazard type(s)\n9. Geographic scale of the MR project\n10. Who or what was retreated\n11. Focus/scope of the MR project\n12. Legal constraints and frameworks\n13. Funding sources\n14. Tax base considerations\n15. Compensation mechanisms and levels\n16. Time horizon of planning\n17. Planning elements and approaches\n18. Decision support tools used\n19. Planning for receiving areas\n20. Planned uses for retreat lands\n21. Degree of choice provided to affected people\n22. Land user groups involved\n23. Actors in the governance structure\n24. Who made ultimate decisions\n25. Community engagement approaches explicitly incorporated\n26. Community resources supporting transition\n27. Supports for engagement during decision process\n28. Language and framing used\n29. First Nations/Indigenous considerations\n30. Equity considerations\n31. Resilience/BBB/DRR goals achieved\n32. All cross-cutting theme notes"
+  }
+]
