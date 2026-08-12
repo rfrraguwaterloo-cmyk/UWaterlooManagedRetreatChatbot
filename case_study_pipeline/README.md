@@ -12,13 +12,20 @@ Automates the 4-step managed retreat case study workflow:
    Check 1 (**Check 2**), producing another scored report so you can compare
    Check 1 vs. Check 2 to measure improvement.
 
+The default workflow still uses Claude for drafting/revision and ChatGPT for
+audits. For shared-account use, pass `--llm-provider claude` or
+`--llm-provider openai` to run all four steps with one provider/key.
+
 ## Setup
 
-1. Make sure `rfr-rag/.env` has both keys:
+1. Make sure `rfr-rag/.env` has the key or keys needed for your workflow:
    ```
    ANTHROPIC_API_KEY=...
    OPENAI_API_KEY=...
    ```
+   For `--llm-provider claude`, only `ANTHROPIC_API_KEY` is required. For
+   `--llm-provider openai`, only `OPENAI_API_KEY` is required. The default
+   mixed workflow requires both.
 2. Install dependencies (adds `fpdf2` to the existing requirements):
    ```bash
    pip install -r requirements.txt
@@ -62,6 +69,7 @@ python -m case_study_pipeline.run_case_study \
   --case-folder data/raw/CS6 \
   --case-id CS6 \                 # defaults to the folder name
   --output-dir outputs/CS6 \      # defaults to <case-folder>/pipeline_output/
+  --llm-provider claude \          # mixed, claude, or openai
   --claude-model claude-sonnet-4-6 \
   --openai-model gpt-5.4-mini \
   --max-tokens 8000 \             # max output tokens per LLM call
@@ -72,6 +80,26 @@ python -m case_study_pipeline.run_case_study \
 By default, if an output PDF already exists you'll be asked to confirm before it's
 overwritten (the `.md` files are always (re)written so you don't lose the run, but
 existing PDFs are kept unless you confirm or pass `--force`).
+
+### Shared one-provider workflow
+
+Use this when the team wants a simple process that only needs one LLM account.
+The Hugging Face app can collect requests and uploaded papers without any API
+calls; a project member then runs the extraction locally:
+
+```bash
+python3 -m case_study_pipeline.run_case_study \
+  --case-folder data/raw/CSxx-ShortName \
+  --case-id CSxx \
+  --llm-provider claude \
+  --max-chars-per-source 150000 \
+  --force
+
+python3 -m case_study_pipeline.select_best_run --case-id CSxx
+python3 ingest/ingest_pipeline_outputs.py --case-id CSxx
+python3 ingest/create_summary_chunks.py
+python3 ingest/embed_and_index.py
+```
 
 ## Running just the audit step (Check 1 / Check 2 only)
 

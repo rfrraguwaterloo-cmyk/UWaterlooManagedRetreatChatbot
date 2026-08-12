@@ -18,6 +18,9 @@ Usage:
 
 Reusable for any case study: pass any folder containing that case study's source
 PDFs (papers, reports, etc.) via --case-folder.
+
+Use --llm-provider claude or --llm-provider openai to run all four steps with
+one provider/key instead of the default mixed Claude + ChatGPT workflow.
 """
 
 from __future__ import annotations
@@ -39,6 +42,34 @@ from .llm_clients import (
 )
 
 CONTEXT_DIR = Path(__file__).resolve().parent / "context"
+
+
+def provider_label(provider: str) -> str:
+    if provider == "openai":
+        return "ChatGPT"
+    if provider == "claude":
+        return "Claude"
+    return provider
+
+
+def query_provider(
+    provider: str,
+    prompt: str,
+    args: argparse.Namespace,
+) -> str:
+    if provider == "openai":
+        return query_openai(prompt, model=args.openai_model, max_tokens=args.max_tokens)
+    if provider == "claude":
+        return query_claude(prompt, model=args.claude_model, max_tokens=args.max_tokens)
+    raise ValueError(f"Unsupported LLM provider: {provider}")
+
+
+def step_provider(args: argparse.Namespace, step: str) -> str:
+    if args.llm_provider in {"claude", "openai"}:
+        return args.llm_provider
+    if step in {"ver1", "ver2"}:
+        return "claude"
+    return "openai"
 
 
 def load_context_docs() -> dict[str, str]:
@@ -119,8 +150,13 @@ def run(args: argparse.Namespace) -> None:
     )
     print(f"  -> {len(source_documents):,} characters of source text")
 
-    # --- Step 1: Claude generates Version 1 -------------------------------
-    print("\n[1/4] Claude: generating Version 1 (initial questionnaire document)...")
+    ver1_provider = step_provider(args, "ver1")
+    check1_provider = step_provider(args, "check1")
+    ver2_provider = step_provider(args, "ver2")
+    check2_provider = step_provider(args, "check2")
+
+    # --- Step 1: Generate Version 1 ---------------------------------------
+    print(f"\n[1/4] {provider_label(ver1_provider)}: generating Version 1 (initial questionnaire document)...")
     prompt_a = prompts.build_prompt_a(
         case_id=case_id,
         ai_questionnaire=context["ai_questionnaire"],
@@ -129,17 +165,17 @@ def run(args: argparse.Namespace) -> None:
         note_taking_guidelines=context["note_taking_guidelines"],
         source_documents=source_documents,
     )
-    version_1 = query_claude(prompt_a, model=args.claude_model, max_tokens=args.max_tokens)
+    version_1 = query_provider(ver1_provider, prompt_a, args)
     pdf1, md1 = write_outputs(output_dir, case_id, "Ver1", version_1, f"{case_id} - Case Study Questionnaire (Version 1)", args.force)
     print(f"  -> {md1}" + (f"\n  -> {pdf1}" if pdf1 else ""))
     try_upload(uploader, pdf1)
 
-    # --- Step 2: ChatGPT Check 1 -------------------------------------------
-    print("\n[2/4] ChatGPT: Check 1 (auditing Version 1)...")
+    # --- Step 2: Check 1 ---------------------------------------------------
+    print(f"\n[2/4] {provider_label(check1_provider)}: Check 1 (auditing Version 1)...")
     check_source = source_documents
     if args.max_check_source_chars and len(check_source) > args.max_check_source_chars:
         check_source = check_source[:args.max_check_source_chars]
-        print(f"  [Note] Source text truncated to {args.max_check_source_chars:,} chars for ChatGPT check (use --max-check-source-chars 0 to disable)")
+        print(f"  [Note] Source text truncated to {args.max_check_source_chars:,} chars for audit checks (use --max-check-source-chars 0 to disable)")
     prompt_b1 = prompts.build_prompt_b(
         case_id=case_id,
         version_label="Version 1 (initial draft)",
@@ -148,15 +184,15 @@ def run(args: argparse.Namespace) -> None:
         note_taking_guidelines=context["note_taking_guidelines"],
         source_documents=check_source,
     )
-    check_1 = query_openai(prompt_b1, model=args.openai_model, max_tokens=args.max_tokens)
+    check_1 = query_provider(check1_provider, prompt_b1, args)
     check1_pdf, check1_md = write_outputs(output_dir, case_id, "Check1_report", check_1, f"{case_id} - Check 1 Report", args.force)
     check_1_grade = extract_grade(check_1)
     print(f"  -> {check1_md}")
     print(f"  Check 1 grade: {check_1_grade}/100")
     try_upload(uploader, check1_pdf)
 
-    # --- Step 3: Claude revises into Version 2 ------------------------------
-    print("\n[3/4] Claude: revising into Version 2 using Check 1 feedback...")
+    # --- Step 3: Revise into Version 2 ------------------------------------
+    print(f"\n[3/4] {provider_label(ver2_provider)}: revising into Version 2 using Check 1 feedback...")
     prompt_revision = prompts.build_prompt_revision(
         case_id=case_id,
         version_1_document=version_1,
@@ -167,13 +203,13 @@ def run(args: argparse.Namespace) -> None:
         note_taking_guidelines=context["note_taking_guidelines"],
         source_documents=source_documents,
     )
-    version_2 = query_claude(prompt_revision, model=args.claude_model, max_tokens=args.max_tokens)
+    version_2 = query_provider(ver2_provider, prompt_revision, args)
     pdf2, md2 = write_outputs(output_dir, case_id, "Ver2", version_2, f"{case_id} - Case Study Questionnaire (Version 2)", args.force)
     print(f"  -> {md2}" + (f"\n  -> {pdf2}" if pdf2 else ""))
     try_upload(uploader, pdf2)
 
-    # --- Step 4: ChatGPT Check 2 (fresh call, no memory of Check 1) ---------
-    print("\n[4/4] ChatGPT: Check 2 (fresh audit of Version 2, no memory of Check 1)...")
+    # --- Step 4: Check 2 (fresh call, no memory of Check 1) ----------------
+    print(f"\n[4/4] {provider_label(check2_provider)}: Check 2 (fresh audit of Version 2, no memory of Check 1)...")
     prompt_b2 = prompts.build_prompt_b(
         case_id=case_id,
         version_label="Version 2 (revised)",
@@ -182,9 +218,9 @@ def run(args: argparse.Namespace) -> None:
         note_taking_guidelines=context["note_taking_guidelines"],
         source_documents=check_source,
     )
-    # New, standalone call: no prior messages / response IDs are passed, so this
-    # call has no memory of Check 1 (see llm_clients.query_openai docstring).
-    check_2 = query_openai(prompt_b2, model=args.openai_model, max_tokens=args.max_tokens)
+    # New, standalone call: no prior messages are passed, so this call has no
+    # memory of Check 1.
+    check_2 = query_provider(check2_provider, prompt_b2, args)
     check2_pdf, check2_md = write_outputs(output_dir, case_id, "Check2_report", check_2, f"{case_id} - Check 2 Report", args.force)
     check_2_grade = extract_grade(check_2)
     print(f"  -> {check2_md}")
@@ -223,6 +259,13 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument("--claude-model", default=DEFAULT_CLAUDE_MODEL, help=f"Claude model (default: {DEFAULT_CLAUDE_MODEL})")
     parser.add_argument("--openai-model", default=DEFAULT_OPENAI_MODEL, help=f"OpenAI model (default: {DEFAULT_OPENAI_MODEL})")
+    parser.add_argument(
+        "--llm-provider",
+        choices=("mixed", "claude", "openai"),
+        default="mixed",
+        help="Provider routing for the 4-step workflow. 'mixed' uses Claude for Ver1/Ver2 and OpenAI for checks; "
+             "'claude' or 'openai' uses one provider for all four steps.",
+    )
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS, help=f"Max output tokens per LLM call (default: {DEFAULT_MAX_TOKENS})")
     parser.add_argument(
         "--max-check-source-chars",

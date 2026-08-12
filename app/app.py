@@ -4,6 +4,7 @@ import re
 import ast
 import uuid
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 import streamlit as st
 
@@ -53,6 +54,18 @@ def _history_dir() -> Path:
         return bucket_mount / "streamlit_history"
 
     return Path(".streamlit_history")
+
+
+def _requests_dir() -> Path:
+    configured = os.getenv("RFR_REQUESTS_DIR")
+    if configured:
+        return Path(configured)
+
+    bucket_mount = Path("/data")
+    if bucket_mount.exists() and os.access(bucket_mount, os.W_OK):
+        return bucket_mount / "new_case_requests"
+
+    return Path(".new_case_requests")
 
 
 @st.cache_data
@@ -146,6 +159,7 @@ def _render_navigation(current_page: str, conversation_id: str) -> None:
     nav_items = [
         ("ask", "Ask"),
         ("how_to_use", "How to Use"),
+        ("new_case_requests", "New Case Study Requests"),
         ("case_studies", "Case Studies"),
         ("previous_responses", "Previous Responses"),
         ("about", "About"),
@@ -175,7 +189,7 @@ def _render_navigation(current_page: str, conversation_id: str) -> None:
         """,
         unsafe_allow_html=True,
     )
-    cols = st.columns([3.9, 0.85, 1.25, 1.35, 1.75, 0.9])
+    cols = st.columns([3.45, 0.75, 1.05, 1.8, 1.15, 1.55, 0.75])
     cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
     for col, (page, label) in zip(cols[1:], nav_items):
         if col.button(
@@ -352,7 +366,7 @@ def _metadata_answer_markdown(query: str) -> str | None:
 
 def _current_page() -> str:
     page = _get_query_param("page") or "ask"
-    allowed = {"ask", "how_to_use", "case_studies", "previous_responses", "about"}
+    allowed = {"ask", "how_to_use", "new_case_requests", "case_studies", "previous_responses", "about"}
     return page if page in allowed else "ask"
 
 
@@ -544,6 +558,133 @@ def _render_how_to_use_page() -> None:
         engagement work.
         """
     )
+
+
+def _safe_filename(name: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", name.strip())
+    cleaned = cleaned.strip("._")
+    return cleaned or "uploaded_file"
+
+
+def _safe_slug(value: str, fallback: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9]+", "-", value.strip()).strip("-").lower()
+    return cleaned[:60] or fallback
+
+
+def _append_request_index(record: dict) -> None:
+    requests_dir = _requests_dir()
+    requests_dir.mkdir(parents=True, exist_ok=True)
+    index_path = requests_dir / "requests_index.json"
+    try:
+        existing = json.loads(index_path.read_text()) if index_path.exists() else []
+    except Exception:
+        existing = []
+    if not isinstance(existing, list):
+        existing = []
+    existing.insert(0, record)
+    index_path.write_text(json.dumps(existing[:500], indent=2))
+
+
+def _render_new_case_requests_page() -> None:
+    st.title("New Case Study Requests")
+    st.caption(
+        "Submit candidate managed retreat case studies and source papers for the RFR team to review. "
+        "This intake form stores files only; it does not call an AI model or process the case automatically."
+    )
+
+    st.info(
+        "Do not upload sensitive or confidential material. Uploaded files and request notes may be "
+        "stored in the app's mounted Hugging Face storage so the project team can retrieve them."
+    )
+
+    with st.form("new_case_request_form", clear_on_submit=False):
+        case_title = st.text_input("Case study name or short title", placeholder="Example: Coastal buyout program in ...")
+        location = st.text_input("Location", placeholder="City/region, province/state")
+        country = st.text_input("Country")
+        source_links = st.text_area(
+            "Paper/source links",
+            placeholder="Paste DOIs, URLs, Google Drive links, or citation notes. One source per line is easiest.",
+            height=120,
+        )
+        notes = st.text_area(
+            "Why should this case be added?",
+            placeholder="Briefly describe why this case is relevant to managed retreat, relocation, buyouts, resettlement, or flood risk.",
+            height=120,
+        )
+        submitter = st.text_input("Your name or email (optional)")
+        uploaded_files = st.file_uploader(
+            "Upload papers or supporting files",
+            type=["pdf", "txt", "md", "doc", "docx"],
+            accept_multiple_files=True,
+            help="PDFs are preferred. Keep uploads to papers and public supporting documents.",
+        )
+
+        submitted = st.form_submit_button("Submit case study request", type="primary")
+
+    if not submitted:
+        with st.expander("How the team processes submitted requests", expanded=False):
+            st.markdown(
+                """
+                1. Review the request files in the mounted storage folder.
+                2. Create a new `CSxx` folder under `data/raw/` on a team machine.
+                3. Move accepted papers into that folder and add or update `case_meta.json`.
+                4. Run the one-provider extraction pipeline locally.
+                5. Ingest, embed, commit, and push the updated index.
+
+                Suggested local commands after a request is accepted:
+
+                ```bash
+                python3 -m case_study_pipeline.run_case_study --case-folder data/raw/CSxx-ShortName --case-id CSxx --llm-provider claude --max-chars-per-source 150000 --force
+                python3 -m case_study_pipeline.select_best_run --case-id CSxx
+                python3 ingest/ingest_pipeline_outputs.py --case-id CSxx
+                python3 ingest/create_summary_chunks.py
+                python3 ingest/embed_and_index.py
+                ```
+                """
+            )
+        return
+
+    if not case_title.strip() and not source_links.strip() and not uploaded_files:
+        st.warning("Please add at least a case title, source link, or uploaded file.")
+        return
+
+    created_at = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    request_id = f"{created_at}_{uuid.uuid4().hex[:8]}"
+    request_slug = _safe_slug(case_title or location or "new-case-request", "new-case-request")
+    request_dir = _requests_dir() / f"{request_id}_{request_slug}"
+    request_dir.mkdir(parents=True, exist_ok=True)
+
+    saved_files = []
+    for uploaded in uploaded_files or []:
+        filename = _safe_filename(uploaded.name)
+        dest = request_dir / filename
+        if dest.exists():
+            dest = request_dir / f"{uuid.uuid4().hex[:6]}_{filename}"
+        dest.write_bytes(uploaded.getbuffer())
+        saved_files.append(dest.name)
+
+    record = {
+        "request_id": request_id,
+        "created_at_utc": created_at,
+        "case_title": case_title.strip(),
+        "location": location.strip(),
+        "country": country.strip(),
+        "source_links": source_links.strip(),
+        "notes": notes.strip(),
+        "submitter": submitter.strip(),
+        "saved_files": saved_files,
+        "storage_folder": str(request_dir),
+        "status": "new",
+    }
+    (request_dir / "request.json").write_text(json.dumps(record, indent=2))
+    _append_request_index(record)
+
+    st.success("Request submitted. The RFR team can now review it from the app storage folder.")
+    st.markdown(f"**Request ID:** `{request_id}`")
+    if saved_files:
+        st.markdown("**Files saved:**")
+        for filename in saved_files:
+            st.markdown(f"- `{filename}`")
 
 
 def _query_param_is_true(key: str) -> bool:
@@ -748,6 +889,10 @@ with st.sidebar:
 
 if current_page == "how_to_use":
     _render_how_to_use_page()
+    st.stop()
+
+if current_page == "new_case_requests":
+    _render_new_case_requests_page()
     st.stop()
 
 if current_page == "case_studies":
