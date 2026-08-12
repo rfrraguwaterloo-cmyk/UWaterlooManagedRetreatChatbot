@@ -488,6 +488,9 @@ def _render_about_page() -> None:
         [Anna Zhou](https://uwaterloo.ca/retreating-from-risk/profiles/anna-zhou)
         from the University of Waterloo.
 
+        For background from the RFR team, see
+        [Managed Retreat 101](https://uwaterloo.ca/retreating-from-risk/managed-retreat-101).
+
         The tool retrieves evidence from indexed case-study summaries and sections,
         then generates a grounded response for planning, policy, and research use.
         It is a research aid only and does not replace professional planning, legal,
