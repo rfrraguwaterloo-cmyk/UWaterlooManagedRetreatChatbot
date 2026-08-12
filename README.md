@@ -77,3 +77,6 @@ rfr-rag/
 ```
 
 See [CLAUDE.md](CLAUDE.md) for full project context.
+
+For day-to-day website upkeep and adding new case studies, see
+[Website Maintenance and New Case Study Guide](docs/website_maintenance.md).
