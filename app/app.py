@@ -630,16 +630,6 @@ def _render_new_case_requests_page() -> None:
                 3. Move accepted papers into that folder and add or update `case_meta.json`.
                 4. Run the one-provider extraction pipeline locally.
                 5. Ingest, embed, commit, and push the updated index.
-
-                Suggested local commands after a request is accepted:
-
-                ```bash
-                python3 -m case_study_pipeline.run_case_study --case-folder data/raw/CSxx-ShortName --case-id CSxx --llm-provider claude --max-chars-per-source 150000 --force
-                python3 -m case_study_pipeline.select_best_run --case-id CSxx
-                python3 ingest/ingest_pipeline_outputs.py --case-id CSxx
-                python3 ingest/create_summary_chunks.py
-                python3 ingest/embed_and_index.py
-                ```
                 """
             )
         return
