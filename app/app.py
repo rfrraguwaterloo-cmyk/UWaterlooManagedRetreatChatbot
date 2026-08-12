@@ -490,6 +490,12 @@ def _render_about_page() -> None:
 
         For background from the RFR team, see
         [Managed Retreat 101](https://uwaterloo.ca/retreating-from-risk/managed-retreat-101).
+        You can also meet the
+        [Retreating From Risk team](https://uwaterloo.ca/retreating-from-risk/meet-retreating-risk-team).
+        This website was supervised by
+        [Dr. Rodrigo Costa](https://uwaterloo.ca/retreating-from-risk/profiles/rodrigo-costa),
+        with PhD collaboration from
+        [Ana Carolina Dalla Valle](https://uwaterloo.ca/retreating-from-risk/profiles/ana-carolina-dalla-valle).
 
         The tool retrieves evidence from indexed case-study summaries and sections,
         then generates a grounded response for planning, policy, and research use.
