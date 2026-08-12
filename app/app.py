@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from rag.pipeline import RAGProviderError, generate_answer, retrieve_chunks
 from ingest.geo_metadata import geographic_metadata, normalize_country
 sys.path.insert(0, str(Path(__file__).parent))
+from drive_request_uploader import upload_case_request_to_drive
 from sheets_logger import log_query
 
 
@@ -54,18 +55,6 @@ def _history_dir() -> Path:
         return bucket_mount / "streamlit_history"
 
     return Path(".streamlit_history")
-
-
-def _requests_dir() -> Path:
-    configured = os.getenv("RFR_REQUESTS_DIR")
-    if configured:
-        return Path(configured)
-
-    bucket_mount = Path("/data")
-    if bucket_mount.exists() and os.access(bucket_mount, os.W_OK):
-        return bucket_mount / "new_case_requests"
-
-    return Path(".new_case_requests")
 
 
 @st.cache_data
@@ -582,20 +571,6 @@ def _safe_slug(value: str, fallback: str) -> str:
     return cleaned[:60] or fallback
 
 
-def _append_request_index(record: dict) -> None:
-    requests_dir = _requests_dir()
-    requests_dir.mkdir(parents=True, exist_ok=True)
-    index_path = requests_dir / "requests_index.json"
-    try:
-        existing = json.loads(index_path.read_text()) if index_path.exists() else []
-    except Exception:
-        existing = []
-    if not isinstance(existing, list):
-        existing = []
-    existing.insert(0, record)
-    index_path.write_text(json.dumps(existing[:500], indent=2))
-
-
 def _render_new_case_requests_page() -> None:
     st.title("New Case Study Requests")
     st.caption(
@@ -604,8 +579,8 @@ def _render_new_case_requests_page() -> None:
     )
 
     st.info(
-        "Do not upload sensitive or confidential material. Uploaded files and request notes may be "
-        "stored in the app's mounted Hugging Face storage so the project team can retrieve them."
+        "Do not upload sensitive or confidential material. Submitted files and request notes are "
+        "saved to the project team's Google Drive intake folder for review."
     )
 
     with st.form("new_case_request_form", clear_on_submit=False):
@@ -636,7 +611,7 @@ def _render_new_case_requests_page() -> None:
         with st.expander("How the team processes submitted requests", expanded=False):
             st.markdown(
                 """
-                1. Review the request files in the mounted storage folder.
+                1. Review the request files in the Google Drive intake folder.
                 2. Create a new `CSxx` folder under `data/raw/` on a team machine.
                 3. Move accepted papers into that folder and add or update `case_meta.json`.
                 4. Run the one-provider extraction pipeline locally.
@@ -652,17 +627,7 @@ def _render_new_case_requests_page() -> None:
     created_at = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     request_id = f"{created_at}_{uuid.uuid4().hex[:8]}"
     request_slug = _safe_slug(case_title or location or "new-case-request", "new-case-request")
-    request_dir = _requests_dir() / f"{request_id}_{request_slug}"
-    request_dir.mkdir(parents=True, exist_ok=True)
-
-    saved_files = []
-    for uploaded in uploaded_files or []:
-        filename = _safe_filename(uploaded.name)
-        dest = request_dir / filename
-        if dest.exists():
-            dest = request_dir / f"{uuid.uuid4().hex[:6]}_{filename}"
-        dest.write_bytes(uploaded.getbuffer())
-        saved_files.append(dest.name)
+    request_folder_name = f"{request_id}_{request_slug}"
 
     record = {
         "request_id": request_id,
@@ -673,15 +638,28 @@ def _render_new_case_requests_page() -> None:
         "source_links": source_links.strip(),
         "notes": notes.strip(),
         "submitter": submitter.strip(),
-        "saved_files": saved_files,
-        "storage_folder": str(request_dir),
+        "submitted_files": [_safe_filename(uploaded.name) for uploaded in uploaded_files or []],
         "status": "new",
     }
-    (request_dir / "request.json").write_text(json.dumps(record, indent=2))
-    _append_request_index(record)
+    try:
+        drive_record = upload_case_request_to_drive(
+            request_folder_name=request_folder_name,
+            request_record=record,
+            uploaded_files=list(uploaded_files or []),
+        )
+    except Exception as exc:
+        st.error(
+            "The request could not be saved to Google Drive. Please try again later "
+            "or contact the RFR team."
+        )
+        st.caption(f"Drive upload error: {exc}")
+        return
 
-    st.success("Request submitted. The RFR team can now review it from the app storage folder.")
+    st.success("Request submitted. The RFR team can now review it in the Google Drive intake folder.")
     st.markdown(f"**Request ID:** `{request_id}`")
+    if drive_record.get("drive_folder_url"):
+        st.markdown(f"**Drive folder:** [Open request folder]({drive_record['drive_folder_url']})")
+    saved_files = drive_record.get("saved_files") or []
     if saved_files:
         st.markdown("**Files saved:**")
         for filename in saved_files:

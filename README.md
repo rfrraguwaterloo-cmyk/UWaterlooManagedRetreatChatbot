@@ -39,6 +39,14 @@ python rag/pipeline.py
 streamlit run app/app.py
 ```
 
+## Hugging Face request intake
+
+The **New Case Study Requests** tab saves each submitted request to Google Drive,
+under folder `10n_-uOCT2GXu_G3r1qi5qJr8hHoy-E_y`. In Hugging Face Spaces, set
+`GOOGLE_SERVICE_ACCOUNT_JSON` as a secret containing the service account JSON,
+and share the Drive intake folder with that service account email. To use a
+different parent folder, set `RFR_REQUESTS_DRIVE_FOLDER_ID`.
+
 ## Ingesting documents
 
 ```bash
