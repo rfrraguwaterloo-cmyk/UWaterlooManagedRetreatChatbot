@@ -1,0 +1,211 @@
+[
+  {
+    "case_id": "CS64",
+    "chunk_index": 0,
+    "section": "preliminary_note_on_source_limitations",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: PRELIMINARY NOTE ON SOURCE LIMITATIONS\n\nBefore presenting any findings, it is essential to state the following clearly: **the two source documents provided for Case CS64 contain no substantive article content.** Source 1 (DOI 10.1080/17477891.2017.1316763) returns an error page stating \"DOI Not Found.\" Source 2 (the CrossMigration metadata page) provides only bibliographic metadata for Stal (2011) — author name, publication year, journal name (*International Migration*), and article title — without access to the article text. No abstract, methodology, findings, or data are available from either source.\n\nAs a consequence, **no factual claim about the case beyond what is verifiable from these two sources can be legitimately entered into this coding document.** All coding questions that require article content must be answered \"Cannot be determined from available sources.\" This document applies that standard strictly, in accordance with the Check 1 audit findings and the RFR note-taking guidelines, which prohibit assumptions not supported by evidence.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 1,
+    "section": "overview",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Case Study Overview\n\n**Case Name and Location:** \"Flooding and Relocation: The Zambezi River Valley in Mozambique\" — a case documented in Mozambique, Southern Africa, and described by Marc Stal in a 2011 article published in the journal *International Migration* [1].\n\n**Hazard(s):** The article title explicitly names flooding in the Zambezi River Valley. Beyond the title, the nature, frequency, or severity of the flood hazard cannot be confirmed from available sources.\n\n**Type of Retreat:** The article title references both \"flooding\" and \"relocation,\" suggesting the case involves some form of population movement associated with flood exposure. Whether this constitutes managed retreat as defined by the RFR framework — i.e., a planned, coordinated risk-reduction process — or whether it represents emergency displacement, disaster-driven resettlement, or some other form of population movement, **cannot be determined from the available sources.** This distinction is critical to the validity of this case's inclusion in the RFR database.\n\n**Scale:** Cannot be determined from available sources.\n\n**Key Actors:** Cannot be determined from available sources.\n\n**Timeline:** The article was published in 2011. The time period of the events described cannot be determined from the available sources.\n\n**Key Outcomes:** Cannot be determined from available sources.\n\n**Narrative Summary:**\n\nCase CS64 is associated with Marc Stal's 2011 article, \"Flooding and Relocation: The Zambezi River Valley in Mozambique,\" published in the journal *International Migration* [1]. A second source assigned to this case — a document associated with DOI 10.1080/17477891.2017.1316763 — returns a \"DOI Not Found\" error and yields no content [2]. As a result, the entire factual basis for this case rests on the title, author, year, and journal name of the Stal article, which were retrieved from a bibliographic aggregator (CrossMigration) without access to the article text itself [1].\n\nThe article title indicates that the case is situated in the Zambezi River Valley in Mozambique and concerns a relationship between flooding and relocation. This is consistent with a managed retreat or disaster-related resettlement scenario, but the title alone is insufficient to establish what kind of relocation occurred, who was involved, under what institutional arrangements, at what scale, and with what outcomes. It is also insufficient to confirm whether the case constitutes managed retreat in the RFR sense, as opposed to emergency displacement or involuntary resettlement.\n\nBecause neither source provides accessible article content, it is not possible to complete meaningful systematic coding for this case. Every coding field that requires more than bibliographic identification must be recorded as \"Cannot be determined from available sources.\" This case study document is therefore best understood as a **placeholder record** with a recommendation that the systematic review team obtain full-text access to Stal (2011) and verify the article associated with DOI 10.1080/17477891.2017.1316763 before proceeding with substantive coding.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 2,
+    "section": "coding_questions",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Coding Questions\n\n---\n\n### Is there any evidence of a proactive or reactive trigger in the MR decision process? (Reactive/Proactive)\n\n**Answer:** Cannot be determined from available sources.\n\n**Narrative:** The article title — \"Flooding and Relocation: The Zambezi River Valley in Mozambique\" — names flooding as the contextual condition associated with relocation, but does not indicate whether the relocation was planned in advance of flood events (proactive) or implemented as a response to flood damage (reactive). No article content is accessible to resolve this question. While a reactive trigger might seem plausible given the framing of the title, title-level inference alone does not meet the evidentiary standard required for code assignment under RFR guidelines.\n\n**Why no code is assigned:** The codebook defines \"Reactive\" as relocation occurring after a hazard has caused damage, as a response to loss, and \"Proactive\" as planned in advance to reduce future risk before major impacts occur. Neither definition can be confirmed or ruled out from the title alone. Assigning \"Reactive\" tentatively, as Version 1 did, is inconsistent with RFR note-taking guidelines, which require that coding be grounded in source evidence rather than inference.\n\n**Uncertainty:** Complete. This field cannot be coded without access to the article text.\n\n---\n\n### Date, Number of households affected, Number of population affected, Total funding\n\n**Answer:**\n- **Date of publication:** 2011 [1]. Date of events described: Cannot be determined from available sources.\n- **Number of households affected:** Cannot be determined from available sources.\n- **Number of population affected:** Cannot be determined from available sources.\n- **Total funding:** Cannot be determined from available sources.\n\n**Narrative:** The only date verifiable from the provided sources is the 2011 publication year of the Stal article [1]. No information on households, population numbers, or funding is accessible from either source document.\n\n---\n\n### What is the occurrence of the hazard(s) considered in the MR decision process? (Single Hazard/Multiple Hazards)\n\n**Answer:** Cannot be determined from available sources.\n\n**Narrative:** The article title references flooding, suggesting at minimum one hazard. However, whether the article addresses a single hazard or multiple hazards (e.g., a flood-drought cycle, cascading hazards, or compound events) cannot be established from the title alone. No article content is available to confirm this.\n\n**Why no code is assigned:** The codebook defines \"Single Hazard\" as one specific hazard and \"Multiple Hazards\" as two or more hazards or cascading hazards. Neither can be confirmed from the title alone, and a tentative \"Single Hazard\" assignment — as in Version 1 — does not meet the evidentiary threshold.\n\n**Uncertainty:** Complete.\n\n---\n\n### What is the origin of the hazards considered in the MR decision process? (Technological Hazard/Natural Hazard)\n\n**Answer:** Natural Hazard (tentative — high uncertainty; cannot be fully confirmed from available sources).\n\n**Narrative:** Flooding in a major river valley is broadly consistent with a natural hazard classification. This is the one coding selection that is partially defensible from the article title alone, as the Zambezi River is a geographic feature and flooding is a natural process. However, the article text is inaccessible, and whether anthropogenic factors (e.g., dam operations or land-use changes) are discussed as drivers of flood risk cannot be confirmed. The \"Natural Hazard\" code is assigned tentatively and flagged with high uncertainty.\n\n**Why this code is selected (tentatively):** The codebook defines \"Natural Hazard\" as including events such as earthquakes (when naturally occurring) and by extension other naturally occurring physical hazards. Riverine flooding from a major river system is consistent with this classification. \"Technological Hazard\" — defined as related to the built environment and human technologies — is not indicated by the available title.\n\n**Uncertainty:** High. The tentative nature of this assignment must be noted in any comparative analysis.\n\n---\n\n### Was this hazard considered in the MR decision process? (Hazard type selection)\n\n**Answer:** Riverine Flooding (tentative — based on article title only; high uncertainty).\n\n**Narrative:** The article title explicitly names both the Zambezi River Valley and flooding. The Zambezi is one of Africa's major river systems, and flooding associated with a named river valley is most consistent with the \"Riverine/Pluvial Flooding\" category in the codebook. However, \"Pluvial\" flooding (i.e., flooding from intense rainfall not associated with river overflow) is not specifically indicated by the title, and should not be separately selected. The code assigned is **Riverine Flooding only**.\n\n**Why \"Pluvial\" is not selected:** The available information names a river valley, not a rainfall-driven surface-water event independent of the river system. \"Pluvial\" as a distinct hazard type is not indicated. This corrects a minor error from Version 1, which listed \"Riverine/Pluvial\" together.\n\n**Uncertainty:** High — only the article title is available as evidence.\n\n---\n\n### What was the geographic scale of the MR project?\n\n**Answer:** Cannot be determined from available sources.\n\n**Narrative:** The article title names the \"Zambezi River Valley\" as the geographic context. This is a large regional area, but the title does not indicate whether the relocation described operated at the scale of individual communities, multiple communities, an entire watershed region, or some other scale. No article content is available to clarify this.\n\n**Uncertainty:** Complete.\n\n---\n\n### Who or what was retreated?\n\n**Answer:** Cannot be determined from available sources. Most plausible inference from title: people/communities — but this is unconfirmed.\n\n**Narrative:** The article is published in a migration studies journal (*International Migration*) and its title references \"relocation,\" suggesting that the subjects of the relocation are people rather than infrastructure or industrial assets. However, which codebook categories apply — Individuals, Groups/Neighbourhoods, Communities, Critical Infrastructure, Hazard Protection Structures, or Industrial Assets — cannot be established without article content.\n\n**Uncertainty:** High for specifics; the inference that people (not infrastructure) are the primary subjects is the most defensible inference available, but remains unconfirmed.\n\n---\n\n### Other notes\n\nBoth source documents are effectively content-free for coding purposes. Source [2] (DOI 10.1080/17477891.2017.1316763) returned a \"DOI Not Found\" error. Source [1] (Stal, 2011) is accessible only as bibliographic metadata via the CrossMigration aggregator. It is not confirmed whether the two sources describe the same case, complementary aspects of the same case, or entirely different events. The systematic review team should verify the assignment of both sources to CS64 and obtain full-text access before substantive coding is attempted.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 3,
+    "section": "institutional_environment",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Institutional Environment\n\n---\n\n### What is the focus or scope of the MR project? (Individual buyout/retreat, Community buyout/retreat, etc.)\n\n**Answer:** Cannot be determined from available sources.\n\n**Narrative:** No article content is available to indicate whether the relocation described by Stal (2011) constitutes an individual buyout, a community-level collective relocation, or another form of managed retreat or resettlement. The codebook distinguishes among individual buyout/retreat, community buyout/retreat, leasebacks/easements/buffers, other acquisition tools, and managed realignment of infrastructure. None of these can be confirmed from the title alone.\n\n---\n\n### What legal constraints or requirements were identified during the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What were the funding sources for the MR project?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What was considered to maintain (or improve) the tax base in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What level/type of compensation mechanisms were considered in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 4,
+    "section": "planning_processes",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Planning Processes\n\n---\n\n### What is the time horizon considered in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What planning elements were considered in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What decision support tools were used in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What planning measures were taken for receiving areas in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What uses were planned for retreat lands?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 5,
+    "section": "community_engagement",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Community Engagement\n\n---\n\n### What degree of choice was provided to affected people in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What land user groups were involved or considered in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What actors participated in the governance structure of the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### Who ultimately made decisions in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### Was this engagement approach explicitly incorporated into the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What community resources supported the transition during the MR process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What supports were provided to facilitate engagement during the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What language or framing was used to engage the community in the MR decision process?\n\n**Answer:** \"Relocation\" — confirmed from article title [1]. All other framing categories: Cannot be determined from available sources.\n\n**Narrative:** The article title uses the term \"relocation\" [1]. This is the only language/framing category that can be confirmed from the available sources. Whether terms such as \"resettlement,\" \"managed,\" \"retreat,\" \"migration,\" or community-visioning language were used in the article or program cannot be determined without article content. The codebook includes \"Relocation\" as a distinct framing code, and its selection here is the sole framing code supported by evidence.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 6,
+    "section": "socio_cultural_considerations",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Socio-Cultural Considerations\n\n---\n\n### What special considerations for First Nations communities were included in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n**Narrative:** The questionnaire category \"First Nations communities\" reflects a coding framework developed primarily in North American contexts. Mozambique does not have \"First Nations\" communities in the legal sense used in Canada and the United States. The country's population includes various ethnic and linguistic communities with place-based identities, but no specific considerations for any such groups can be identified from the available sources (which contain no article content). The codebook sub-categories (ancestral lands, decision-making context, place attachment, communal lands, etc.) are potentially relevant in principle to any context involving Indigenous or traditional land-based communities, but none can be confirmed as addressed by Stal (2011).\n\n---\n\n### What equity considerations were addressed in the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---\n\n### What resilience, Build Back Better (BBB), or disaster risk reduction (DRR) goals were achieved through the MR decision process?\n\n**Answer:** Cannot be determined from available sources. No evidence found in reviewed sources.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 7,
+    "section": "cross_cutting_themes",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Cross-Cutting Themes\n\n### Add any relevant notes related to themes not considered before.\n\n**Institutional Environment:** No substantive evidence available from reviewed sources. The institutional context of any relocation in Mozambique — including relevant government agencies, international organizations, and legal frameworks — cannot be described on the basis of the available sources, which provide only bibliographic metadata.\n\n**Planning Processes:** No substantive evidence available from reviewed sources. Whether the relocation described by Stal (2011) was part of a planned risk-reduction process or a reactive crisis response cannot be determined from available sources. This distinction is of direct relevance to the RFR framework's interest in proactive managed retreat.\n\n**Community Engagement:** No substantive evidence available from reviewed sources.\n\n**Socio-Cultural Considerations:** No substantive evidence available from reviewed sources. The placement of the Stal (2011) article in *International Migration* — a journal focused on population movement — may suggest attention to the human and social dimensions of relocation, but this cannot be confirmed from the metadata alone.\n\n**Fundamental case validity question:** It cannot be confirmed from available sources whether the relocation documented by Stal (2011) constitutes managed retreat as defined by the RFR framework, or whether it represents emergency/disaster-driven displacement or a different form of resettlement. This distinction is critical to the validity of this case's inclusion in the RFR database.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 8,
+    "section": "additional_notes",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Additional Notes and Lessons Learned\n\n1. **Critical source limitation — both sources are content-free for coding purposes.** Source [2] (DOI 10.1080/17477891.2017.1316763) returns a \"DOI Not Found\" error with no article content. Source [1] (Stal, 2011) is accessible only as bibliographic metadata on the CrossMigration aggregator, without abstract, methodology, or findings. This means that the entire case record rests on a single article title, author name, publication year, and journal name.\n\n2. **Relationship between the two sources is unclear.** The Stal (2011) article is published in *International Migration*. The ISSN component of the DOI string for the second source (17477891) corresponds to the journal *Environmental Hazards* (Taylor & Francis), suggesting the second source may have been intended to cite a 2017 article in that journal — but this cannot be confirmed since the DOI does not resolve [2]. It is therefore unclear whether these two sources are intended to be complementary references to the same case, or whether one or both were incorrectly assigned to CS64. The systematic review team should verify this assignment.\n\n3. **Managed retreat vs. emergency resettlement — a critical conceptual distinction.** The available evidence (article title only) is insufficient to confirm that this case represents managed retreat as defined in the RFR framework. Managed retreat requires planned, coordinated risk-reduction processes. The title \"Flooding and Relocation\" is consistent with a range of scenarios: proactive planned relocation, reactive post-disaster resettlement, emergency displacement, or migration studies analysis of environmentally influenced movement. This ambiguity must be resolved before the case can be meaningfully coded.\n\n4. **Global South context.** This is a Global South case, located in Mozambique, Southern Africa. The RFR codebook was developed substantially from Global North case examples. Categories such as \"First Nations communities,\" \"home acquisition,\" \"buyout programs,\" and \"tax base considerations\" may require contextual adaptation for a Mozambican setting. Future coding should be attentive to this structural mismatch.\n\n5. **Methodological lesson — avoidance of ungrounded contextual claims.** Version 1 of this document incorporated substantial claims about Mozambique's flood history, the 2000 floods, land tenure law, the Cahora Bassa dam, and livelihood patterns — none of which were supported by the provided sources. These claims were derived from general regional knowledge and presented as case background without citation. Version 2 excludes all such claims in compliance with RFR note-taking guidelines, which require that all notes cite sources directly and avoid assumptions not supported by evidence. The systematic review team should note this as a methodological risk when sources are inaccessible: the temptation to substitute general contextual knowledge for source-grounded evidence is a significant threat to systematic review data quality.\n\n6. **Recommendation for the systematic review team.** To code this case substantively, full-text access to Stal (2011), \"Flooding and Relocation: The Zambezi River Valley in Mozambique,\" *International Migration*, is essential. The team should also verify what article (if any) was intended to be cited by DOI 10.1080/17477891.2017.1316763, and confirm whether both sources were correctly assigned to CS64.\n\n**Note on one disagreement with the Check 1 audit:** The audit (Minor Issue C) suggests retaining the \"Natural Hazard\" code with stronger hedging. This document follows that recommendation. The audit also suggests (Minor Issue D) that \"Pluvial\" should be removed from the hazard type coding, noting that \"Pluvial flooding is not indicated.\" Version 2 follows this correction. No disagreement with auditor findings is entered; all corrections have been applied as directed.\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 9,
+    "section": "evidence_gaps",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: Fields with Limited or No Evidence\n\nGiven that neither source document provides substantive article content, essentially all coding fields beyond basic bibliographic identification lack sufficient evidence for coding. The following is a complete list of fields that cannot be coded:\n\n- Trigger (reactive vs. proactive)\n- Date of events described\n- Number of households affected\n- Number of population affected\n- Total funding\n- Hazard occurrence (single vs. multiple hazards)\n- Geographic scale of MR project\n- Who or what was retreated (specific codebook categories)\n- Focus/scope of MR project (individual vs. community buyout, etc.)\n- Legal constraints and requirements\n- Funding sources (specific)\n- Tax base considerations\n- Compensation mechanisms\n- Time horizon of planning\n- Planning elements employed\n- Decision support tools used\n- Receiving area planning measures\n- Planned uses of retreat lands\n- Degree of choice provided to affected people\n- Land user groups involved\n- Actors in governance structure\n- Who ultimately made decisions\n- Community engagement approaches\n- Community resources for transition\n- Supports for engagement\n- Most language/framing categories (except \"Relocation,\" confirmed from title)\n- Indigenous/First Nations considerations (specific sub-categories)\n- Equity considerations (specific)\n- Resilience/BBB/DRR goals achieved\n\n**Fields with partial or tentative coding (based on title only, high uncertainty):**\n- Hazard origin: Natural Hazard (tentative)\n- Hazard type: Riverine Flooding (tentative)\n- Global North/South: South (confirmed — Mozambique)\n- Language/framing — \"Relocation\" (confirmed from article title)\n\n---"
+  },
+  {
+    "case_id": "CS64",
+    "chunk_index": 10,
+    "section": "references",
+    "location": "Mutarara district, Tete",
+    "country": "Mozambique",
+    "country_normalized": "Mozambique",
+    "continent": "Africa",
+    "admin_area": "Tete",
+    "source": "Pipeline Ver2 — Mutarara district",
+    "source_links": [
+      {
+        "title": "DOI 10.1080/17477891.2017.1316763",
+        "doi": "10.1080/17477891.2017.1316763",
+        "url": "https://doi.org/10.1080/17477891.2017.1316763"
+      }
+    ],
+    "text": "Case study: Mutarara district (Mutarara district, Tete, Mozambique)\nSection: References\n\n[1] M. Stal, \"Flooding and Relocation: The Zambezi River Valley in Mozambique,\" *International Migration*, 2011. [Online]. Available: https://www.migrationresearch.com/item/flooding-and-relocation-the-zambezi-river-valley-in-mozambique/694498\n\n[2] \"Error: DOI Not Found — 10.1080/17477891.2017.1316763,\" DOI.org, accessed 2026-08-13. [Online]. Available: https://doi.org/10.1080/17477891.2017.1316763"
+  }
+]

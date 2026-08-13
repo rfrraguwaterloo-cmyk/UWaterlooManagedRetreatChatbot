@@ -23,6 +23,8 @@ COUNTRY_TO_CONTINENT = {
     "Fiji": "Oceania",
     "Germany": "Europe",
     "India": "Asia",
+    "Malawi": "Africa",
+    "Mozambique": "Africa",
     "Nepal": "Asia",
     "New Zealand": "Oceania",
     "Peru": "South America",
