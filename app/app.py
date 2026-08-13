@@ -147,10 +147,10 @@ def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
 def _render_navigation(current_page: str, conversation_id: str) -> None:
     nav_items = [
         ("ask", "Ask"),
+        ("previous_responses", "Previous Responses"),
         ("how_to_use", "How to Use"),
         ("new_case_requests", "New Case Study Requests"),
         ("case_studies", "Case Studies"),
-        ("previous_responses", "Previous Responses"),
         ("about", "About"),
     ]
     st.markdown(
