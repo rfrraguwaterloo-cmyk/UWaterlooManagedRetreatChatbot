@@ -6,7 +6,6 @@ import uuid
 import os
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -146,102 +145,63 @@ def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 def _render_navigation(current_page: str, conversation_id: str) -> None:
-    nav_items = [
-        ("ask", "Ask"),
-        ("previous_responses", "Previous Responses"),
-        ("how_to_use", "How to Use"),
-        ("new_case_requests", "New Case Study Requests"),
-        ("case_studies", "Case Studies"),
-        ("about", "About"),
-    ]
-    links = []
-    for page, label in nav_items:
-        classes = "rfr-nav-link is-active" if page == current_page else "rfr-nav-link"
-        href = "?" + urlencode({
-            "disclaimer_accepted": "true",
-            "conversation_id": conversation_id,
-            "page": page,
-        })
-        links.append(f'<a class="{classes}" href="{href}">{label}</a>')
-
     st.markdown(
-        f"""
+        """
         <style>
-        .rfr-nav {{
+        div[data-testid="stHorizontalBlock"] .stButton > button {
+            min-height: 2.25rem;
+            width: 100%;
+            border-radius: 6px;
+            white-space: normal;
+            line-height: 1.15;
+            padding: 0.45rem 0.65rem;
+        }
+        .rfr-nav-brand {
+            min-height: 2.25rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            width: 100%;
-        }}
-        .rfr-nav-brand {{
             color: #17324d;
             font-weight: 700;
             font-size: 1.05rem;
             white-space: nowrap;
-            margin-right: auto;
-        }}
-        .rfr-nav-links {{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 0.55rem;
-            min-width: 0;
-        }}
-        .rfr-nav-link {{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 2.25rem;
-            padding: 0.45rem 0.8rem;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            color: #2f3340 !important;
-            text-decoration: none !important;
-            background: #ffffff;
-            line-height: 1.15;
-            white-space: nowrap;
-            box-sizing: border-box;
-        }}
-        .rfr-nav-link:hover {{
-            border-color: #aeb6c2;
-            background: #f8fafc;
-            color: #17324d !important;
-        }}
-        .rfr-nav-link.is-active {{
-            background: #edf4f8;
-            border-color: #d6e3ea;
-            color: #17324d !important;
-            font-weight: 600;
-        }}
-        .rfr-nav-rule {{
+        }
+        .rfr-nav-spacer {
+            min-height: 0.35rem;
+        }
+        .rfr-nav-rule {
             border-bottom: 1px solid #dfe4ea;
             margin: 0.25rem 0 1.5rem 0;
-        }}
-        @media (max-width: 980px) {{
-            .rfr-nav {{
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 0.75rem;
-            }}
-            .rfr-nav-brand {{
-                margin-right: 0;
-            }}
-            .rfr-nav-links {{
-                justify-content: flex-start;
-            }}
-        }}
+        }
         </style>
-        <nav class="rfr-nav" aria-label="Primary navigation">
-            <div class="rfr-nav-brand">RFR Knowledge Platform</div>
-            <div class="rfr-nav-links">
-                {"".join(links)}
-            </div>
-        </nav>
-        <div class="rfr-nav-rule"></div>
         """,
         unsafe_allow_html=True,
     )
+
+    def nav_button(col, page: str, label: str) -> None:
+        if col.button(
+            label,
+            key=f"nav_{page}",
+            type="primary" if page == current_page else "secondary",
+            disabled=page == current_page,
+        ):
+            _set_query_param("disclaimer_accepted", "true")
+            _set_query_param("conversation_id", conversation_id)
+            _set_query_param("page", page)
+            st.rerun()
+
+    top_cols = st.columns([3.45, 0.75, 1.55, 1.05])
+    top_cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
+    nav_button(top_cols[1], "ask", "Ask")
+    nav_button(top_cols[2], "previous_responses", "Previous Responses")
+    nav_button(top_cols[3], "how_to_use", "How to Use")
+
+    st.markdown('<div class="rfr-nav-spacer"></div>', unsafe_allow_html=True)
+    bottom_cols = st.columns([3.45, 2.2, 1.25, 0.8])
+    nav_button(bottom_cols[1], "new_case_requests", "New Case Study Requests")
+    nav_button(bottom_cols[2], "case_studies", "Case Studies")
+    nav_button(bottom_cols[3], "about", "About")
+
+    st.markdown('<div class="rfr-nav-rule"></div>', unsafe_allow_html=True)
 
 
 def _case_sort_key(case_id: str) -> int:
