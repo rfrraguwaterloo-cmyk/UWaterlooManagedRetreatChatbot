@@ -5,7 +5,6 @@ import ast
 import uuid
 import os
 from datetime import datetime, timezone
-from html import escape
 from pathlib import Path
 import streamlit as st
 
@@ -146,113 +145,61 @@ def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 def _render_navigation(current_page: str, conversation_id: str) -> None:
-    nav_items = [
-        ("ask", "Ask"),
-        ("previous_responses", "Previous Responses"),
-        ("how_to_use", "How to Use"),
-        ("new_case_requests", "New Case Study Requests"),
-        ("case_studies", "Case Studies"),
-        ("about", "About"),
-    ]
-    hidden_params = {
-        "disclaimer_accepted": "true",
-        "conversation_id": conversation_id,
-    }
-    hidden_inputs = "\n".join(
-        f'<input type="hidden" name="{escape(key)}" value="{escape(value)}">'
-        for key, value in hidden_params.items()
-    )
-    buttons = []
-    for page, label in nav_items:
-        classes = "rfr-nav-button is-active" if page == current_page else "rfr-nav-button"
-        disabled = " disabled" if page == current_page else ""
-        buttons.append(
-            f'<button class="{classes}" type="submit" name="page" '
-            f'value="{escape(page)}"{disabled}>{escape(label)}</button>'
-        )
-
     st.markdown(
-        f"""
+        """
         <style>
-        .rfr-nav {{
+        div[data-testid="stHorizontalBlock"] {
+            column-gap: 0.65rem;
+            row-gap: 0.45rem;
+        }
+        div[data-testid="stHorizontalBlock"] .stButton > button {
+            min-height: 2.25rem;
+            width: 100%;
+            border-radius: 6px;
+            white-space: normal;
+            line-height: 1.15;
+            padding: 0.45rem 0.65rem;
+        }
+        .rfr-nav-brand {
+            min-height: 2.25rem;
             display: flex;
             align-items: center;
-            gap: 0.9rem 1.4rem;
-            width: 100%;
-        }}
-        .rfr-nav-brand {{
             color: #17324d;
             font-weight: 700;
             font-size: 1.05rem;
             white-space: nowrap;
-            margin-right: auto;
-        }}
-        .rfr-nav-form {{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 0.55rem 0.7rem;
-            margin: 0;
-            min-width: 0;
-        }}
-        .rfr-nav-button {{
-            min-height: 2.25rem;
-            padding: 0.45rem 0.8rem;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            background: #ffffff;
-            color: #2f3340;
-            font: inherit;
-            line-height: 1.15;
-            white-space: nowrap;
-            cursor: pointer;
-        }}
-        .rfr-nav-button:hover:not(:disabled) {{
-            border-color: #aeb6c2;
-            background: #f8fafc;
-            color: #17324d;
-        }}
-        .rfr-nav-button.is-active {{
-            background: #edf4f8;
-            border-color: #d6e3ea;
-            color: #17324d;
-            font-weight: 600;
-            cursor: default;
-        }}
-        .rfr-nav-rule {{
+        }
+        .rfr-nav-rule {
             border-bottom: 1px solid #dfe4ea;
             margin: 0.25rem 0 1.5rem 0;
-        }}
-        @media (max-width: 980px) {{
-            .rfr-nav {{
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 0.65rem;
-            }}
-            .rfr-nav-brand {{
-                margin-right: 0;
-            }}
-            .rfr-nav-form {{
-                justify-content: flex-start;
-                gap: 0.45rem 0.55rem;
-            }}
-            .rfr-nav-button {{
-                padding: 0.42rem 0.7rem;
-            }}
-        }}
+        }
         </style>
-        <nav class="rfr-nav" aria-label="Primary navigation">
-            <div class="rfr-nav-brand">RFR Knowledge Platform</div>
-            <form class="rfr-nav-form" method="get" target="_self">
-                {hidden_inputs}
-                {"".join(buttons)}
-            </form>
-        </nav>
-        <div class="rfr-nav-rule"></div>
         """,
         unsafe_allow_html=True,
     )
+
+    def nav_button(col, page: str, label: str) -> None:
+        if col.button(
+            label,
+            key=f"nav_{page}",
+            type="primary" if page == current_page else "secondary",
+            disabled=page == current_page,
+        ):
+            _set_query_param("disclaimer_accepted", "true")
+            _set_query_param("conversation_id", conversation_id)
+            _set_query_param("page", page)
+            st.rerun()
+
+    cols = st.columns([3.4, 0.75, 1.55, 1.05, 1.95, 1.25, 0.8], gap="small")
+    cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
+    nav_button(cols[1], "ask", "Ask")
+    nav_button(cols[2], "previous_responses", "Previous Responses")
+    nav_button(cols[3], "how_to_use", "How to Use")
+    nav_button(cols[4], "new_case_requests", "New Case Study Requests")
+    nav_button(cols[5], "case_studies", "Case Studies")
+    nav_button(cols[6], "about", "About")
+
+    st.markdown('<div class="rfr-nav-rule"></div>', unsafe_allow_html=True)
 
 
 def _case_sort_key(case_id: str) -> int:
