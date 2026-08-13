@@ -178,7 +178,7 @@ def _render_navigation(current_page: str, conversation_id: str) -> None:
         """,
         unsafe_allow_html=True,
     )
-    cols = st.columns([3.45, 0.75, 1.05, 1.8, 1.15, 1.55, 0.75])
+    cols = st.columns([3.45, 0.75, 1.55, 1.05, 1.8, 1.15, 0.75])
     cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
     for col, (page, label) in zip(cols[1:], nav_items):
         if col.button(
