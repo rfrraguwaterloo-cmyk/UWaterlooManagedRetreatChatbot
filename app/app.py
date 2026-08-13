@@ -5,8 +5,11 @@ import ast
 import uuid
 import os
 from datetime import datetime, timezone
+from html import escape
 from pathlib import Path
+from urllib.parse import urlencode
 import streamlit as st
+import streamlit.components.v1 as components
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from rag.pipeline import RAGProviderError, generate_answer, retrieve_chunks
@@ -145,61 +148,125 @@ def _render_apa_source_links(raw_links, limit: int | None = None) -> None:
             st.markdown(f"  - [PDF]({link['pdf_url']})")
 
 def _render_navigation(current_page: str, conversation_id: str) -> None:
-    st.markdown(
-        """
+    nav_items = [
+        ("ask", "Ask"),
+        ("previous_responses", "Previous Responses"),
+        ("how_to_use", "How to Use"),
+        ("new_case_requests", "New Case Study Requests"),
+        ("case_studies", "Case Studies"),
+        ("about", "About"),
+    ]
+    buttons = []
+    for page, label in nav_items:
+        classes = "rfr-nav-button is-active" if page == current_page else "rfr-nav-button"
+        query = urlencode({
+            "disclaimer_accepted": "true",
+            "conversation_id": conversation_id,
+            "page": page,
+        })
+        buttons.append(
+            f'<button class="{classes}" type="button" data-query="{escape(query)}">'
+            f'{escape(label)}</button>'
+        )
+
+    components.html(
+        f"""
         <style>
-        div[data-testid="stHorizontalBlock"] {
-            column-gap: 0.65rem;
-            row-gap: 0.45rem;
-        }
-        div[data-testid="stHorizontalBlock"] .stButton > button {
-            min-height: 2.25rem;
-            width: 100%;
-            border-radius: 6px;
-            white-space: normal;
-            line-height: 1.15;
-            padding: 0.45rem 0.65rem;
-        }
-        .rfr-nav-brand {
-            min-height: 2.25rem;
+        body {{
+            margin: 0;
+            font-family: sans-serif;
+        }}
+        .rfr-nav {{
             display: flex;
             align-items: center;
+            gap: 0.8rem 1.25rem;
+            width: 100%;
+            box-sizing: border-box;
+        }}
+        .rfr-nav-brand {{
             color: #17324d;
             font-weight: 700;
             font-size: 1.05rem;
             white-space: nowrap;
-        }
-        .rfr-nav-rule {
+            margin-right: auto;
+        }}
+        .rfr-nav-buttons {{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.5rem 0.65rem;
+            min-width: 0;
+        }}
+        .rfr-nav-button {{
+            min-height: 2.25rem;
+            padding: 0.45rem 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: #ffffff;
+            color: #2f3340;
+            font: inherit;
+            font-size: 1rem;
+            line-height: 1.15;
+            white-space: normal;
+            overflow-wrap: normal;
+            word-break: keep-all;
+            cursor: pointer;
+        }}
+        .rfr-nav-button:hover:not(:disabled) {{
+            border-color: #aeb6c2;
+            background: #f8fafc;
+            color: #17324d;
+        }}
+        .rfr-nav-button.is-active {{
+            background: #edf4f8;
+            border-color: #d6e3ea;
+            color: #17324d;
+            font-weight: 600;
+            cursor: default;
+        }}
+        .rfr-nav-rule {{
             border-bottom: 1px solid #dfe4ea;
-            margin: 0.25rem 0 1.5rem 0;
-        }
+            margin-top: 0.75rem;
+        }}
+        @media (max-width: 980px) {{
+            .rfr-nav {{
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.65rem;
+            }}
+            .rfr-nav-brand {{
+                margin-right: 0;
+            }}
+            .rfr-nav-buttons {{
+                justify-content: flex-start;
+                gap: 0.45rem 0.55rem;
+            }}
+            .rfr-nav-button {{
+                padding: 0.42rem 0.7rem;
+            }}
+        }}
         </style>
+        <nav class="rfr-nav" aria-label="Primary navigation">
+            <div class="rfr-nav-brand">RFR Knowledge Platform</div>
+            <div class="rfr-nav-buttons">
+                {"".join(buttons)}
+            </div>
+        </nav>
+        <div class="rfr-nav-rule"></div>
+        <script>
+        const buttons = document.querySelectorAll(".rfr-nav-button");
+        buttons.forEach((button) => {{
+            button.addEventListener("click", () => {{
+                if (button.classList.contains("is-active")) return;
+                const query = button.dataset.query;
+                window.parent.location.href = window.parent.location.pathname + "?" + query;
+            }});
+        }});
+        </script>
         """,
-        unsafe_allow_html=True,
+        height=116,
     )
-
-    def nav_button(col, page: str, label: str) -> None:
-        if col.button(
-            label,
-            key=f"nav_{page}",
-            type="primary" if page == current_page else "secondary",
-            disabled=page == current_page,
-        ):
-            _set_query_param("disclaimer_accepted", "true")
-            _set_query_param("conversation_id", conversation_id)
-            _set_query_param("page", page)
-            st.rerun()
-
-    cols = st.columns([3.4, 0.75, 1.55, 1.05, 1.95, 1.25, 0.8], gap="small")
-    cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
-    nav_button(cols[1], "ask", "Ask")
-    nav_button(cols[2], "previous_responses", "Previous Responses")
-    nav_button(cols[3], "how_to_use", "How to Use")
-    nav_button(cols[4], "new_case_requests", "New Case Study Requests")
-    nav_button(cols[5], "case_studies", "Case Studies")
-    nav_button(cols[6], "about", "About")
-
-    st.markdown('<div class="rfr-nav-rule"></div>', unsafe_allow_html=True)
 
 
 def _case_sort_key(case_id: str) -> int:
