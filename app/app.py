@@ -183,21 +183,20 @@ def _render_navigation(current_page: str, conversation_id: str) -> None:
             key=f"nav_{page}",
             type="primary" if page == current_page else "secondary",
             disabled=page == current_page,
-            use_container_width=True,
         ):
             _set_query_param("disclaimer_accepted", "true")
             _set_query_param("conversation_id", conversation_id)
             _set_query_param("page", page)
             st.rerun()
 
-    top_cols = st.columns([3.45, 0.75, 1.55, 1.05, 3.0], gap="small")
+    top_cols = st.columns([3.45, 0.75, 1.55, 1.05])
     top_cols[0].markdown('<div class="rfr-nav-brand">RFR Knowledge Platform</div>', unsafe_allow_html=True)
     nav_button(top_cols[1], "ask", "Ask")
     nav_button(top_cols[2], "previous_responses", "Previous Responses")
     nav_button(top_cols[3], "how_to_use", "How to Use")
 
     st.markdown('<div class="rfr-nav-spacer"></div>', unsafe_allow_html=True)
-    bottom_cols = st.columns([3.45, 2.2, 1.25, 0.8, 3.0], gap="small")
+    bottom_cols = st.columns([3.45, 2.2, 1.25, 0.8])
     nav_button(bottom_cols[1], "new_case_requests", "New Case Study Requests")
     nav_button(bottom_cols[2], "case_studies", "Case Studies")
     nav_button(bottom_cols[3], "about", "About")
