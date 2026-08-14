@@ -43,7 +43,11 @@ def _create_folder(service, parent_folder_id: str, name: str) -> dict:
         "mimeType": "application/vnd.google-apps.folder",
         "parents": [parent_folder_id],
     }
-    return service.files().create(body=metadata, fields="id,name,webViewLink").execute()
+    return (
+        service.files()
+        .create(body=metadata, fields="id,name,webViewLink", supportsAllDrives=True)
+        .execute()
+    )
 
 
 def _upload_bytes(
@@ -60,7 +64,12 @@ def _upload_bytes(
     metadata = {"name": filename, "parents": [parent_folder_id]}
     return (
         service.files()
-        .create(body=metadata, media_body=media, fields="id,name,webViewLink")
+        .create(
+            body=metadata,
+            media_body=media,
+            fields="id,name,webViewLink",
+            supportsAllDrives=True,
+        )
         .execute()
     )
 

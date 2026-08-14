@@ -660,7 +660,16 @@ def _render_new_case_requests_page() -> None:
             "The request could not be saved to Google Drive. Please try again later "
             "or contact the RFR team."
         )
-        st.caption(f"Drive upload error: {exc}")
+        error_text = str(exc)
+        if "Service Accounts do not have storage quota" in error_text:
+            st.caption(
+                "Drive upload error: Google service accounts cannot own new files in a regular "
+                "My Drive folder. Move the intake folder to a Google Shared Drive, give the "
+                "service account Content manager or Manager access, and update "
+                "RFR_REQUESTS_DRIVE_FOLDER_ID to that Shared Drive folder ID."
+            )
+        else:
+            st.caption(f"Drive upload error: {exc}")
         return
 
     st.success("Request submitted. The RFR team can now review it in the Google Drive intake folder.")
