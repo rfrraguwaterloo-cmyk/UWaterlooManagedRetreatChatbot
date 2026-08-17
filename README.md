@@ -42,10 +42,25 @@ streamlit run app/app.py
 ## Hugging Face request intake
 
 The **New Case Study Requests** tab saves each submitted request to Google Drive,
-under folder `10n_-uOCT2GXu_G3r1qi5qJr8hHoy-E_y`. In Hugging Face Spaces, set
-`GOOGLE_SERVICE_ACCOUNT_JSON` as a secret containing the service account JSON,
-and share the Drive intake folder with that service account email. To use a
-different parent folder, set `RFR_REQUESTS_DRIVE_FOLDER_ID`.
+under folder `10n_-uOCT2GXu_G3r1qi5qJr8hHoy-E_y`. In Hugging Face Spaces, use
+OAuth credentials for the Google account that should own submitted files, usually
+`rfr.rag.uwaterloo@gmail.com`. Set these secrets:
+
+```text
+GOOGLE_OAUTH_CLIENT_ID
+GOOGLE_OAUTH_CLIENT_SECRET
+GOOGLE_OAUTH_REFRESH_TOKEN
+```
+
+To generate those values, run:
+
+```bash
+python3 -m case_study_pipeline.create_drive_oauth_secrets \
+  --credentials-file /path/to/oauth-client.json \
+  --space-id UWRFR/UWaterlooRFRChatBot
+```
+
+To use a different parent folder, set `RFR_REQUESTS_DRIVE_FOLDER_ID`.
 
 ## Ingesting documents
 

@@ -72,7 +72,9 @@ OPENAI_MODEL
 For Google Drive request uploads:
 
 ```text
-GOOGLE_SERVICE_ACCOUNT_JSON
+GOOGLE_OAUTH_CLIENT_ID
+GOOGLE_OAUTH_CLIENT_SECRET
+GOOGLE_OAUTH_REFRESH_TOKEN
 ```
 
 Optional override for the new case study request intake folder:
@@ -111,15 +113,44 @@ Example:
 gpt-4o-mini
 ```
 
-### `GOOGLE_SERVICE_ACCOUNT_JSON`
+### Google Drive Request Upload Secrets
 
 Used by the website to upload New Case Study Requests into Google Drive.
 
-This should contain the full JSON service account credential, not just the
-service account email.
+Preferred setup uses OAuth for the shared Google account that should own the
+uploaded folders and PDFs, usually:
 
-The Drive intake folder must be shared with the service account email. If it is
-not shared, uploads will fail even if the secret is present.
+```text
+rfr.rag.uwaterloo@gmail.com
+```
+
+Set these Hugging Face secrets:
+
+```text
+GOOGLE_OAUTH_CLIENT_ID
+GOOGLE_OAUTH_CLIENT_SECRET
+GOOGLE_OAUTH_REFRESH_TOKEN
+```
+
+Generate the secret values locally:
+
+```bash
+python3 -m case_study_pipeline.create_drive_oauth_secrets \
+  --credentials-file /path/to/oauth-client.json \
+  --space-id UWRFR/UWaterlooRFRChatBot
+```
+
+When the browser opens, sign in as `rfr.rag.uwaterloo@gmail.com`. The script
+prints the `hf spaces secrets add ...` commands to run.
+
+The older fallback secret is:
+
+```text
+GOOGLE_SERVICE_ACCOUNT_JSON
+```
+
+That service-account option works best with a Google Shared Drive. It can fail
+in normal My Drive folders because service accounts do not have storage quota.
 
 ## How to Add or Replace a Secret
 
@@ -140,6 +171,7 @@ Open Space logs and look for messages like:
 ANTHROPIC_API_KEY is not set
 OPENAI_API_KEY is not set
 GOOGLE_SERVICE_ACCOUNT_JSON is not set
+GOOGLE_OAUTH_REFRESH_TOKEN is not set
 credit balance is too low
 invalid_api_key
 permission denied
@@ -147,9 +179,11 @@ permission denied
 
 For Drive upload problems, check:
 
-- The `GOOGLE_SERVICE_ACCOUNT_JSON` secret exists.
-- It is valid JSON.
-- The Drive intake folder is shared with the service account email.
+- The three OAuth secrets exist: `GOOGLE_OAUTH_CLIENT_ID`,
+  `GOOGLE_OAUTH_CLIENT_SECRET`, and `GOOGLE_OAUTH_REFRESH_TOKEN`.
+- The OAuth token was created by signing in as the account that owns or can edit
+  the intake folder.
+- The intake folder ID is set correctly with `RFR_REQUESTS_DRIVE_FOLDER_ID`.
 - The Space was restarted after the secret was added.
 
 ## Do Not Put API Keys in GitHub
@@ -165,4 +199,3 @@ Never commit API keys to:
 Use Hugging Face secrets for the live website.
 
 Use a local `.env` file for your own computer. Do not commit `.env`.
-

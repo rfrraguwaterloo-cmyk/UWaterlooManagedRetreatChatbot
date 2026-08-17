@@ -1,7 +1,9 @@
 """Google Drive intake uploads for new case study requests.
 
-Uses the same GOOGLE_SERVICE_ACCOUNT_JSON secret pattern as sheets_logger.py.
-The target Drive folder must be shared with the service account email.
+Preferred hosted auth uses OAuth user credentials for the shared
+``rfr.rag.uwaterloo@gmail.com`` account. This avoids service-account Drive
+storage quota limits in regular My Drive folders. If OAuth secrets are absent,
+the uploader falls back to the older service-account secret.
 """
 
 from __future__ import annotations
@@ -14,10 +16,22 @@ from typing import Any
 
 
 DEFAULT_REQUESTS_DRIVE_FOLDER_ID = "10n_-uOCT2GXu_G3r1qi5qJr8hHoy-E_y"
+DRIVE_SCOPES = ["https://www.googleapis.com/auth/drive"]
+
+
+def _oauth_env_is_configured() -> bool:
+    required = (
+        "GOOGLE_OAUTH_CLIENT_ID",
+        "GOOGLE_OAUTH_CLIENT_SECRET",
+        "GOOGLE_OAUTH_REFRESH_TOKEN",
+    )
+    return all(os.getenv(key) for key in required)
 
 
 def _drive_service():
     try:
+        from google.auth.transport.requests import Request
+        from google.oauth2.credentials import Credentials as OAuthCredentials
         from google.oauth2.service_account import Credentials
         from googleapiclient.discovery import build
     except ImportError as exc:
@@ -25,15 +39,29 @@ def _drive_service():
             "Google Drive libraries are not installed. Check requirements.txt."
         ) from exc
 
+    if _oauth_env_is_configured():
+        creds = OAuthCredentials(
+            token=None,
+            refresh_token=os.environ["GOOGLE_OAUTH_REFRESH_TOKEN"],
+            token_uri=os.getenv("GOOGLE_OAUTH_TOKEN_URI", "https://oauth2.googleapis.com/token"),
+            client_id=os.environ["GOOGLE_OAUTH_CLIENT_ID"],
+            client_secret=os.environ["GOOGLE_OAUTH_CLIENT_SECRET"],
+            scopes=DRIVE_SCOPES,
+        )
+        creds.refresh(Request())
+        return build("drive", "v3", credentials=creds)
+
     creds_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
     if not creds_json:
         raise RuntimeError(
-            "GOOGLE_SERVICE_ACCOUNT_JSON is not set. Add it as a Hugging Face Space secret."
+            "Google Drive credentials are not set. Add OAuth secrets "
+            "GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, and "
+            "GOOGLE_OAUTH_REFRESH_TOKEN, or add GOOGLE_SERVICE_ACCOUNT_JSON "
+            "as a Hugging Face Space secret."
         )
 
     creds_dict = json.loads(creds_json)
-    scopes = ["https://www.googleapis.com/auth/drive"]
-    creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
+    creds = Credentials.from_service_account_info(creds_dict, scopes=DRIVE_SCOPES)
     return build("drive", "v3", credentials=creds)
 
 
